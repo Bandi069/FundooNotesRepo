@@ -3,24 +3,18 @@
     <button class="btn" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1>FUNDOO</h1>
+    <h3>FUNDOO NOTE</h3>
     <div class="search">
-      <mat-card class="search-bar">
-        <button class="search-button" id="search-button" mat-icon-button>
+      <mat-card class="searchbar">
+        <button class="searchbutton"  mat-icon-button>
           <mat-icon matSuffix class="suffix">search</mat-icon>
         </button>
-        <input class="in" type="text" name="search" autocomplete="off" placeholder="search ">
-        <button class="search-button" mat-icon-button>
+        <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="search ">
+        <button class="searchbutton" mat-icon-button>
           <mat-icon matSuffix class="search">clear</mat-icon>
         </button>
       </mat-card>
     </div>
 
-    <mat-menu #menu="matMenu">
-      <div class="p">
-        <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="">
-        <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePic}}">
-      </div>
-    </mat-menu>
   </mat-toolbar>
 </div>
