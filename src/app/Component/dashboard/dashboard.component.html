@@ -1,24 +1,26 @@
-<div class="list" fxFlex="100" fxFlex.xs="100" fxLayout="colum">
-  <mat-toolbar class="toolbar">
-    <div fxFlex="100" fxLayoutAlign="space-between center">
-      <div fxFlex="40" fxLayoutAlign="space-between center">
-        <div fxFlex="40" fxFlex.xs="10" fxLayout="row" fxLayoutAlign.xs="start center" fxLayoutAlign="center center">
-          <button mat-icon-button (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <div fxHide.sm='true' fxHide.xs='true'>
-            <span class="header test-header" *ngIf="headerName == null">FUNDOO</span>
-            <span class="header">{{headerName}}</span>
-          </div>
-        </div>
-      </div>
-      <div fxFlex="100" fxFlex.xs="100" class="search-list">
-        <button mat-button class="search-button">
-          <mat-icon>search</mat-icon>
+<div class="body">
+  <mat-toolbar color="primary" class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+    <button class="btn" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>FUNDOO</h1>
+    <div class="search">
+      <mat-card class="search-bar">
+        <button class="search-button" id="search-button" mat-icon-button>
+          <mat-icon matSuffix class="suffix">search</mat-icon>
         </button>
-        <input fxFlex="100" fxFlex.sm="100" class="search" fxFlex.xs="100" matInput placeholder="Search"
-          [(ngModel)]="Search" (keyup)="key()" autocomplete="off">
-      </div>
+        <input class="in" type="text" name="search" autocomplete="off" placeholder="search ">
+        <button class="search-button" mat-icon-button>
+          <mat-icon matSuffix class="search">clear</mat-icon>
+        </button>
+      </mat-card>
     </div>
+
+    <mat-menu #menu="matMenu">
+      <div class="p">
+        <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="">
+        <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePic}}">
+      </div>
+    </mat-menu>
   </mat-toolbar>
 </div>
