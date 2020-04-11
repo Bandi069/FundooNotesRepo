@@ -1,19 +1,20 @@
 <div class="body">
   <div>
     <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
-       <!-- <img src="C:\Users\tree\FundooFrontEnd\src\assets\images\fun.png">  -->
-      <button class="btn" mat-icon-button (click)="snav.toggle()">
+      
+      <button class="menubutton" mat-icon-button (click)="snav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      <img src="./fun.png" class="image">
       <h3>FUNDOO NOTE</h3>
-      <div class=" search">
+      <div class="search">
         <mat-card class="searchbar">
           <button class="searchbutton" mat-icon-button>
             <mat-icon matSuffix>search</mat-icon>
           </button>
           <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="Search ">
           <button class="searchbutton" mat-icon-button>
-            <!-- <mat-icon matSuffix class="search">clear</mat-icon> -->
+            <!--<mat-icon matSuffix class="search">clear</mat-icon> -->
           </button>
         </mat-card>
       </div>
@@ -32,13 +33,18 @@
         <img class="profilepicture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePic}}"
           [matMenuTriggerFor]="menu">
       </div>
-      
+      <mat-menu #menu="matMenu">
+        <div class="p">
+          <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="/assets/img/No.png">
+          <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePic}}">
+        </div>
+      </mat-menu>
     </mat-toolbar>
     <div>
       <mat-drawer-container class="container">
         <mat-drawer mode="side" class="side" opened>
           <mat-divider class="div"></mat-divider>
-          <button mat-button class="navadd" >
+          <button mat-button class="navadd">
             <div class="drawer">
               <mat-icon class="icon">emoji_objects</mat-icon>
               <div class="note">Notes</div>

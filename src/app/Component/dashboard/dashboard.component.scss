@@ -8,9 +8,16 @@
     align-items: center;
 }
 h3{
-    padding-left: 15px;
+    padding-left: 13px;
    font-size: larger;
    color: rebeccapurple;
+}
+.searchbar{
+    margin: auto;
+padding-left: 30px;
+}
+.menubutton{
+    padding-left: 15px;
 }
 .searchbar{
     max-width: 90%;
@@ -32,16 +39,19 @@ h3{
     width: 560px;
     margin-left: 20px;
 }
+.image{
+    padding-left: 20px;
+}
 .navadd{
-    width:100%;
+    width:50%;
     background: transparent;
     outline: none;
     border: none;
 }
 .container{
     background: transparent;
-   width:100%;
-    height:90%;
+   // width: 13%;
+    height: 90%;
     top:64px;
     position: absolute;
 }
@@ -77,4 +87,5 @@ margin-right: 10px;
     height:40px;
     border-radius: 50%;
     cursor: pointer;
+    padding-left:230px;
 }
