@@ -1,20 +1,80 @@
 <div class="body">
-  <mat-toolbar color="primary" class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
-    <button class="btn" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h3>FUNDOO NOTE</h3>
-    <div class="search">
-      <mat-card class="searchbar">
-        <button class="searchbutton"  mat-icon-button>
-          <mat-icon matSuffix >search</mat-icon>
+  <div>
+    <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+       <!-- <img src="C:\Users\tree\FundooFrontEnd\src\assets\images\fun.png">  -->
+      <button class="btn" mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h3>FUNDOO NOTE</h3>
+      <div class=" search">
+        <mat-card class="searchbar">
+          <button class="searchbutton" mat-icon-button>
+            <mat-icon matSuffix>search</mat-icon>
+          </button>
+          <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="Search ">
+          <button class="searchbutton" mat-icon-button>
+            <!-- <mat-icon matSuffix class="search">clear</mat-icon> -->
+          </button>
+        </mat-card>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="listgrid">
+        <button mat-icon-button class="listbutton" *ngIf="!card1" matTooltip="List view">
+          <mat-icon>list</mat-icon>
         </button>
-        <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="search ">
-        <button class="searchbutton" mat-icon-button>
-          <mat-icon matSuffix class="search">clear</mat-icon>
+        <button mat-icon-button class="gridbutton" *ngIf="card1" matTooltip="Grid view">
+          <mat-icon>grid_on</mat-icon>
         </button>
-      </mat-card>
+      </div>
+      <div>
+        <img class="profilepicture" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/img/No.png"
+          [matMenuTriggerFor]="menu">
+        <img class="profilepicture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePic}}"
+          [matMenuTriggerFor]="menu">
+      </div>
+      
+    </mat-toolbar>
+    <div>
+      <mat-drawer-container class="container">
+        <mat-drawer mode="side" class="side" opened>
+          <mat-divider class="div"></mat-divider>
+          <button mat-button class="navadd" >
+            <div class="drawer">
+              <mat-icon class="icon">emoji_objects</mat-icon>
+              <div class="note">Notes</div>
+            </div>
+          </button>
+          <button mat-button class="navadd">
+            <div class="drawer">
+              <mat-icon class="icon">notifications</mat-icon>
+              <div class="note">Remainders</div>
+            </div>
+          </button>
+          <mat-divider class="div"></mat-divider>
+          <button mat-button class="navadd">
+            <div class="drawer">
+              <mat-icon class="icon">create</mat-icon>
+              <div class="note">Edit Labels</div>
+            </div>
+          </button>
+          <mat-divider class="div"></mat-divider>
+          <button mat-button class="navadd">
+            <div class="drawer">
+              <mat-icon class="icon">archive</mat-icon>
+              <div class="note">Archive</div>
+            </div>
+          </button>
+          <mat-divider class="div"></mat-divider>
+          <button mat-button class="navadd">
+            <div class="drawer">
+              <mat-icon class="icon">delete</mat-icon>
+              <div class="note">Trash</div>
+            </div>
+          </button>
+        </mat-drawer>
+      </mat-drawer-container>
+      <mat-drawer-content>
+        <router-outlet> </router-outlet>
+      </mat-drawer-content>
     </div>
-
-  </mat-toolbar>
-</div>
+  </div>

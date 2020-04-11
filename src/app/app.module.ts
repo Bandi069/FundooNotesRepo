@@ -5,8 +5,11 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  MatButtonModule, MatInputModule, MatRippleModule} from '@angular/material';
-import { MatCardModule } from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './Component/register/register.component';
@@ -31,12 +34,15 @@ import { DashboardComponent } from './Component/dashboard/dashboard.component';
     MatFormFieldModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatMenuModule,
     //FormControl,
    //FormGroup,
    ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
+    MatTooltipModule,
     MatCardModule,
+    MatIconModule,
     RouterModule.forRoot([])
 
 

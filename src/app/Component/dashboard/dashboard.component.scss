@@ -15,7 +15,7 @@ h3{
 .searchbar{
     max-width: 90%;
     border-radius: 5px;
-    padding-left: 15px;
+    padding-left: 25px;
     height: 40px;
     padding: 0px;
     display:flex;
@@ -31,4 +31,50 @@ h3{
     border: none;
     width: 560px;
     margin-left: 20px;
+}
+.navadd{
+    width:100%;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.container{
+    background: transparent;
+   width:100%;
+    height:90%;
+    top:64px;
+    position: absolute;
+}
+.icon{
+    margin-top: 5px;
+}
+.drawer{
+    display:flex;
+    padding: 10px 5px 10px 5px;
+}
+.note{
+    padding-left: 30px;
+}
+.div{
+    padding:5px;
+}
+.mat-dialog-container {
+    width: 250px;
+    height: 250px
+}
+.listgrid{
+    padding-right: 30px;
+}
+
+.listbutton gridbutton{
+    background-color: transparent;
+border: none;
+outline: none;
+margin-right: 10px;
+}
+.profilepicture{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    cursor: pointer;
 }
