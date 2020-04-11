@@ -1,0 +1,38 @@
+.card{
+    width:40em;
+    margin:10px;
+    padding: 0px;
+    cursor: text;
+}
+.takeNote{
+    font-weight: 500;
+    padding: 15px;
+    opacity: 50%;
+}
+.notetext{
+    font-weight: 500;
+    font-size: initial;
+    border: none;
+    background: transparent;
+    width: 20em;
+    outline: none;
+    height: 3em;
+    margin-left: 15px;
+}
+.close{
+    width:68px;
+    height:35px;
+    background-color:purple;
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 10px;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.saveclass{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    padding-bottom: 5px
+}
