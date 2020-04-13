@@ -12,20 +12,25 @@ h3{
    font-size: larger;
    color: rebeccapurple;
 }
+.search{
+    padding-left: 25px;
+}
 .searchbar{
     margin: auto;
-padding-left: 30px;
+    padding-left: 30px;
 }
 .menubutton{
     padding-left: 15px;
 }
 .searchbar{
-    max-width: 90%;
+    width: 750px;
+    //max-width: 90%;
     border-radius: 5px;
     padding-left: 25px;
     height: 40px;
     padding: 0px;
     display:flex;
+    border-inline-start-color: gainsboro;
 }
 .searchbutton{
     background: transparent;
@@ -41,6 +46,7 @@ padding-left: 30px;
 }
 .image{
     padding-left: 20px;
+    padding-top: 10px;
 }
 .navadd{
     width:50%;
@@ -50,24 +56,30 @@ padding-left: 30px;
 }
 .container{
     background: transparent;
-   // width: 13%;
+   width: 13%;
     height: 90%;
     top:64px;
     position: absolute;
+    margin: auto;
 }
 .icon{
     margin-top: 5px;
 }
-.drawer{
-    display:flex;
-    padding: 10px 5px 10px 5px;
-}
+// .sidenave{
+//     display:flex;
+//     padding: 10px 5px 10px 5px;
+// }
 .note{
     padding-left: 30px;
 }
 .div{
-    padding:5px;
+    padding:3px;
 }
+.sidenavlist {
+    width: 270px;
+    height: 98.6%;
+    background-color: #ffffff;
+    }
 .mat-dialog-container {
     width: 250px;
     height: 250px
@@ -82,10 +94,54 @@ border: none;
 outline: none;
 margin-right: 10px;
 }
-.profilepicture{
-    width:40px;
-    height:40px;
+.sidenavContent {
+background-color: rgb(255, 255, 255);
+max-width: -webkit-fill-available;
+max-height: -webkit-fill-available;
+margin-left: 200px;
+}
+.signout{
+    width:90px;
+    height:45px;
+    background-color:green;
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 10px;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.signoutclass{
+    padding :10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentdiv{
+    margin: auto;
+    margin-top: 60px;
+}
+.pic{
+    width:80px;
+    height:80px;
     border-radius: 50%;
-    cursor: pointer;
-    padding-left:230px;
+    margin-top:1em;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}
+.addAcount{
+    font: sans-serif;
+    font-size: 1em;
+}
+.picture{
+    width: 50px;
+padding-left: 80px;
+padding-top: 10px;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -22px;
 }

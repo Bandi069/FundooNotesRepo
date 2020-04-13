@@ -1,86 +1,100 @@
 <div class="body">
-  <div>
-    <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
-      
-      <button class="menubutton" mat-icon-button (click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
+  <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+    <button class="menubutton" mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="assets/images/fun.png" class="image">
+    <h3>FUNDOO NOTE</h3>
+    <div class="search">
+      <mat-card class="searchbar">
+        <button class="searchbutton" mat-icon-button>
+          <mat-icon matSuffix>search</mat-icon>
+        </button>
+        <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="Search ">
+        <button class="searchbutton" mat-icon-button>
+          <!--<mat-icon matSuffix class="search">clear</mat-icon> -->
+        </button>
+      </mat-card>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="listgrid">
+      <button mat-icon-button class="listbutton" *ngIf="!card1" matTooltip="List view">
+        <mat-icon>list</mat-icon>
       </button>
-      <img src="./fun.png" class="image">
-      <h3>FUNDOO NOTE</h3>
-      <div class="search">
-        <mat-card class="searchbar">
-          <button class="searchbutton" mat-icon-button>
-            <mat-icon matSuffix>search</mat-icon>
-          </button>
-          <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="Search ">
-          <button class="searchbutton" mat-icon-button>
-            <!--<mat-icon matSuffix class="search">clear</mat-icon> -->
-          </button>
-        </mat-card>
+      <button mat-icon-button class="gridbutton" *ngIf="card1" matTooltip="Grid view">
+        <mat-icon>grid_on</mat-icon>
+      </button>
+    </div>
+    <div>
+      <img class="picture" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/images/user.png"
+        [matMenuTriggerFor]="menu">
+      <img class="picture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePicture}}" [matMenuTriggerFor]="menu">
+    </div>
+    <mat-menu #menu="matMenu">
+      <div class="photo">
+        <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="/assets/images/user.png">
+        <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePicture}}">
+      </div>
+      <div class="changePic">
+        <mat-icon mat-icon-button (click)="ChangeProfile()" class="edit">photo_camera</mat-icon>
       </div>
       <mat-divider></mat-divider>
-      <div class="listgrid">
-        <button mat-icon-button class="listbutton" *ngIf="!card1" matTooltip="List view">
-          <mat-icon>list</mat-icon>
-        </button>
-        <button mat-icon-button class="gridbutton" *ngIf="card1" matTooltip="Grid view">
-          <mat-icon>grid_on</mat-icon>
-        </button>
-      </div>
-      <div>
-        <img class="profilepicture" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/img/No.png"
-          [matMenuTriggerFor]="menu">
-        <img class="profilepicture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePic}}"
-          [matMenuTriggerFor]="menu">
-      </div>
-      <mat-menu #menu="matMenu">
-        <div class="p">
-          <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="/assets/img/No.png">
-          <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePic}}">
+      <button mat-button class="add" >
+        <div class="collab">
+          <mat-icon>person_add</mat-icon>
+          <div class="addAcount">Add Account</div>
         </div>
-      </mat-menu>
-    </mat-toolbar>
-    <div>
-      <mat-drawer-container class="container">
-        <mat-drawer mode="side" class="side" opened>
+      </button>
+      <mat-divider></mat-divider>
+      <div class="signoutclass">
+        <button mat-button class="signout" (click)="logout()">Sign Out</button>
+      </div>
+    </mat-menu>
+  </mat-toolbar>
+  <div class="contentdiv">
+    <mat-sidenav-container class="container" >
+      <mat-sidenav #snav mode="side"  opened>
+        <mat-nav-list class="sidenavlist">
+          <div class="sidenave">
+            <button mat-button class="navadd">
+              <div class="sidenave">
+                <mat-icon class="icon">emoji_objects</mat-icon>
+                <div class="note">Notes</div>
+              </div>
+            </button>
+            <button mat-button class="navadd">
+              <div class="sidenave">
+                <mat-icon class="icon">notifications</mat-icon>
+                <div class="note">Remainders</div>
+              </div>
+            </button>
+          </div>
           <mat-divider class="div"></mat-divider>
           <button mat-button class="navadd">
-            <div class="drawer">
-              <mat-icon class="icon">emoji_objects</mat-icon>
-              <div class="note">Notes</div>
-            </div>
-          </button>
-          <button mat-button class="navadd">
-            <div class="drawer">
-              <mat-icon class="icon">notifications</mat-icon>
-              <div class="note">Remainders</div>
-            </div>
-          </button>
-          <mat-divider class="div"></mat-divider>
-          <button mat-button class="navadd">
-            <div class="drawer">
+            <div class="sidenave">
               <mat-icon class="icon">create</mat-icon>
               <div class="note">Edit Labels</div>
             </div>
           </button>
           <mat-divider class="div"></mat-divider>
           <button mat-button class="navadd">
-            <div class="drawer">
+            <div class="sidenave">
               <mat-icon class="icon">archive</mat-icon>
               <div class="note">Archive</div>
             </div>
           </button>
           <mat-divider class="div"></mat-divider>
           <button mat-button class="navadd">
-            <div class="drawer">
+            <div class="sidenave">
               <mat-icon class="icon">delete</mat-icon>
               <div class="note">Trash</div>
             </div>
           </button>
-        </mat-drawer>
-      </mat-drawer-container>
-      <mat-drawer-content>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="SideNavContent">
         <router-outlet> </router-outlet>
-      </mat-drawer-content>
-    </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
+</div>
