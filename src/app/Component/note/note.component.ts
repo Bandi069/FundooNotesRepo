@@ -11,12 +11,9 @@ export class NoteComponent implements OnInit {
   description;
   card1 = true;
   card2 = false;
-  constructor( ) 
-    { }
-
+  constructor(){ }
   ngOnInit() {
   }
-
   note(){
     this.card2=true;
     this.card1=false;
