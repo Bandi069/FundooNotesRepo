@@ -36,16 +36,15 @@
         <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePicture}}">
       </div>
       <div class="changePic">
-        <mat-icon mat-icon-button (click)="ChangeProfile()" class="edit">photo_camera</mat-icon>
+        <mat-icon mat-icon-button (click)="ChangeProfile()" class="photoedit">photo_camera</mat-icon>
       </div>
       <mat-divider></mat-divider>
       <button mat-button class="add">
         <div class="collab">
-          <mat-icon>person_add</mat-icon>
-          <div class="addAcount">Add Account</div>
+          <mat-icon class="addicon">person_add</mat-icon>
+          <span class="addAcount">Add Account</span>
         </div>
       </button>
-      <!-- <mat-divider></mat-divider> -->
       <div class="signoutclass">
         <button mat-button class="signout" (click)="logout()">Sign Out</button>
       </div>
@@ -61,36 +60,33 @@
             <div class="sidenave">
               <button mat-button class="navadd">
                 <mat-icon class="icon">emoji_objects</mat-icon>
-                <div class="note">Notes</div>
+                <span class="note">Notes</span>
               </button>
             </div>
             <div class="sidenave">
               <button mat-button class="navadd">
                 <mat-icon class="icon">notifications</mat-icon>
-                <div class="note">Remainders</div>
+                <span class="note">Remainders</span>
               </button>
             </div>
-            <mat-divider class="div"></mat-divider>
             <div class="sidenave">
               <button mat-button class="navadd">
-
                 <mat-icon class="icon">create</mat-icon>
-                <div class="note">Edit Labels</div>
-
+                <span class="note">Edit Labels</span>
               </button>
             </div>
             <mat-divider class="div"></mat-divider>
             <button mat-button class="navadd">
               <div class="sidenave">
                 <mat-icon class="icon">archive</mat-icon>
-                <div class="note">Archive</div>
+                <span class="note">Archive</span>
               </div>
             </button>
             <mat-divider class="div"></mat-divider>
             <button mat-button class="navadd">
               <div class="sidenave">
                 <mat-icon class="icon">delete</mat-icon>
-                <div class="note">Trash</div>
+                <span class="note">Trash</span>
               </div>
             </button>
           </div>
