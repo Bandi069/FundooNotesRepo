@@ -1,0 +1,47 @@
+.button{
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 4px;
+}
+.icon{
+    font-size: 20px;
+}
+.heading{
+    font-size: 15px;
+    margin: 10px 15px;
+}
+.iconbuttons{
+    margin-top: 10px;
+}
+// .verticalbutton
+// {
+//     aria-hidden =false;
+//      aria-label ="expandmenu"  ; 
+// }
+
+.Reminderbutton{
+    display: grid;
+}
+.align{
+    display:flex;
+}
+.space{
+    padding-left: 80px;
+}
+.space1{
+    padding-left: 89px;
+}
+.colorIcon{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 3px;
+}
+.colorIcons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu{
+    max-width: 100%;
+}

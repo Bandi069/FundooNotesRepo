@@ -1,0 +1,71 @@
+<div class="iconbuttons">
+  <button mat-icon-button class="button" matTooltip="Remind me">
+    <mat-icon class="icon" [matMenuTriggerFor]="menu">add_alert</mat-icon>
+  </button>
+  <button mat-icon-button class="button" matTooltip="Collaborator">
+    <mat-icon class="icon" (click)="AddCollaborator(data)">person_add</mat-icon>
+  </button>
+  <button mat-icon-button class="button" matTooltip="Change color">
+    <mat-icon class="icon" [matMenuTriggerFor]="color">color_lens</mat-icon>
+  </button>
+  <button mat-icon-button class="button" (click)="addImage(data)" matTooltip="Add image">
+    <mat-icon class="icon">add_photo_alternate</mat-icon>
+  </button>
+  <button mat-icon-button class="button">
+    <mat-icon class="icon">archive</mat-icon>
+  </button>
+   <!-- <button mat-icon-button class="button" *ngIf="!data.archive" (click)="Archive()" matTooltip="Archive">
+    <mat-icon class="icon">archive</mat-icon>
+  </button>
+  <button mat-icon-button class="button" *ngIf="data.archive" (click)="unArchive()" matTooltip="Unarchive">
+    <mat-icon class="icon">unarchive</mat-icon>
+  </button> -->
+  <button class="verticalbutton" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="more">
+    <mat-icon class="icon" aria-label="expand menu">more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div class="heading">Reminder:</div>
+  <div class="Reminderbutton">
+  <button mat-button class="Reminderbutton" (click)="Remainder8PM()">
+    <div class="align">
+      <div>Later Today</div>
+      <div class="space">8PM</div>
+    </div>
+  </button>
+  <button mat-button class="Reminderbutton" (click)="Remainder8AM()">
+    <div class="align">
+    <div>Tomorrow</div>
+    <div class="space1">8AM</div>
+  </div>
+  </button>
+  </div>
+  </mat-menu>
+  
+<mat-menu #color="matMenu"  class ="menu">
+    <div class="colorIcons">
+<div *ngFor="let color of Colors;  index as i">
+  <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
+        (click)="updatecolor(i, note.id)"  matTooltip="{{color.name}}">
+    </button>
+</div>
+</div>
+</mat-menu>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span>Delete note</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="addLabelMenu">
+      <span>Add label</span>
+    </button>
+    <button mat-menu-item>
+      <span>Add drawing</span>
+    </button>
+    <button mat-menu-item>
+      <span>Make a copy</span>
+    </button>
+    <button mat-menu-item>
+      <span>show checkboxes</span>
+    </button>
+  </mat-menu>
+</div>
