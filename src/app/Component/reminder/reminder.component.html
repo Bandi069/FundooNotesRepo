@@ -1,5 +1,28 @@
 <div *ngIf="notes.length <= 0">
     <mat-icon class="archive">notifications</mat-icon>
-    <img class="archive" src="./assets/images/remainder.png"> -->
-    <div class="text">Notes with upcoming reminders appear here!!</div>
+    <img class="archive" src="./assets/images/remainder.png">
+    <div class="text">Notes with upcoming reminders appear here</div>
+</div>
+<div class="reminderclass" fxLayoutAlign="center center">
+    <div class="reminder">
+        <mat-card class="card" [style.backgroundColor]="note.color">
+            <div> class="title">
+                {{note.Title}}
+            </div>
+            <mat-card-content>
+                <div class="display">
+                    {{note.Description}}
+                </div>
+                <mat-card-footer>
+                    <mat-chip-list>
+                        <mat-chip class="remin" *ngIf="note.reminder">
+                            <mat-icon matChipRemove class="remindertime">access_time</mat-icon>
+                            <span class="reminderdisplay">{{note.reminder}}</span>
+                            <mat-icon matChipRemove class="remove" (click)="removeReminder(note)">close</mat-icon>
+                        </mat-chip>
+                    </mat-chip-list>
+                </mat-card-footer>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>
