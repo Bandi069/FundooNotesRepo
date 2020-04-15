@@ -58,9 +58,10 @@
         <mat-nav-list class="sidenavlist">
           <div class="sidenavbar">
             <div class="sidenave">
-              <button mat-button class="navadd">
+              <button mat-button class="navadd" [routerLink]="['note']" routerLinkActive="router-link-active" (click)="headerName='Notes'"
+              [ngClass]="{'sidename': headerName!='Notes', 'sideNames': headerName=='Notes'}" >
                 <mat-icon class="icon">emoji_objects</mat-icon>
-                <span class="note">Notes</span>
+                <span class="note" >Notes</span>
               </button>
             </div>
             <div class="sidenave">
@@ -78,7 +79,8 @@
             <mat-divider class="div"></mat-divider>
             <button mat-button class="navadd">
               <div class="sidenave">
-                <mat-icon class="icon">archive</mat-icon>
+                <mat-icon class="icon" [routerLink]="['\archive']" routerLinkActive="router-link-active" (click)="headerName='Archive'"
+                [ngClass]="{'sidename': headerName!='Archive', 'sideNames': headerName=='Archive'}" >archive</mat-icon>
                 <span class="note">Archive</span>
               </div>
             </button>
@@ -93,7 +95,7 @@
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content class="SidenavContent">
-        <router-outlet> </router-outlet>
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>

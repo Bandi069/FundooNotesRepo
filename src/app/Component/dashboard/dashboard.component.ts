@@ -5,8 +5,9 @@ import { Subject } from 'rxjs';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav'; 
-
-
+import { Route } from '@angular/compiler/src/core';
+import { DataSharingService } from 'src/app/Services/datasharing.service';
+import { NoteService } from 'src/app/Services/note.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,29 +16,26 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 })
 export class DashboardComponent implements OnInit {
   mobileQuery: MediaQueryList;
-ngOnInit()
-{} 
- fillerNav = Array.from({length: 6}, (_, i) => `Nav Item ${i + 1}`);
-
-  // fillerContent = Array.from({length: 6}, () =>
-  //     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  //      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  //      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-  //      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-  //      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
-
+  fillerNav = Array.from({length: 6}, (_, i) => `Nav Item ${i + 1}`);
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    private datasharing:DataSharingService,
+    private route:Router,
+    private serviobj:NoteService,
+    public dialog:MatDialog,
+    media:MediaMatcher,
+    Detector:ChangeDetectorRef) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this._mobileQueryListener = () => Detector.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
-
+ngOnInit()
+{
+} 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+ shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+ 
 }
-  
-
