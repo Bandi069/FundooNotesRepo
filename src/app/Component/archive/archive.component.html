@@ -1,6 +1,31 @@
 <div *ngIf="note.length <=0">
     <div>
-        <img class="archive" src="./assets/image/archive.png">
+        <img class="archive" src="./assets/images/archive.png">
     </div>
     <span class="centertext">Your archived notes appear here!!</span>
+</div>
+<div class="archiveclass" fxLayoutAlign="center center">
+    <div *ngFor="let note of notes">
+        <div class="mainarchive">
+            <mat-card class="card"
+                [ngClass]="{'cardGridView':Archive=='row wrap','cardListView':Archive=='column wrap'}" fxFlex.xs="100"
+                [style.backgroundColor]="note.color">
+                <div>
+                    <div fxFlex="80" class="archivetitle">
+                        {{note.Title}}
+                    </div>
+                </div>
+                <mat-card-content>
+                    <div class="display">
+                        {{note.Description}}
+                    </div>
+                    <div class="final" >
+                        <button mat-icon-button matTooltip="unarchive" (click)="unarchive(note)">
+                            <img src="./assets/images/unarchive.png">
+                        </button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
 </div>
