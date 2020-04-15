@@ -1,14 +1,14 @@
-<mat-card *ngIf="!card2" class="card" (click)="note()">
+<mat-card *ngIf="!Note2" class="card" (click)="note()">
   <div class="takeNote">Take a note...</div>
 </mat-card>
 
-<mat-card *ngIf="!card1" class="card">
+<mat-card *ngIf="!Note1" class="card">
   <div class="text">
     <input type="text" class="notetext" placeholder="Note Title" [(ngModel)]="title">
     <input class="notetext" type="text" placeholder="Take a note......" [(ngModel)]="description">
   </div>
-
+<app-icons></app-icons>
   <div class="cancelclass">
-    <button mat-button class="close" (click)="close()">Cancel</button>
+    <button mat-button class="close" (click)="close()">Close</button>
   </div>
 </mat-card>

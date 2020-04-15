@@ -12,8 +12,8 @@ export class NoteComponent implements OnInit {
   userData=JSON.parse(localStorage.getItem('userData'));
   title;
   description;
-  card1 = true;
-  card2 = false;
+  Note1 = true;
+  Note2 = false;
   constructor(
     private dataSharing:DataSharingService,
     private notes:NoteService,  
@@ -23,13 +23,12 @@ export class NoteComponent implements OnInit {
   }
  
   note(){
-        this.card2=true;
-        this.card1=false;
+        this.Note2=true;
+        this.Note1=false;
       }
-      
       close(){
-        this.card1 = true;
-        this.card2 = false;
+        this.Note1 = true;
+        this.Note2 = false;
         if(this.title != null || this.description !=null){
           this.notes.addNote(this.title ,this.description,this.userData.email).subscribe((status)=>{
             if(status != null){
