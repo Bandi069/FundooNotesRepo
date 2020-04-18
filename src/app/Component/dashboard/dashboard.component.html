@@ -26,13 +26,13 @@
       </button>
     </div>
     <div>
-      <img class="picture" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/images/user.png"
+      <img class="picture propic" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/images/user.jpg"
         [matMenuTriggerFor]="menu">
       <img class="picture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePicture}}" [matMenuTriggerFor]="menu">
     </div>
     <mat-menu #menu="matMenu">
       <div class="photo">
-        <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="/assets/images/user.png">
+        <img class="pic" alt="Profile Picture" *ngIf="!profilePic" src="/assets/images/user.jpg">
         <img class="pic" alt="Profile Picture" *ngIf="profilePic" src="{{profilePicture}}">
       </div>
       <div class="changePic">
@@ -57,42 +57,46 @@
         fixedTopGap="56" opened>
         <mat-nav-list class="sidenavlist">
           <div class="sidenavbar">
-            <div class="sidenave">
-              <button mat-button class="navadd navbar" [routerLink]="['note']" routerLinkActive="router-link-active"
+            <div class="sidenave snavbar">
+              <button mat-button class="navadd" [routerLink]="['note']" routerLinkActive="router-link-active"
                 (click)="headerName='Notes'"
                 [ngClass]="{'sidename': headerName!='Notes', 'sideNames': headerName=='Notes'}">
                 <mat-icon class="icon">emoji_objects</mat-icon>
                 <span class="note">Notes</span>
               </button>
             </div>
-            <div class="sidenave">
-              <button mat-button class="navadd navbar" >
+            <div class="sidenave snavbar">
+              <button mat-button class="navadd navbar">
                 <mat-icon class="icon">notifications</mat-icon>
                 <span class="note">Remainders</span>
               </button>
             </div>
-            <div class="sidenave">
-              <button mat-button class="navadd navbar" >
+            <div class="sidenave snavbar">
+              <button mat-button class="navadd">
                 <mat-icon class="icon">create</mat-icon>
                 <span class="note">Edit Labels</span>
               </button>
             </div>
-            <mat-divider class="div"></mat-divider>
-            <button mat-button class="navadd navbar" >
-              <div class="sidenave">
+            <!-- <mat-divider class="div"></mat-divider> -->
+            <div class="sidenave snavbar">
+              <button mat-button class="navadd">
+
                 <mat-icon class="icon" [routerLink]="['archive']" routerLinkActive="router-link-active"
                   (click)="headerName='Archive'"
                   [ngClass]="{'sidename': headerName!='Archive', 'sideNames': headerName=='Archive'}">archive</mat-icon>
                 <span class="note">Archive</span>
-              </div>
-            </button>
-            <mat-divider class="div"></mat-divider>
-            <button mat-button class="navadd navbar" >
-              <div class="sidenave">
+
+              </button>
+            </div>
+            <!-- <mat-divider class="div"></mat-divider> -->
+            <div class="sidenave snavbar">
+              <button mat-button class="navadd">
+
                 <mat-icon class="icon">delete</mat-icon>
                 <span class="note">Trash</span>
-              </div>
-            </button>
+
+              </button>
+            </div>
           </div>
         </mat-nav-list>
       </mat-sidenav>

@@ -65,7 +65,8 @@ h3{
     padding-left: 46%;
 }
 .navadd{
-    width:60%;
+    display: flex;
+    //width:100%;
     background: transparent;
     outline: none;
     border: none;
@@ -86,12 +87,17 @@ h3{
    // margin: auto;
 }
 .icon{
-    margin-top: 5px;
+    margin-top: 0px;
 }
 .sidenave{
     user-select: none;
     display:flex;
-    padding: 10px 5px 10px 5px;
+    padding: 1px 81px 10px 11px;
+border-top-right-radius: 52px 26px;
+border-bottom-right-radius: 42px 25px;
+// //     padding: 10px 5px 10px 5px;
+// //     border-top-right-radius: 57px 20px;
+// // border-bottom-right-radius: 62px 21px;
 }
 .note{
     padding-left: 30px;
@@ -173,6 +179,9 @@ margin-top: 50px;
     font: sans-serif;
     font-size: 1em;
 }
+.propic{
+    border-radius:30px;
+}
 .picture{
     width: 50px;
 padding-left: 80px;
@@ -190,9 +199,11 @@ padding-top: 10px;
 .menubutton{
    left:10px;
 }
-.navbar:hover {
-    background-color:orangered;
-    }
+.snavbar:hover {
+    background-color:#feefc3;
+    width:60%;
+}
+
 // .picturecls
 // {
 // }
