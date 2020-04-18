@@ -58,34 +58,36 @@
         <mat-nav-list class="sidenavlist">
           <div class="sidenavbar">
             <div class="sidenave">
-              <button mat-button class="navadd" [routerLink]="['note']" routerLinkActive="router-link-active" (click)="headerName='Notes'"
-              [ngClass]="{'sidename': headerName!='Notes', 'sideNames': headerName=='Notes'}" >
+              <button mat-button class="navadd navbar" [routerLink]="['note']" routerLinkActive="router-link-active"
+                (click)="headerName='Notes'"
+                [ngClass]="{'sidename': headerName!='Notes', 'sideNames': headerName=='Notes'}">
                 <mat-icon class="icon">emoji_objects</mat-icon>
-                <span class="note" >Notes</span>
+                <span class="note">Notes</span>
               </button>
             </div>
             <div class="sidenave">
-              <button mat-button class="navadd">
+              <button mat-button class="navadd navbar" >
                 <mat-icon class="icon">notifications</mat-icon>
                 <span class="note">Remainders</span>
               </button>
             </div>
             <div class="sidenave">
-              <button mat-button class="navadd">
+              <button mat-button class="navadd navbar" >
                 <mat-icon class="icon">create</mat-icon>
                 <span class="note">Edit Labels</span>
               </button>
             </div>
             <mat-divider class="div"></mat-divider>
-            <button mat-button class="navadd">
+            <button mat-button class="navadd navbar" >
               <div class="sidenave">
-                <mat-icon class="icon" [routerLink]="['\archive']" routerLinkActive="router-link-active" (click)="headerName='Archive'"
-                [ngClass]="{'sidename': headerName!='Archive', 'sideNames': headerName=='Archive'}" >archive</mat-icon>
+                <mat-icon class="icon" [routerLink]="['archive']" routerLinkActive="router-link-active"
+                  (click)="headerName='Archive'"
+                  [ngClass]="{'sidename': headerName!='Archive', 'sideNames': headerName=='Archive'}">archive</mat-icon>
                 <span class="note">Archive</span>
               </div>
             </button>
             <mat-divider class="div"></mat-divider>
-            <button mat-button class="navadd">
+            <button mat-button class="navadd navbar" >
               <div class="sidenave">
                 <mat-icon class="icon">delete</mat-icon>
                 <span class="note">Trash</span>
