@@ -1,0 +1,17 @@
+<div *ngIf="notepara=='notes'">
+    <app-getnote></app-getnote>
+    <div class="dis">
+        <div *ngFor="let note of allnotes" class="notearea">
+            <app-editcard *ngIf="!note.bin&&!note.archive&&note.pin=='1'" [param]="notepara" [labels]="labelNotes"
+                [notes]="note"></app-editcard>
+        </div>
+    </div>
+    <div class="Show">
+            <div *ngFor="let note of allnotes" class="notearea">
+                <app-editcard *ngIf="!note.bin&&!note.archive&&!note.pin" [param]="gridView" [labels]="labelNotes"
+                    [notes]="note">
+                </app-editcard>
+            </div>
+        
+    </div>
+</div>
