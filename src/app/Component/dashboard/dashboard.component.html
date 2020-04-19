@@ -1,7 +1,7 @@
 <div class="total">
   <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
     <button class="menubutton" mat-icon-button (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon matTooltip="Main Menu">menu</mat-icon>
     </button>
     <img src="assets/images/fun.png" class="image">
     <h3>FUNDOO NOTE</h3>
@@ -41,8 +41,7 @@
       <mat-divider></mat-divider>
       <button mat-button class="add">
         <div class="collab">
-          <mat-icon class="addicon">person_add</mat-icon>
-          <span class="addAcount">Add Account</span>
+          <mat-icon class="addicon">person_add</mat-icon><span class="addAcount">Add Account</span>
         </div>
       </button>
       <div class="signoutclass">
@@ -60,13 +59,13 @@
             <div class="sidenave snavbar">
               <button mat-button class="navadd" [routerLink]="['note']" routerLinkActive="router-link-active"
                 (click)="headerName='Notes'"
-                [ngClass]="{'sidename': headerName!='Notes', 'sideNames': headerName=='Notes'}">
+                [ngClass]="{'sidenavname': headerName!='Notes', 'sideNames': headerName=='Notes'}">
                 <mat-icon class="icon">emoji_objects</mat-icon>
                 <span class="note">Notes</span>
               </button>
             </div>
             <div class="sidenave snavbar">
-              <button mat-button class="navadd navbar">
+              <button mat-button class="navadd navbar" [routerLink]="['reminder']" routerLinkActive="router-link-active">
                 <mat-icon class="icon">notifications</mat-icon>
                 <span class="note">Remainders</span>
               </button>
@@ -79,18 +78,16 @@
             </div>
             <!-- <mat-divider class="div"></mat-divider> -->
             <div class="sidenave snavbar">
-              <button mat-button class="navadd">
-
-                <mat-icon class="icon" [routerLink]="['archive']" routerLinkActive="router-link-active"
-                  (click)="headerName='Archive'"
-                  [ngClass]="{'sidename': headerName!='Archive', 'sideNames': headerName=='Archive'}">archive</mat-icon>
+              <button mat-button class="navadd" [routerLink]="['arch']"  routerLinkActive="router-link-active" (click)="headerName='Archive'"
+              [ngClass]="{'sidenavname': headerName!='Archive', 'sideNames': headerName=='Archive'}">
+                <mat-icon class="icon" >archive</mat-icon>
                 <span class="note">Archive</span>
 
               </button>
             </div>
             <!-- <mat-divider class="div"></mat-divider> -->
             <div class="sidenave snavbar">
-              <button mat-button class="navadd">
+              <button mat-button class="navadd" [routerLink]="['trash']" routerLinkActive="router-link-active">
 
                 <mat-icon class="icon">delete</mat-icon>
                 <span class="note">Trash</span>
