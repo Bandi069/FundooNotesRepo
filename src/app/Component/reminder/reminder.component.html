@@ -1,13 +1,14 @@
-<div *ngIf="notes.length <= 0">
-    <mat-icon class="archive">notifications</mat-icon>
-    <img class="archive" src="./assets/images/remainder.png">
+<div class="total">
+    <!-- <mat-icon class="archive">notifications</mat-icon> -->
+    <img class="reminderimg" src="./assets/images/reminder.png"> 
     <div class="text">Notes with upcoming reminders appear here</div>
 </div>
-<div class="reminderclass" fxLayoutAlign="center center">
+<!-- <div class="reminderclass" fxLayoutAlign="center center">
     <div class="reminder">
         <mat-card class="card" [style.backgroundColor]="note.color">
-            <div> class="title">
+            <div class="title">
                 {{note.Title}}
+                 
             </div>
             <mat-card-content>
                 <div class="display">
@@ -25,4 +26,4 @@
             </mat-card-content>
         </mat-card>
     </div>
-</div>
+</div> -->
