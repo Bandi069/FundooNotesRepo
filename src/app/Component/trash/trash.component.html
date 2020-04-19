@@ -1,1 +1,10 @@
-<p>trash works!</p>
+<div class="trashtotal">
+    <div fxLayoutAlign="center center" class="trashclass">
+       <span class="text"> Notes in Trash are deleted after 7 days.</span>
+        <div class="trashbutton" *ngIf="items.length > 0">
+             <button mat-button >
+                <span class="trash">Empty Trash</span>
+            </button> 
+        </div>
+    </div>
+</div>
