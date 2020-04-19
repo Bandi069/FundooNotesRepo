@@ -1,0 +1,38 @@
+<div class="totalnote">
+    <div class="note">
+        <mat-card class="card" *ngIf="flag==true" (click)="reverseFlag()">
+            <div data-text="Take a note.." class="textplace notecard" contenteditable="true">
+            </div>
+        </mat-card>
+    </div>
+    <div class="big-note" *ngIf="flag==false" >
+        <mat-card [style.backgroundColor]="setColor" >
+            <div class="titcard">
+                <input class="title" type="text" [formControl]="noteTitle" placeholder="Title">
+            </div>
+            <div class="place">
+                <textarea class="addnote" matTextareaAutosize [formControl]="noteContent"
+                    placeholder="Take a note..."></textarea>
+            </div>
+            <mat-chip-list class="list">
+
+                <mat-chip class="showreminders" *ngIf="reminderData">
+                    <mat-icon matChipRemove class="time-icon" style="margin-right: 8px;">access_time</mat-icon>
+                    <span class="showtime">{{reminderData}}</span>
+                    <mat-icon matChipRemove class="closecls" (click)="removeReminder()">close </mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+            <div class="icons">
+                <mat-card-footer>
+                    <app-icon (reminderEvent)="receiveReminderEvent($event)"
+                        (setColorEvent)="receiveSetColorEvent($event)" (archiveEvent)="receiveArchiveEvent($event)">
+                    </app-icon>
+                    <button mat-button (click)="addNote()"><span class="close">Close</span></button>
+                </mat-card-footer>
+            </div>
+        </mat-card>
+    </div>
+    <div class="appcard">
+        <app-card></app-card>
+    </div>
+</div>

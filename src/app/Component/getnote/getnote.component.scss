@@ -1,0 +1,84 @@
+.card{
+    border-radius: 10px;
+    margin-top:20px
+}
+
+.textplace{
+    border-color:white;
+}
+
+.notecard{
+    width:60%; color:rgb(173,166,166);
+}
+
+.note{
+    margin-top:20px;
+}
+
+.title{
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    width:100%;
+    background:transparent;
+}
+.textarea{
+    width: 100%;
+}
+.addnote{
+    font:550 14px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    background: transparent;
+    
+}
+.icons{
+    margin-top : 15px;
+    width: 100%;
+}
+.logo{
+    height: 39px;
+    width:10px;
+}
+
+
+.close{
+    box-sizing: border-box;
+    color: rgba(0,0,0,.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 550;
+    line-height: 1.25rem;
+    height: 36px;
+    padding: 8px 24px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.closecls{
+    visibility: hidden;
+}
+
+.showreminders {
+    opacity: 1;
+    visibility: hidden;
+}
+.showreminders:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.showtime{
+    color: rgba(0,0,0,.87);
+    font-weight: 550;
+    font-size: 11px;
+    border: 1px solid transparent;
+    text-align: center;
+
+}
+.list{
+    margin-top:10px;
+}
