@@ -1,20 +1,23 @@
-<div *ngIf="note.length <=0">
+ <div >
+    <!-- *ngIf="note.length <=0 -->
     <div>
         <img class="archive" src="./assets/images/archive.png">
     </div>
-    <span class="centertext">Your archived notes appear here!!</span>
+    <span class="centertext">Your archived notes appear here</span>
 </div>
+
 <div class="archiveclass" fxLayoutAlign="center center">
     <div *ngFor="let note of notes">
         <div class="mainarchive">
             <mat-card class="card"
-                [ngClass]="{'cardGridView':Archive=='row wrap','cardListView':Archive=='column wrap'}" fxFlex.xs="100"
+                [ngClass]="{'cardGridView':Archive=='row wrap','cardListView':Archive=='column wrap'}"
                 [style.backgroundColor]="note.color">
                 <div>
-                    <div fxFlex="80" class="archivetitle">
+                    <div  class="archivetitle">
                         {{note.Title}}
                     </div>
                 </div>
+                
                 <mat-card-content>
                     <div class="display">
                         {{note.Description}}
@@ -28,4 +31,4 @@
             </mat-card>
         </div>
     </div>
-</div>
+</div> 
