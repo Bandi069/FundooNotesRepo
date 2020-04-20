@@ -32,6 +32,7 @@ import { ReminderComponent } from './Component/reminder/reminder.component';
 import { GetnoteComponent } from './Component/getnote/getnote.component';
 import { CardComponent } from './Component/card/card.component';
 import { TrashComponent } from './Component/trash/trash.component';
+import { EditNoteComponent } from './Component/edit-note/edit-note.component';
 
  
 
@@ -50,7 +51,8 @@ import { TrashComponent } from './Component/trash/trash.component';
     ReminderComponent,
     GetnoteComponent,
     CardComponent,
-    TrashComponent
+    TrashComponent,
+    EditNoteComponent
   ],
   imports: [
     BrowserModule,
