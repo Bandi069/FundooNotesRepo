@@ -121,6 +121,16 @@ border-bottom-right-radius: 42px 25px;
 }
 .picture{
     margin-left: 100px;
+    background-size: 32px 32px;
+-moz-border-radius: 50%;
+border-radius: 50%;
+display: block;
+//margin: 0;
+overflow: hidden;
+position: relative;
+height: 32px;
+width: 32px;
+z-index: 0;
 }
 .white {
     background-color: white;
