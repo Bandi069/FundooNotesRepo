@@ -12,7 +12,7 @@ import { ArchiveComponent } from './Component/archive/archive.component';
 import { ReminderComponent } from './Component/reminder/reminder.component';
 import { DisplaynoteComponent } from './Component/displaynote/displaynote.component';
 import { GetnoteComponent } from './Component/getnote/getnote.component';
-
+import { TrashComponent }from './Component/trash/trash.component'
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'note', component: NoteComponent },
       {path : 'arch',component:ArchiveComponent},
       {path : 'reminder',component:ReminderComponent},
-      //{path:'trash',component:TrashComponent},
+      {path:'trash',component:TrashComponent},
       {path:'notedisplay',component:DisplaynoteComponent},
       {path :'getnote',component:GetnoteComponent}
     ]
