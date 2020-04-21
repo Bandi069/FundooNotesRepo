@@ -1,10 +1,12 @@
 <div *ngIf="notepara=='notes'">
-    <app-getnote></app-getnote>
+    <div class="getnote">
+        <app-getnote></app-getnote>
+    </div>
     <div class="pinned">PINNED
     </div>
     <div class="dis">
         <div *ngFor="let note of allnotes" class="notearea">
-            <app-editcard *ngIf="!note.bin&&!note.archive&&note.pin=='1'" [param]="notepara" [labels]="labelNotes"
+            <app-editcard *ngIf="!note.trash&&!note.archive&&note.pin=='1'" [param]="notepara" 
                 [notes]="note"></app-editcard>
         </div>
     </div>
@@ -12,9 +14,34 @@
     </div>
     <div class="display">
         <div *ngFor="let note of allnotes" class="notearea">
-            <app-editcard *ngIf="!note.bin&&!note.archive&&!note.pin" [param]="gridView" [labels]="labelNotes"
-                [notes]="note">
-            </app-editcard>
+            <app-edit-note *ngIf="!note.trash&&!note.archive&&!note.pin" [param]="gridView" [notes]="note">
+            </app-edit-note>
+        </div>
+    </div>
+</div>
+<div *ngIf="param=='Archive'">
+    <div class="archivedis">
+        <div class="archdis" *ngFor="let note of allnotes">
+            <app-edit-note *ngIf="!note.trash&&note.archive=='1'" [param]="gridView" [notes]="note">
+            </app-edit-note>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="param=='Trash'">
+    <div class="remindclass">
+        <div *ngFor="let note of allnotes" class="space">
+            <app-edit-note *ngIf="note.trash=='1'" [param]="gridView" [notes]="note"></app-edit-note>
+        </div>
+    </div>
+</div>
+<div *ngIf="param=='Reminder'">
+    <app-getnote></app-getnote>
+    <div class="reminddis">
+        <div *ngFor="let note of allnotes" class="space">
+            <div *ngIf="note.reminder!=null">
+                <app-edit-note *ngIf="!note.trash&&!note.archive" [param]="gridView" [ [notes]="note"></app-edit-note>
+            </div>
         </div>
     </div>
 </div>
