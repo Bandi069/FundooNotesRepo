@@ -33,6 +33,9 @@ import { GetnoteComponent } from './Component/getnote/getnote.component';
 import { CardComponent } from './Component/card/card.component';
 import { TrashComponent } from './Component/trash/trash.component';
 import { EditNoteComponent } from './Component/edit-note/edit-note.component';
+import { PinComponent } from './Component/pin/pin.component';
+import { LabelComponent } from './Component/label/label.component';
+import { EditlabelComponent } from './Component/editlabel/editlabel.component';
 
  
 
@@ -52,7 +55,10 @@ import { EditNoteComponent } from './Component/edit-note/edit-note.component';
     GetnoteComponent,
     CardComponent,
     TrashComponent,
-    EditNoteComponent
+    EditNoteComponent,
+    PinComponent,
+    LabelComponent,
+    EditlabelComponent
   ],
   imports: [
     BrowserModule,
