@@ -26,7 +26,7 @@
             </button>
         </div>
         <div>
-            
+
             <img class="picture propic" alt="ProfilePicture" *ngIf="!profilePic" src="/assets/images/user.jpg"
                 [matMenuTriggerFor]="menu">
             <img class="picture" alt="ProfilePicture" *ngIf="profilePic" src="{{profilePicture}}"
@@ -42,15 +42,15 @@
             </div>
             <mat-divider></mat-divider>
             <div class="addpersondiv">
-            <button mat-button class="add">
-                <div class="collab">
-                    <a class="addperson">
-                    <mat-icon class="addicon">person_add</mat-icon>
-                    <span class="addAcount">Add Account</span>
-                </a>
-                </div>
-            </button>
-        </div>
+                <button mat-button class="add">
+                    <div class="collab">
+                        <a class="addperson">
+                            <mat-icon class="addicon">person_add</mat-icon>
+                            <span class="addAcount">Add Account</span>
+                        </a>
+                    </div>
+                </button>
+            </div>
             <div class="signoutclass">
                 <button mat-button class="signout" (click)="logout()">Sign Out</button>
             </div>
@@ -66,16 +66,17 @@
                         <div class="sidenave snavbar">
                             <button mat-button class="navadd" [routerLink]="['note']"
                                 routerLinkActive="router-link-active" (click)="headerName='Notes'"
-                                [ngClass]="{'sidenavname': headerName!='Notes', 'sideNames': headerName=='Notes'}" opened>
+                                [ngClass]="{'sidenavname': headerName!='Notes', 'sideNames': headerName=='Notes'}"
+                                opened>
                                 <mat-icon class="icon">emoji_objects</mat-icon>
                                 <span class="note">Notes</span>
                             </button>
                         </div>
-                        <!-- <div class="sidenave snavbar" role="button"
-                          class="navadd navbar" [routerLink]="['reminder']"
-                                routerLinkActive="router-link-active">
-                                <mat-icon class="icon">notifications</mat-icon>
-                                <span class="note">Remainders</span>
+                        <!-- <div class="sidenave snavbar navadd navbar" role="button" mat-button [routerLink]="['reminder']"
+                            routerLinkActive="router-link-active" (click)="headerName='Reminder'"
+                            [ngClass]="{'sidenavname': headerName!='Reminder', 'sideNames': headerName=='Reminder'}">
+                            <mat-icon class="icon">notifications</mat-icon>
+                            <span class="note">Remainders</span>
                         </div> -->
                         <div class="sidenave snavbar">
                             <button mat-button class="navadd" [routerLink]="['reminder']"
@@ -83,7 +84,7 @@
                                 [ngClass]="{'sidenavname': headerName!='Reminder', 'sideNames': headerName=='Reminder'}">
                                 <mat-icon class="icon">notifications</mat-icon>
                                 <span class="note">Remainders</span>
-                                </button>
+                            </button>
                         </div>
 
                         <div class="sidenave snavbar">
