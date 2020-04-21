@@ -1,0 +1,20 @@
+<mat-card class="card" [ngStyle]="{'background-color':notes.color}">
+    <div class="editnotediv">
+        <div class="ntitle" (click)="Update(note)">
+            {{notes.title}}
+        </div>
+        <div class="ndescription" (click)="Updatenote(note)">
+            {{notes.description}}
+        </div>
+        <div class="chiplist" >
+            <mat-chip-list>
+                <mat-chip matTooltip="Delete Reminder" [ngStyle]="{'background-color' : notes.color}" class="reminder">
+                    <mat-icon matChipRemove class="remindtime">access_time</mat-icon>
+                    {{notes.reminder}}
+                    <mat-icon (click)="deleteReminder(notes.id)">close</mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <app-icon></app-icon>
+    </div>
+</mat-card>
