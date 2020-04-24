@@ -1,1 +1,24 @@
-<p>editlabel works!</p>
+<div mat-dialog-content class="editbody">
+    <div>
+        <div class="editlabelname">Edit labels</div>
+    </div>
+    <div>
+        <!-- <mat-icon class="cancel icon" matTooltip="Create label">add</mat-icon> -->
+        <mat-icon class="cancel icon" matTooltip="Cancel">close</mat-icon>
+        <input matInput class="create labelnew" placeholder="Create new label" value="" autocomplete="off">
+        <mat-icon role="button" matTooltip="Create label" mat-dialog-close class="check icon"
+            (click)="newLabel(data.value)">
+            check</mat-icon>
+    </div>
+    <label *ngFor="let lab of allLabelNames">
+        <div class="deletelabel">
+            <mat-icon matTooltip="Delete Label" (click)="deleteLabel(label.id)" mat-dialog-close>label</mat-icon>
+            <input *ngIf="edit" value="{{label. labelName}}">
+            <a *ngIf="!edit"><span> {{label. labelName}}</span></a>
+            <mat-icon (click)=editLabel() matTooltip="Rename Label" class="check">edit</mat-icon>
+        </div>
+    </label>
+    <div class="donediv" mat-dialog-actions>
+        <div role="button" class="donebutn" mat-dialog-close matTooltip="Done">Done</div>
+    </div>
+</div>
