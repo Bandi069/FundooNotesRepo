@@ -1,15 +1,19 @@
-<div class="totalnote">
+ <div class="totalnote">
     <div class="note">
         <mat-card class="card" *ngIf="flag==true" (click)="reverseFlag()">
-            <div data-text="Take a note.." class="textplace notecard" contenteditable="true">
+            <div text="Take a note.." class="textplace notecard" contenteditable="true">
             </div>
         </mat-card>
     </div>
-    <div class="big-note" *ngIf="flag==false" >
+    <div class="bignote" *ngIf="flag==false" >
         <mat-card [style.backgroundColor]="setColor" >
             <div class="titcard">
-                <input class="title" type="text" [formControl]="noteTitle" placeholder="Title">
+                <input class="title" type="text" [formControl]="noteTitle" placeholder="Title"> -->
+                <div class="pin" *ngIf="value==false" (click)="pinval()"  matTooltip="Pin note"> <img src="../../../assets/images/pinimg.svg"></div>
+                <div class="unpin" *ngIf="value==true" (click)="unpinval()" matTooltip="Unpin note"> <img src="../../../assets/images/unpinimg.svg"></div>
+           
             </div>
+
             <div class="place">
                 <textarea class="addnote" matTextareaAutosize [formControl]="noteContent"
                     placeholder="Take a note..."></textarea>
@@ -17,7 +21,7 @@
             <mat-chip-list class="list">
 
                 <mat-chip class="showreminders" *ngIf="reminderData">
-                    <mat-icon matChipRemove class="time-icon" style="margin-right: 8px;">access_time</mat-icon>
+                    <mat-icon matChipRemove class="time-icon" >access_time</mat-icon>
                     <span class="showtime">{{reminderData}}</span>
                     <mat-icon matChipRemove class="closecls" (click)="removeReminder()">close </mat-icon>
                 </mat-chip>
@@ -27,7 +31,7 @@
                     <app-icon (reminderEvent)="receiveReminderEvent($event)"
                         (setColorEvent)="receiveSetColorEvent($event)" (archiveEvent)="receiveArchiveEvent($event)">
                     </app-icon>
-                    <button mat-button (click)="addNote()"><span class="close">Close</span></button>
+                    <button mat-button (click)="addNote()" class="close">Close</button>
                 </mat-card-footer>
             </div>
         </mat-card>
