@@ -1,4 +1,4 @@
-<div>
-    <div class="pin" *ngIf="value==false" (click)="reverseValue()"> <img src="../../../assets/pinimg.svg"></div>
-    <div class="unpin" *ngIf="value==true" (click)="reverseValue()"> <img src="../../../assets/unpinimg.svg"></div>
+<div class="pinclass">
+    <div class="imgpin" *ngIf="value==false" (click)="pinval()"  matTooltip="Pin note"> <img src="../../../assets/images/pinimg.svg"></div>
+    <div class="imgpin" *ngIf="value==true" (click)="unpinval()" matTooltip="Unpin note"> <img src="../../../assets/images/unpinimg.svg"></div>
 </div>
