@@ -1,5 +1,10 @@
 <mat-card class="card" [ngStyle]="{'background-color':notes.color}">
     <div class="editnotediv">
+        <div class="pin">
+            <div class="title">
+                <app-pin *ngIf="!notes.trash" [notes]="notes"></app-pin>
+            </div>
+        </div>
         <div class="ntitle" (click)="Update(note)">
             {{notes.title}}
         </div>
