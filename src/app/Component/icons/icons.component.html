@@ -11,37 +11,43 @@
   <button mat-icon-button class="button" (click)="addImage(data)" matTooltip="Add image">
     <mat-icon class="icon">add_photo_alternate</mat-icon>
   </button>
-  <button mat-icon-button class="button">
+  <button mat-icon-button class="button" matTooltip="Archive">
     <mat-icon class="icon">archive</mat-icon>
   </button>
-  <!-- <button mat-icon-button class="button" *ngIf="!data.archive" (click)="Archive()" matTooltip="Archive">
+   <!-- <button mat-icon-button class="button"  (click)="Archive()" matTooltip="Archive">
     <mat-icon class="icon">archive</mat-icon>
   </button>
-  <button mat-icon-button class="button" *ngIf="data.archive" (click)="unArchive()" matTooltip="Unarchive">
+  <button mat-icon-button class="button" click)="unArchive()" matTooltip="Unarchive">
     <mat-icon class="icon">unarchive</mat-icon>
   </button> -->
   <button class="verticalbutton" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="more">
     <mat-icon class="icon" aria-label="expand menu">more_vert</mat-icon>
   </button>
   <mat-menu #remindermenu="matMenu">
-    <div class="heading"> Note Reminder</div>
+    <div class="heading"> Reminder:</div>
     <div class="Reminderbutton">
       <button mat-button class="Reminderbutton" (click)="Remainder8PM()">
         <div class="align">
-          <div>Tomorrow</div>
+          <div>Later today</div>
           <div class="space">8:00AM</div>
         </div>
       </button>
       <button mat-button class="Reminderbutton" (click)="Remainder8AM()">
         <div class="align">
-          <div>Next Week</div>
+          <div>Tomorroow</div>
           <div class="space1">8:00AM</div>
         </div>
       </button>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
     </div>
   </mat-menu>
   <mat-menu #color="matMenu" class="menu">
-    <div class="colorIcons">
+    <div class="colorIcons ">
       <div *ngFor="let color of Colors;  index as i">
         <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
           (click)="updatecolor(i, note.id)" matTooltip="{{color.name}}">

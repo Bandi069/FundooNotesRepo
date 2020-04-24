@@ -21,17 +21,18 @@ export class IconsComponent implements OnInit {
     this.note = this.data;
   }
   Colors = [
-    { colorCode: '#FFFFFF', name: 'white' },
-    { colorCode: '#FF0000', name: 'red' },
-    { colorCode: '#FFA500', name: 'orange' },
-    { colorCode: '#808080', name: 'gray' },
-    { colorCode: '#800080', name: 'purple' },
-    { colorCode: '#FFC0CB', name: 'pink' },
-    { colorCode: '#A52A2A', name: 'brown' },
-    { colorCode: '#008000', name: 'green' },
-    { colorCode: '#FFFF00', name: 'yellow' },
-    { colorCode: '#4b0082', name: 'indigo' },
-    { colorCode: '#008080', name: 'teal' }
+    { colorCode: '#FFFFFF', name: 'Default' },
+    { colorCode: '#FF0000', name: 'Red' },
+    { colorCode: '#FFA500', name: 'Orange' },
+    { colorCode: '#808080', name: 'Gray' },
+    { colorCode: '#800080', name: 'Purple' },
+    { colorCode: '#FFC0CB', name: 'Pink' },
+    { colorCode: '#0000FF', name: 'Blue' },
+    { colorCode: '#0000A0', name: 'Dark blue' },
+    { colorCode: '#A52A2A', name: 'Brown' },
+    { colorCode: '#008000', name: 'Green' },
+    { colorCode: '#FFFF00', name: 'Yellow' },
+    { colorCode: '#008080', name: 'Teal' }
   ];
   Remainder8PM() {
     this.note.addRemainder(this.data.id, "Today, 8:00 PM").subscribe((status) => {
@@ -73,6 +74,7 @@ export class IconsComponent implements OnInit {
       }
     });
   }
+
   updatecolor(index) {
     this.note.addColor(this.data.id, this.Colors[index].name).subscribe((status) => {
       if (status != null) {
