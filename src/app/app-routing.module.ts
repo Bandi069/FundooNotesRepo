@@ -14,13 +14,15 @@ import { DisplaynoteComponent } from './Component/displaynote/displaynote.compon
 import { GetnoteComponent } from './Component/getnote/getnote.component';
 import { TrashComponent }from './Component/trash/trash.component';
 import {EditNoteComponent} from './Component/edit-note/edit-note.component';
+import { LabelComponent } from './Component/label/label.component';
+import { EditlabelComponent } from './Component/editlabel/editlabel.component';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot', component: ForgotPasswordComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },
-  {path :'edit',component:EditNoteComponent},
+  //{path :'edit',component:EditNoteComponent},
  //{ path: 'arch', component: ArchiveComponent },
   {
     path: 'dashboard', component: DashboardComponent,
@@ -30,7 +32,9 @@ const routes: Routes = [
       {path : 'reminder',component:ReminderComponent},
       {path:'trash',component:TrashComponent},
       {path:'notedisplay',component:DisplaynoteComponent},
-      {path :'getnote',component:GetnoteComponent}
+      {path :'getnote',component:GetnoteComponent},
+      {path:'editlabel',component:EditlabelComponent},
+     // {path:'editlabel',component:LabelComponent}
     ]
   }
   //{path : 'icon', component: IconsComponent},
