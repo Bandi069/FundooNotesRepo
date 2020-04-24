@@ -4,6 +4,7 @@
         <input style="border: none; outline: none;" [ngStyle]="{'background-color' : data.note.color}" matInput
             type="text" class="cardtitle" value="{{data.note.title}}">
     </div>
+    <app-pin [notes]="data.note"></app-pin>
     <div>
         <input [ngStyle]="{'background-color' : data.note.color}" matInput type="text" class="title"
             value="{{data.note.description}}">

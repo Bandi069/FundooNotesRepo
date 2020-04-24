@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { Route } from '@angular/compiler/src/core';
 import { DataSharingService } from 'src/app/Services/datasharing.service';
 import { NoteService } from 'src/app/Services/note.service';
+import { EditlabelComponent } from '../editlabel/editlabel.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,7 +26,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private datasharing: DataSharingService,
     private route: Router,
-    private serviobj: NoteService,
+    private service: NoteService,
     public dialog: MatDialog,
     media: MediaMatcher,
     Detector: ChangeDetectorRef) {
@@ -43,5 +44,12 @@ export class DashboardComponent implements OnInit {
   enableDisableRule() {
     this.toggle = !this.toggle;
     this.status = this.toggle ? 'Enable' : 'Disable';
+  }
+  openDialog(): void {
+    const dialog = this.dialog.open(EditlabelComponent, {
+      //width: '400px',
+      //height:'250px'
+      //data: {name: this.name, animal: this.animal}
+    });
   }
 }

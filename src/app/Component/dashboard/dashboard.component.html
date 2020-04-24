@@ -88,7 +88,8 @@
                         </div>
 
                         <div class="sidenave snavbar">
-                            <button mat-button class="navadd">
+                            <button mat-button class="navadd" (click)="openDialog()"  >
+                                <!-- [routerLink]="['editlabel']" routerLinkActive="router-link-active" -->
                                 <mat-icon class="icon">create</mat-icon>
                                 <span class="note">Edit Labels</span>
                             </button>
