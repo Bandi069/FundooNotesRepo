@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
+import { AccountService } from 'src/app/Services/account.service';
 
 
 @Component({
@@ -10,7 +11,10 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private service:AccountService,
+    private route:Router
+  ) { }
   firstName = new FormControl('', [
     Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z]*'), ]);
   lastName = new FormControl('', [
@@ -34,5 +38,18 @@ export class RegisterComponent implements OnInit {
   //       this.password.hasError('minlength') ? 'Password Minmum length 6 characters' :
   //         this.password.hasError('maxlength') ? 'Password Max Legnth upto 15 characters' :
   //           '';
+  }
+  registration(){
+    const data={
+    firstName:this.firstName.value,
+    lastName:this.lastName.value,
+    emailid:this.email.value,password:this.password.value
+    };
+    console.log(data);
+    this.service.register(data).subscribe((result)=>{const temp=JSON.stringify(result);
+    const res=JSON.parse(temp);
+  this.route.navigate(['/login']);
+});
+this.service.register(data);
   }
 }
