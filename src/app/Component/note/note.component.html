@@ -7,8 +7,12 @@
     <input type="text" class="notetext" placeholder="Note Title" [(ngModel)]="title">
     <input class="notetext" type="text" placeholder="Take a note......" [(ngModel)]="description">
   </div>
-<app-icons></app-icons>
-  <div class="cancelclass">
-    <button mat-button class="close" (click)="close()">Close</button>
+  <div class="box">
+    <div class="bottomalign">
+      <app-icons></app-icons>
+    </div>
+    <div class=" cancelclass">
+      <button mat-button class="closecls" (click)="close()">Close</button>
+    </div>
   </div>
 </mat-card>
