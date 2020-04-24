@@ -1,1 +1,4 @@
-<p>pin works!</p>
+<div>
+    <div class="pin" *ngIf="value==false" (click)="reverseValue()"> <img src="../../../assets/pinimg.svg"></div>
+    <div class="unpin" *ngIf="value==true" (click)="reverseValue()"> <img src="../../../assets/unpinimg.svg"></div>
+</div>

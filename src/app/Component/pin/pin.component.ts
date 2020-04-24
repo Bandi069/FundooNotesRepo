@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PinComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private serviceobj:NoteService,
+    private snackbar:MatSnackBar,
+    private datasharing:DataSharingService) { }
   ngOnInit() {
   }
 
