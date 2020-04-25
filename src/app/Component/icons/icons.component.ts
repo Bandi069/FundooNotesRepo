@@ -1,8 +1,9 @@
 //import { Component, OnInit } from '@angular/core';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { NoteService } from 'src/app/Services/note.service';
 import { DataSharingService } from 'src/app/Services/datasharing.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-icons',
@@ -11,15 +12,20 @@ import { DataSharingService } from 'src/app/Services/datasharing.service';
 })
 export class IconsComponent implements OnInit {
   @Input() data;
-  notes = [];
+  @Input() value:any;
+  //@Input() notes=any;
+  @Output() setColorEvent=new EventEmitter<any>();
+  //notes = [];
+  //color:Note=new Note();
   constructor(private dataSharing: DataSharingService,
     public dialog: MatDialog,
-    private note: NoteService,
+    private noteserve: NoteService,
     private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.note = this.data;
+    this.noteserve = this.data;
   }
+
   Colors = [
     { colorCode: '#FFFFFF', name: 'Default' },
     { colorCode: '#FF0000', name: 'Red' },
@@ -34,8 +40,14 @@ export class IconsComponent implements OnInit {
     { colorCode: '#FFFF00', name: 'Yellow' },
     { colorCode: '#008080', name: 'Teal' }
   ];
+  setcolor(id,changeColor)
+  {
+    this.setColorEvent.emit("done");
+    this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
+  }
+
   Remainder8PM() {
-    this.note.addRemainder(this.data.id, "Today, 8:00 PM").subscribe((status) => {
+    this.noteserve.addRemainder(this.data.id, "Today, 8:00 PM").subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
         this.snackBar.open('Remainder added.', '', { duration: 2000 });
@@ -43,7 +55,7 @@ export class IconsComponent implements OnInit {
     });
   }
   Remainder8AM() {
-    this.note.addRemainder(this.data.id, "Tomorrow, 8:00 AM").subscribe((status) => {
+    this.noteserve.addRemainder(this.data.id, "Tomorrow, 8:00 AM").subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
         this.snackBar.open('Remainder added.', '', { duration: 2000 });
@@ -51,7 +63,7 @@ export class IconsComponent implements OnInit {
     });
   }
  Archive() {
-    this.note.addArchive(this.data.id).subscribe((status) => {
+    this.noteserve.addArchive(this.data.id).subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
         this.snackBar.open('Added archive.', '', { duration: 2000 });
@@ -59,7 +71,7 @@ export class IconsComponent implements OnInit {
     });
   }
  unArchive() {
-    this.note.unArchive(this.data.id).subscribe((status) => {
+    this.noteserve.unArchive(this.data.id).subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
         this.snackBar.open('Removed from archive.', '', { duration: 2000 });
@@ -67,7 +79,7 @@ export class IconsComponent implements OnInit {
     });
   }
   addTrash() {
-    this.note.addTrash(this.data.id).subscribe((status) => {
+    this.noteserve.addTrash(this.data.id).subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
         this.snackBar.open('Added to trash.', '', { duration: 2000 });
@@ -75,12 +87,12 @@ export class IconsComponent implements OnInit {
     });
   }
 
-  updatecolor(index) {
-    this.note.addColor(this.data.id, this.Colors[index].name).subscribe((status) => {
-      if (status != null) {
-        this.dataSharing.changeMessage(true);
-        console.log("color added");
-      }
-    });
-  }
+  // updatecolor(index) {
+  //   this.note.addColor(this.data.id, this.Colors[index].name).subscribe((status) => {
+  //     if (status != null) {
+  //       this.dataSharing.changeMessage(true);
+  //       console.log("color added");
+  //     }
+  //   });
+  // }
 }

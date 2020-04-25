@@ -5,7 +5,7 @@
   <button mat-icon-button class="button" matTooltip="Collaborator">
     <mat-icon class="icon" (click)="AddCollaborator(data)">person_add</mat-icon>
   </button>
-  <button mat-icon-button class="button" matTooltip="Change color">
+  <button mat-icon-button class="button" matTooltip="Change color" class="{{value}}">
     <mat-icon class="icon" [matMenuTriggerFor]="color">color_lens</mat-icon>
   </button>
   <button mat-icon-button class="button" (click)="addImage(data)" matTooltip="Add image">
@@ -35,22 +35,30 @@
       <button mat-button class="Reminderbutton" (click)="Remainder8AM()">
         <div class="align">
           <div>Tomorroow</div>
-          <div class="space1">8:00AM</div>
+          <div class="space">8:00AM</div>
         </div>
       </button>
-      <mat-form-field>
+      <button mat-button class="Reminderbutton" (click)="datepicker()">
+        <div class="align">
+          <mat-icon class="timericon">schedule</mat-icon>
+          <div class="picktime">Pick date & time</div>
+        </div>
+
+    </button>
+      <!-- <mat-form-field>
+        <mat-icon></mat-icon>
         <input matInput [matDatepicker]="picker" placeholder="Choose a date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      </mat-form-field> -->
       
     </div>
   </mat-menu>
   <mat-menu #color="matMenu" class="menu">
     <div class="colorIcons ">
-      <div *ngFor="let color of Colors;  index as i">
+      <div *ngFor="let color of Colors">
         <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
-          (click)="updatecolor(i, note.id)" matTooltip="{{color.name}}">
+          (click)="setcolor(notes.id, color.color)" matTooltip="{{color.name}}">
         </button>
       </div>
     </div>
