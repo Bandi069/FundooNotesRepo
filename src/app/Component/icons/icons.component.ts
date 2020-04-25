@@ -27,25 +27,42 @@ export class IconsComponent implements OnInit {
   }
 
   Colors = [
+    [
     { colorCode: '#FFFFFF', name: 'Default' },
     { colorCode: '#FF0000', name: 'Red' },
     { colorCode: '#FFA500', name: 'Orange' },
     { colorCode: '#808080', name: 'Gray' },
+    ],
+    [
     { colorCode: '#800080', name: 'Purple' },
     { colorCode: '#FFC0CB', name: 'Pink' },
     { colorCode: '#0000FF', name: 'Blue' },
     { colorCode: '#0000A0', name: 'Dark blue' },
+  ],
+  [
     { colorCode: '#A52A2A', name: 'Brown' },
     { colorCode: '#008000', name: 'Green' },
     { colorCode: '#FFFF00', name: 'Yellow' },
     { colorCode: '#008080', name: 'Teal' }
+  ]
   ];
   setcolor(id,changeColor)
   {
     this.setColorEvent.emit("done");
     this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
   }
-
+  reminderDialog(): void {
+    const dialogRef = this.dialog.open(IconsComponent, {
+      width: '250px',
+height:'150px'
+      //data: {name: this.name, animal: this.animal}
+    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    //   //this.animal = result;
+    // });
+  }
+  
   Remainder8PM() {
     this.noteserve.addRemainder(this.data.id, "Today, 8:00 PM").subscribe((status) => {
       if (status != null) {
