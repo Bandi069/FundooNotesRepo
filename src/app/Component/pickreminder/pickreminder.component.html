@@ -3,4 +3,10 @@
         <mat-icon matTooltip="Go back" mat-dialog-close>arrow_back</mat-icon>
     </div>
     <div class="pictag">Pick date & time</div>
+    <mat-form-field>
+        <mat-icon></mat-icon>
+        <input matInput [matDatepicker]="date" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 </mat-card>
