@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { DialogData } from '../editlabel/editlabel.component';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-pickreminder',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PickreminderComponent implements OnInit {
 
-  constructor() { }
-
+  constructor( public dialogRef: MatDialogRef<PickreminderComponent>,
+    @Inject(MAT_DIALOG_DATA) private data: DialogData) { }
+    // onNoClick(): void {
+    //   this.dialogRef.close();
+    // }
   ngOnInit() {
   }
+  
 
 }
