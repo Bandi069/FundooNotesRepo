@@ -2,8 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 //import { DialogData } from '../editlabel/editlabel.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export interface DialogData {
-  //animal: string;
-  //name: string;
+  
 }
 @Component({
   selector: 'app-pickreminder',
