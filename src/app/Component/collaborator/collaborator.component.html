@@ -1,17 +1,31 @@
-<div class="collabdiv" fxFlex="100" fxLayout="column">
-    <div fxFlex="100" class="main">
-        <div class="collabname">Collaborators</div>
-        <div class="ownerdetails" fxLayout="row">
-            <div class="divclass">
-                <div class="ownerimg"> <img [src]="profilepic" class="accountpic"> </div>
-                <div fxLayout="column">
-                    <div>
-                        <span class="names"> {{firstName}} {{lastName}} </span>
-                        <span class="owner">(Owner)</span>
+<!-- <mat-dialog-container class="container"> -->
+<mat-card class="card">
+    <div mat-dialog-content class="collabdiv" fxFlex="100" fxLayout="column">
+        <div fxFlex="100" class="main">
+            <div class="collabname">Collaborators</div>
+            <div class="ownerdetails" fxLayout="row">
+                <div class="divclass">
+                    <div class="ownerimg"> <img [src]="profilepic" class="accountpic"> </div>
+                    <div fxLayout="column">
+                        <div>
+                            <span class="names"> {{firstName}} {{lastName}} </span>
+                            <span class="owner">(Owner)</span>
+                        </div>
+                        <div class="usermail"> {{email}}</div>
                     </div>
-                    <div class="usermail"> {{email}}</div>
+                </div>
+                <div>
+                    <div>
+                        <img src="../../../assets/images/person_add.svg">
+                    </div>
+                    <div class="add">
+                        <input matInput type="text" class="newcollab" aria-label="Number"
+                            placeholder="Person or email to share with" [matAutocomplete]="auto">
+                            <img src=""
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</mat-card>
+<!-- </mat-dialog-container> -->
