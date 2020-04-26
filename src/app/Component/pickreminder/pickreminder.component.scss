@@ -1,8 +1,8 @@
 .card{
-    // align-items: center;
-    // border-radius: 4px;
-    // cursor: default;
-    // font-size: 13px;
+    align-items: center;
+    border-radius: 4px;
+    cursor: default;
+    font-size: 13px;
     height: 100px;
     width: 100px;
 }
@@ -16,20 +16,27 @@
     font-size: 14px;
     padding: 15px;
 }
-// .content{
-//     height: 100px;
-//     width: 100px;
-//     margin-left: 450px;
-//     margin-top: 170px;
-// }
-//.mat-dialog-container {
-//     display: flex;
-//     padding: 24px;
-//     border-radius: 4px;
-//     box-sizing: border-box;
-//     outline: 0;
-//     margin-left: 450px;
-//     margin-top: 150px;
-//     height: 150px;
-//     width: 200px;
-// }
+.content{
+    height: 100px;
+    width: 100px;
+    margin-left: 450px;
+    margin-top: 170px;
+}
+.mat-dialog-container {
+    display: flex;
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: 0;
+    margin-left: 450px;
+    margin-top: 150px;
+    height: 150px;
+    width: 200px;
+}
+.editbody
+{
+    max-height: 400px;
+overflow-y: hidden;
+padding: 15px;
+width: 284px;
+}
