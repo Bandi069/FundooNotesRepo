@@ -2,8 +2,8 @@
   <button mat-icon-button class="button" matTooltip="Remind me">
     <mat-icon class="icon" [matMenuTriggerFor]="remindermenu">add_alert</mat-icon>
   </button>
-  <button mat-icon-button class="button" matTooltip="Collaborator">
-    <mat-icon class="icon" (click)="AddCollaborator(data)">person_add</mat-icon>
+  <button mat-icon-button class="button" matTooltip="Collaborator" (click)="collaborator()" class="{{param}}">
+    <mat-icon class="icon" >person_add</mat-icon>
   </button>
   <button mat-icon-button class="button" matTooltip="Change color" class="{{value}}">
     <mat-icon class="icon" [matMenuTriggerFor]="color">color_lens</mat-icon>
@@ -14,7 +14,7 @@
   <button mat-icon-button class="button" matTooltip="Archive">
     <mat-icon class="icon">archive</mat-icon>
   </button>
-   <!-- <button mat-icon-button class="button"  (click)="Archive()" matTooltip="Archive">
+  <!-- <button mat-icon-button class="button"  (click)="Archive()" matTooltip="Archive">
     <mat-icon class="icon">archive</mat-icon>
   </button>
   <button mat-icon-button class="button" click)="unArchive()" matTooltip="Unarchive">
@@ -38,22 +38,60 @@
           <div class="space">8:00AM</div>
         </div>
       </button>
-      <button mat-button class="Reminderbutton" (click)="datepicker()">
+      <button mat-button class="Reminderbutton" (click)="Location()">
         <div class="align">
-          <mat-icon class="timericon">schedule</mat-icon>
-          <div class="picktime" (click)="reminderDialog()">Pick date & time</div>
+          <div>Home</div>
+          <div class="space1">Telangana</div>
         </div>
+      </button>
+      <button  class="Reminderbutton"  >
+        <!-- mat-menu-item [matMenuTriggerFor]="pickdate" -->
+        <div class="align" (click)="reminderDialog()">
+          <mat-icon class="timericon">schedule</mat-icon>
+          <div class="picktime" >Pick date & time</div>
+        </div>
+      </button>
+       <!-- <mat-menu #pickdate="matMenu">
+        <div> 
+          <mat-form-feild class="time">
+              <mat-label>8:00 AM</mat-label>
+              <mat-select>
+                  <mat-option value="8:00 AM">Morning 8:00 AM</mat-option>
+                  <mat-option value="1:00 PM">Afternoon 8:00 PM</mat-option>
+                  <mat-option value="6:00 PM">Evening 8:00 AM</mat-option>
+                  <mat-option value="8:00 PM">Night 8:00 AM</mat-option>
+                  <mat-option value="">Custom</mat-option>
 
-    </button>
-      <!-- <mat-form-field>
-        <mat-icon></mat-icon>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field> -->
-      
-    </div>
-  </mat-menu>
+              </mat-select>
+          </mat-form-feild>
+      </div>
+      <div>
+          <mat-form-feild>
+              <mat-label>Does not repeat</mat-label>
+              <mat-select>
+                  <mat-option value="null">Does not repeat</mat-option>
+                  <mat-option value="daily">Daily</mat-option>
+                  <mat-option value="weekly">Weekly</mat-option>
+                  <mat-option value="monthly">Monthly</mat-option>
+                  <mat-option value="yearly">Yearly</mat-option>
+              </mat-select>
+          </mat-form-feild>
+          </div>d
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+         <!-- <mat-form-field>
+          <input matInput [ngxTimepicker]="picker">
+          <ngx-material-timepicker #picker></ngx-material-timepicker>
+        </mat-form-field>   -->
+        <!-- <div class="savediv">
+          <button class="saverebutton" mat-raised-button mat-dialog-close (click)="savefun()">Save</button>
+        </div>
+       </mat-menu> -->
+    <!-- </div>
+  </mat-menu> -->
   <mat-menu #color="matMenu" class="menu">
     <div class="colorIcons ">
       <div *ngFor="let color of Colors">
@@ -68,7 +106,7 @@
     <button mat-menu-item>
       <span>Delete note</span>
     </button>
-    <button mat-menu-item >
+    <button mat-menu-item>
       <span>Add label</span>
     </button>
     <button mat-menu-item>

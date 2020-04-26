@@ -52,11 +52,11 @@ export class IconsComponent implements OnInit {
     this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
   }
   reminderDialog(): void {
-    const dialogRef = this.dialog.open(IconsComponent, {
-      width: '250px',
-height:'150px'
-      //data: {name: this.name, animal: this.animal}
-    });
+    const dialog = this.dialog.open(IconsComponent, {
+    //  width: '250px',
+    //  height:'150px'
+     // data: {name: this.name, animal: this.animal}
+   });
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log('The dialog was closed');
     //   //this.animal = result;
