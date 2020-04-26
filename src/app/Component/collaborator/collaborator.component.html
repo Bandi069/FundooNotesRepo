@@ -21,8 +21,16 @@
                     <div class="add">
                         <input matInput type="text" class="newcollab" aria-label="Number"
                             placeholder="Person or email to share with" [matAutocomplete]="auto">
-                            <img src=""
+                            <img src="../../../assets/images/check-24px.svg" class="addcollab" (click)="addCollaborator()" matTooltip="Add collaborator">
+                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of options" [value]="option">
+                                    {{option.email}}
+                                </mat-option>
+                            </mat-autocomplete>
                     </div>
+                </div>
+                <div class="cancelsave" fxLayoutAlign="end">
+                    
                 </div>
             </div>
         </div>
