@@ -2,13 +2,15 @@
     <div fxFlex="100" class="main">
         <div class="collabname">Collaborators</div>
         <div class="ownerdetails" fxLayout="row">
-            <div class="ownerimg"> <img [src]="picLink" class="account-icon"> </div>
-            <div fxLayout="column">
-                <div>
-                    <span class="names"> {{firstName}} {{lastName}} </span>
-                    <span class="owner">(Owner)</span>
+            <div class="divclass">
+                <div class="ownerimg"> <img [src]="profilepic" class="accountpic"> </div>
+                <div fxLayout="column">
+                    <div>
+                        <span class="names"> {{firstName}} {{lastName}} </span>
+                        <span class="owner">(Owner)</span>
+                    </div>
+                    <div class="usermail"> {{email}}</div>
                 </div>
-                <div class="usermail"> {{email}}</div>
             </div>
         </div>
     </div>
