@@ -2,7 +2,7 @@
   <button mat-icon-button class="button" matTooltip="Remind me">
     <mat-icon class="icon" [matMenuTriggerFor]="remindermenu">add_alert</mat-icon>
   </button>
-  <button mat-icon-button class="button" matTooltip="Collaborator" (click)="collaborator()" class="{{param}}">
+  <button mat-icon-button class="button" matTooltip="Collaborator" (click)="openCollabDialog(data)">
     <mat-icon class="icon" >person_add</mat-icon>
   </button>
   <button mat-icon-button class="button" matTooltip="Change color" class="{{value}}">

@@ -4,6 +4,8 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 import { NoteService } from 'src/app/Services/note.service';
 import { DataSharingService } from 'src/app/Services/datasharing.service';
 import { EventEmitter } from '@angular/core';
+import { CollaboratorComponent } from '../collaborator/collaborator.component';
+import { PickreminderComponent } from '../pickreminder/pickreminder.component';
 
 @Component({
   selector: 'app-icons',
@@ -17,6 +19,7 @@ export class IconsComponent implements OnInit {
   @Output() setColorEvent=new EventEmitter<any>();
   //notes = [];
   //color:Note=new Note();
+
   constructor(private dataSharing: DataSharingService,
     public dialog: MatDialog,
     private noteserve: NoteService,
@@ -52,15 +55,26 @@ export class IconsComponent implements OnInit {
     this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
   }
   reminderDialog(): void {
-    const dialog = this.dialog.open(IconsComponent, {
+    const dialog = this.dialog.open(PickreminderComponent, {
     //  width: '250px',
     //  height:'150px'
      // data: {name: this.name, animal: this.animal}
    });
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
+    dialog.afterClosed().subscribe(result => {
+       console.log('The dialog was closed');
     //   //this.animal = result;
-    // });
+     });
+  }
+  openCollabDialog(data) {
+    const dialog = this.dialog.open(CollaboratorComponent, {
+      autoFocus: false,
+      data: this.data,
+     // width:'250px',
+      //height:'250px'
+    });
+   dialog.afterClosed().subscribe(result=>{
+      console.log('dialog closed');
+    });
   }
   
   Remainder8PM() {
