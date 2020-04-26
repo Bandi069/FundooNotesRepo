@@ -15,23 +15,38 @@
                     </div>
                 </div>
                 <div>
+                    <div fxLayout="row">
+                        <div *ngFor="let note of collaborator" class="collabnew">
+                            <div class="del" matTooltip="{{note.email}}">
+                                <span class="email">
+                                    {{note.email}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="deletecollab">
+                            <button mat-button matTooltip="Delete" (click)="deletecollaborator(note)">
+                                <img src="../../../assets/images/close-24px.svg" class="deleteimage">
+                            </button>
+                        </div>
+                    </div>
                     <div>
                         <img src="../../../assets/images/person_add.svg">
                     </div>
                     <div class="add">
                         <input matInput type="text" class="newcollab" aria-label="Number"
                             placeholder="Person or email to share with" [matAutocomplete]="auto">
-                            <img src="../../../assets/images/check-24px.svg" class="addcollab" (click)="addCollaborator()" matTooltip="Add collaborator">
-                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                                <mat-option *ngFor="let option of options" [value]="option">
-                                    {{option.email}}
-                                </mat-option>
-                            </mat-autocomplete>
+                        <img src="../../../assets/images/check-24px.svg" class="addcollab" (click)="addCollaborator()"
+                            matTooltip="Add collaborator">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options" [value]="option">
+                                {{option.email}}
+                            </mat-option>
+                        </mat-autocomplete>
                     </div>
                 </div>
                 <div class="cancelsave" fxLayoutAlign="end">
-                    <button mat-raised-button mat-dialog-closed (click)="cancel()">Cancel</button> 
-                    <button mat-raised-button  (click)="addCollaborator()">Save</button> 
+                    <button mat-raised-button mat-dialog-closed (click)="cancel()">Cancel</button>
+                    <button mat-raised-button (click)="addCollaborator()">Save</button>
 
                 </div>
             </div>
