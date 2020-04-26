@@ -9,15 +9,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./collaborator.component.scss']
 })
 export class CollaboratorComponent implements OnInit {
-
+  email: any ="";
+  firstName: any ="";
+  lastName: any ="";
   constructor(public dialogRef: MatDialogRef<CollaboratorComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private noteService: NoteService,
     private snackBar : MatSnackBar) { }
-
   ngOnInit(
-    
-  ) {
-  }
+  ){}
 
 }
