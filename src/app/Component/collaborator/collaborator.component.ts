@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { NoteService } from 'src/app/Services/note.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-collaborator',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollaboratorComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<CollaboratorComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private noteService: NoteService,
+    private snackBar : MatSnackBar) { }
 
-  ngOnInit() {
+  ngOnInit(
+    
+  ) {
   }
 
 }
