@@ -1,48 +1,62 @@
 .container{
-    height:150px;
-width:450px;
-margin-top:90px;
-margin-left:200px;
+   //height:150px;
+//width:450px;
+//margin-top:90px;
+//margin-left:200px;
+    height: 173px;
+    width: 277px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow: hidden;
+    margin-right: 193px;
+    margin-top: 266px;
 }
-.card{
-    align-items: center;
-    border-radius: 4px;
-    cursor: default;
-    font-size: 13px;
-    height: 100px;
-    width: 100px;
+// .card{
+//     align-items: center;
+//     border-radius: 4px;
+//     cursor: default;
+//     font-size: 13px;
+//    // height: 100px;
+//     //width: 100px;
+// }
+// .backicon{
+//     border-radius: 50%;
+//     border: 1px solid transparent;
+//     display: inline-block;
+// }
+// .picktag{
+//     padding-left: 40px;
+//     font-size: 14px;
+//     padding: 15px;
+// }
+// .content{
+//     height: 100px;
+//     width: 100px;
+//     margin-left: 450px;
+//     margin-top: 170px;
+//}
+// .mat-dialog-container {
+//     display: flex;
+//     padding: 24px;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     outline: 0;
+//     margin-left: 450px;
+//     margin-top: 150px;
+//     height: 150px;
+//     width: 200px;
+// }
+.mat-dialog-container{
+    height: 173px;
+    width: 373px;
+    margin-right: 132px;
+    margin-top: 250px;
+    overflow: hidden;
 }
-.backicon{
-    border-radius: 50%;
-    border: 1px solid transparent;
-    display: inline-block;
-}
-.picktag{
-    padding-left: 40px;
-    font-size: 14px;
-    padding: 15px;
-}
-.content{
-    height: 100px;
-    width: 100px;
-    margin-left: 450px;
-    margin-top: 170px;
-}
-.mat-dialog-container {
-    display: flex;
-    padding: 24px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    outline: 0;
-    margin-left: 450px;
-    margin-top: 150px;
-    height: 150px;
-    width: 200px;
-}
-.editbody
-{
-    max-height: 400px;
-overflow-y: hidden;
-padding: 15px;
-width: 284px;
-}
+// .editbody
+// {
+//     max-height: 400px;
+// overflow-y: hidden;
+// padding: 15px;
+// width: 284px;
+// }

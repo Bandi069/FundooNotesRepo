@@ -12,12 +12,8 @@ export interface DialogData {
 export class PickreminderComponent implements OnInit {
 
   constructor( 
-    public dialogRef: MatDialogRef<PickreminderComponent>,
-    @Inject(MAT_DIALOG_DATA) private data: DialogData
-    ) { }
-   // onNoClick(): void {
-  //   this.dialogRef.close();
-    //}
+    @Inject(MAT_DIALOG_DATA) public data:any   ) { }
+    
   ngOnInit() {
   }
 }
