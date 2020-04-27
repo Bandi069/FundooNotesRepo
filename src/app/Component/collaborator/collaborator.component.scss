@@ -1,10 +1,11 @@
-.container{
-    height:150px;
-width:450px;
-margin-top:90px;
-margin-left:200px;
-}
+// .container{
+//     height:150px;
+// width:450px;
+// margin-top:90px;
+// margin-left:200px;
+// }
 .collabdiv{
+    padding: 15px 15px 0;
     // padding: 15px 15px ;
     // border-bottom: 1px solid rgba(0,0,0,0.15);
     // font-size: 18px;
@@ -12,8 +13,16 @@ margin-left:200px;
     // height: 25px;
     // padding: 0 0 10px 0;
     // font-family: 'Roboto',arial,sans-serif;
-    height: 250px;
-    width: 500px;
+   // height: 250px;
+    //width: 500px;
+    
+}
+.mat-dialog-content 
+{
+    height: 300px;
+    width: 650px;
+    margin-top: 96px;
+    margin-left: 100px;
 }
 .collabname{
     border-bottom: 1px solid rgba(0,0,0,0.15);
