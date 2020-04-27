@@ -27,6 +27,10 @@ import { DisplaynoteComponent } from './Component/displaynote/displaynote.compon
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AccountService } from './Services/account.service';
 import { NoteService } from './Services/note.service';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
 import { ArchiveComponent } from './Component/archive/archive.component';
 import { ReminderComponent } from './Component/reminder/reminder.component';
 import { GetnoteComponent } from './Component/getnote/getnote.component';
@@ -36,7 +40,9 @@ import { EditNoteComponent } from './Component/edit-note/edit-note.component';
 import { PinComponent } from './Component/pin/pin.component';
 import { LabelComponent } from './Component/label/label.component';
 import { EditlabelComponent } from './Component/editlabel/editlabel.component';
-
+import { PickreminderComponent } from './Component/pickreminder/pickreminder.component';
+import { CollaboratorComponent } from './Component/collaborator/collaborator.component';
+import {FormControl} from '@angular/forms';
  
 
 @NgModule({
@@ -58,7 +64,11 @@ import { EditlabelComponent } from './Component/editlabel/editlabel.component';
     EditNoteComponent,
     PinComponent,
     LabelComponent,
-    EditlabelComponent
+    EditlabelComponent,
+    PickreminderComponent,
+    CollaboratorComponent
+   // FormControl
+
   ],
   imports: [
     BrowserModule,
@@ -68,9 +78,11 @@ import { EditlabelComponent } from './Component/editlabel/editlabel.component';
     FormsModule,
     MatMenuModule,
     HttpClientModule,
-     //   HttpModule,
     //FormControl,
-    //FormGroup,
+   ////NgxMaterialTimepickerModule,
+   NgxMaterialTimepickerModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     ReactiveFormsModule,
     MatInputModule,
     MatDialogModule,
@@ -80,10 +92,13 @@ import { EditlabelComponent } from './Component/editlabel/editlabel.component';
     MatIconModule,
     MatSidenavModule,
     MatSnackBarModule,
+  //  MatDialogRef,
     RouterModule.forRoot([])
   ],
-  providers: [AccountService,NoteService],
+  providers: [AccountService,NoteService,{provide: MatDialogRef, useValue: {}},
+  {provide:MAT_DIALOG_DATA,useValue:{}}],
   bootstrap: [AppComponent],
+  entryComponents:[CollaboratorComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ]
