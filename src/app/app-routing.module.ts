@@ -16,6 +16,7 @@ import { TrashComponent }from './Component/trash/trash.component';
 import {EditNoteComponent} from './Component/edit-note/edit-note.component';
 import { LabelComponent } from './Component/label/label.component';
 import { EditlabelComponent } from './Component/editlabel/editlabel.component';
+import { PickreminderComponent } from './Component/pickreminder/pickreminder.component';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -36,8 +37,9 @@ const routes: Routes = [
       {path:'editlabel',component:EditlabelComponent},
      // {path:'editlabel',component:LabelComponent}
     ]
-  }
+  },
   //{path : 'icon', component: IconsComponent},
+  {path:'pick', component:PickreminderComponent}
 ];
 @NgModule({
   imports: [
