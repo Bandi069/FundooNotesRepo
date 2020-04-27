@@ -2,9 +2,11 @@
   <button mat-icon-button class="button" matTooltip="Remind me">
     <mat-icon class="icon" [matMenuTriggerFor]="remindermenu">add_alert</mat-icon>
   </button>
+  <!-- <div class="collabcls"> -->
   <button mat-icon-button class="button" matTooltip="Collaborator" (click)="openCollabDialog(data)">
-    <mat-icon class="icon" >person_add</mat-icon>
+    <mat-icon class="icon">person_add</mat-icon>
   </button>
+  <!-- </div> -->
   <button mat-icon-button class="button" matTooltip="Change color" class="{{value}}">
     <mat-icon class="icon" [matMenuTriggerFor]="color">color_lens</mat-icon>
   </button>
@@ -44,14 +46,14 @@
           <div class="space1">Telangana</div>
         </div>
       </button>
-      <button  class="Reminderbutton"  >
+      <button class="Reminderbutton">
         <!-- mat-menu-item [matMenuTriggerFor]="pickdate" -->
         <div class="align" (click)="reminderDialog()">
           <mat-icon class="timericon">schedule</mat-icon>
-          <div class="picktime" >Pick date & time</div>
+          <div class="picktime">Pick date & time</div>
         </div>
       </button>
-       <!-- <mat-menu #pickdate="matMenu">
+      <!-- <mat-menu #pickdate="matMenu">
         <div> 
           <mat-form-feild class="time">
               <mat-label>8:00 AM</mat-label>
@@ -82,41 +84,41 @@
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field> -->
-         <!-- <mat-form-field>
+      <!-- <mat-form-field>
           <input matInput [ngxTimepicker]="picker">
           <ngx-material-timepicker #picker></ngx-material-timepicker>
         </mat-form-field>   -->
-        <!-- <div class="savediv">
+      <!-- <div class="savediv">
           <button class="saverebutton" mat-raised-button mat-dialog-close (click)="savefun()">Save</button>
         </div>
        </mat-menu> -->
-    <!-- </div>
+      <!-- </div>
   </mat-menu> -->
-  <mat-menu #color="matMenu" class="menu">
-    <div class="colorIcons ">
-      <div *ngFor="let color of Colors">
-        <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
-          (click)="setcolor(notes.id, color.color)" matTooltip="{{color.name}}">
-        </button>
-      </div>
-    </div>
-  </mat-menu>
+      <mat-menu #color="matMenu" class="menu">
+        <div class="colorIcons ">
+          <div *ngFor="let color of Colors">
+            <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
+              (click)="setcolor(notes.id, color.color)" matTooltip="{{color.name}}">
+            </button>
+          </div>
+        </div>
+      </mat-menu>
 
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <span>Delete note</span>
-    </button>
-    <button mat-menu-item>
-      <span>Add label</span>
-    </button>
-    <button mat-menu-item>
-      <span>Add drawing</span>
-    </button>
-    <button mat-menu-item>
-      <span>Make a copy</span>
-    </button>
-    <button mat-menu-item>
-      <span>show checkboxes</span>
-    </button>
-  </mat-menu>
-</div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Delete note</span>
+        </button>
+        <button mat-menu-item>
+          <span>Add label</span>
+        </button>
+        <button mat-menu-item>
+          <span>Add drawing</span>
+        </button>
+        <button mat-menu-item>
+          <span>Make a copy</span>
+        </button>
+        <button mat-menu-item>
+          <span>show checkboxes</span>
+        </button>
+      </mat-menu>
+    </div>

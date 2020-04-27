@@ -19,6 +19,7 @@ export class IconsComponent implements OnInit {
   @Output() setColorEvent=new EventEmitter<any>();
   //notes = [];
   //color:Note=new Note();
+  allreminder:any;
 
   constructor(private dataSharing: DataSharingService,
     public dialog: MatDialog,
@@ -54,21 +55,26 @@ export class IconsComponent implements OnInit {
     this.setColorEvent.emit("done");
     this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
   }
-  reminderDialog(): void {
+  reminderDialog() {
+
+  //  allreminder:localStorage.getItem('allreminder');
     const dialog = this.dialog.open(PickreminderComponent, {
+      data:{labels:this.allreminder},
+      height: '173px',
+    width: '373px',
     //  width: '250px',
     //  height:'150px'
      // data: {name: this.name, animal: this.animal}
    });
     dialog.afterClosed().subscribe(result => {
        console.log('The dialog was closed');
-    //   //this.animal = result;
+    //this.animal = result;
      });
   }
-  openCollabDialog(data) {
+  openCollabDialog(coll) {
     const dialog = this.dialog.open(CollaboratorComponent, {
       autoFocus: false,
-      data: this.data,
+      data:coll,
      // width:'250px',
       //height:'250px'
     });
