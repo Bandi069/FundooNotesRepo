@@ -46,13 +46,17 @@
           <div class="space1">Telangana</div>
         </div>
       </button>
-      <button class="Reminderbutton">
+      <div class="align" >
+      <button class="Reminderbutton" (click)="reminderDialog()">
         <!-- mat-menu-item [matMenuTriggerFor]="pickdate" -->
-        <div class="align" (click)="reminderDialog()">
+        
+          <div class="pickdivicon">
           <mat-icon class="timericon">schedule</mat-icon>
-          <div class="picktime">Pick date & time</div>
+          <span class="picktime">Pick date & time</span>
         </div>
+     
       </button>
+    </div>
       <!-- <mat-menu #pickdate="matMenu">
         <div> 
           <mat-form-feild class="time">

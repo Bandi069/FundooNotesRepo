@@ -60,8 +60,8 @@ export class IconsComponent implements OnInit {
   //  allreminder:localStorage.getItem('allreminder');
     const dialog = this.dialog.open(PickreminderComponent, {
       data:{labels:this.allreminder},
-      height: '173px',
-    width: '373px',
+     // height: '173px',
+    //width: '373px',
     //  width: '250px',
     //  height:'150px'
      // data: {name: this.name, animal: this.animal}

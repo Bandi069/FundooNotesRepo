@@ -56,6 +56,8 @@
 }
 .picktime{
     margin-left: 18px;
+   // background-size: 15px 15px;
+  //  padding-left: 25px;
     color: #3c4043;
 }
 .saverebutton{
@@ -67,4 +69,10 @@
 flex-direction: row;
 justify-content: center;
 margin-top: 40px;
+}
+.pickdivicon{
+    cursor: pointer;
+   
+    color: #3c4043;
+    font-family: 'Roboto',arial,sans-serif
 }
