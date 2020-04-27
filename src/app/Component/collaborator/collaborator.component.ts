@@ -15,11 +15,14 @@ export class CollaboratorComponent implements OnInit {
   email: any = "";
   firstName: any = "";
   lastName: any = "";
-  constructor(public dialogRef: MatDialogRef<CollaboratorComponent>,
+  constructor(
+    public dialogRef: MatDialogRef<CollaboratorComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private noteService: NoteService,
     private snackBar: MatSnackBar) { }
   ngOnInit(
   ) { }
-
+  addCollaborator(){
+    
+  }
 }
