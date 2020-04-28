@@ -1,20 +1,32 @@
 <mat-dialog-content class="container">
     <!-- <div mat-dialog-content class="editbody"> -->
-        <!-- <mat-card class="card"> -->
-        <div  class="content">
+    <!-- <mat-card class="card"> -->
+    <div class="content">
+        <div class="datepicdiv">
             <div class="backicon">
-                <mat-icon matTooltip="Go back" mat-dialog-close>arrow_back</mat-icon>
+                <!-- <mat-icon matTooltip="Go back" mat-dialog-close>arrow_back</mat-icon> -->
+                <img src="../../../assets/images/arrow_back-24px.svg" class="back" matTooltip="Go back"
+                    mat-dialog-close>
+                <div class="pictag">Pick date & time</div>
             </div>
-            <div class="pictag">Pick date & time</div>
             <div class="datetoggel">
                 <mat-form-field>
-                    <mat-icon></mat-icon>
+                    <!-- <mat-icon></mat-icon> -->
                     <input matInput [matDatepicker]="date" placeholder="Choose a date">
                     <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
-            <!-- <div>  
+            <div class="timetoggle">
+                <mat-form-field>
+                    <input matInput [ngxTimepicker]="pickertime" placeholder="Choose a time">
+                    <!-- <ngx-datepicker-toggle matSuffix [for]="time"></mat-datepicker-toggle> -->
+                    <ngx-material-timepicker-toggle matSuffix [for]="timePick"></ngx-material-timepicker-toggle>
+                    <ngx-material-timepicker #pickertime></ngx-material-timepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- <div>  
             <mat-form-feild class="time">
                 <mat-label>8:00 AM</mat-label>
                 <mat-select>
@@ -38,11 +50,12 @@
                     <mat-option value="yearly">Yearly</mat-option>
                 </mat-select>
             </mat-form-feild>-->
-            <div class="savediv">
-                <button mat-raised-button mat-dialog-close (click)="savefun()">Save</button>
-            </div>
-            <!-- </div>  -->
-        </div>
-        <!-- </mat-card> -->
+       
+        <!-- </div>  -->
+    </div>
+    <div class="savediv">
+        <button mat-raised-button class="savebutn" mat-dialog-close (click)="savefun()">Save</button>
+    </div>
+    <!-- </mat-card> -->
     <!-- </div> -->
 </mat-dialog-content>
