@@ -8,7 +8,7 @@
 @Browser:Chrome
 #@Smoketest
 Scenario Outline: Testing the login funtionality is working or not (+ve or -ve)
-	Given I have navigate to my application
+	Given I have navigate to my login application
 	And I typed the <Emailid> and <Password>
 	When I click on login button
 	Then I see the dashboard page
