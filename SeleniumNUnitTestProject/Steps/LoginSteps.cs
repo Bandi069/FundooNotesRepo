@@ -14,8 +14,8 @@ namespace UnitTestProject.Steps
     {
         IWebDriver currentDriver = new ChromeDriver();
 
-        [Given(@"I have navigate to my application")]
-        public void GivenIHaveNavigateToMyApplication()
+        [Given(@"I have navigate to my login application")]
+        public void GivenIHaveNavigateToMyLoginApplication()
         {
             currentDriver.Navigate().GoToUrl("http://localhost:4200/login");
         }

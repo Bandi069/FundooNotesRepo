@@ -16,6 +16,7 @@
           "Selenium.WebDriver.ChromeDriver": "81.0.4044.6900",
           "SpecFlow": "3.1.97",
           "SpecFlow.Assist.Dynamic": "1.4.1",
+          "SpecFlow.NUnit": "3.1.97",
           "SpecFlow.Tools.MsBuild.Generation": "3.1.97",
           "NUnit": "3.12.0"
         },
@@ -533,6 +534,18 @@
           "lib/netstandard2.0/SpecFlow.Assist.Dynamic.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SpecFlow.NUnit/3.1.97": {
+        "dependencies": {
+          "NUnit": "3.12.0",
+          "SpecFlow": "3.1.97"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.97.53089"
           }
         }
       },
@@ -1494,6 +1507,13 @@
       "sha512": "sha512-aVpMTnJJ7oLxDIzhA4mNnDgbHpC8rIx8y754onItEnq4Sg9Y5IyIbuRHTb9FwsAvoU7gUB6GeYZgxZ8jOa2hgQ==",
       "path": "specflow.assist.dynamic/1.4.1",
       "hashPath": "specflow.assist.dynamic.1.4.1.nupkg.sha512"
+    },
+    "SpecFlow.NUnit/3.1.97": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BzY9W55Hi4PbD0XOfML7mZh601ITWOwOg0ydo/ZR5CSh668xXezTcrl7/I8SCLjdaMPqZGXN08qdKTnLcv1aAA==",
+      "path": "specflow.nunit/3.1.97",
+      "hashPath": "specflow.nunit.3.1.97.nupkg.sha512"
     },
     "SpecFlow.Tools.MsBuild.Generation/3.1.97": {
       "type": "package",

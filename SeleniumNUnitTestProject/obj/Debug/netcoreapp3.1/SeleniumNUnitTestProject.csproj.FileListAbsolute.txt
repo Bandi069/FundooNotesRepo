@@ -1,4 +1,5 @@
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\nunit.engine.dll

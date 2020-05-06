@@ -74,22 +74,20 @@ namespace SeleniumNUnitTestProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Testing the login funtionality is working or not (+ve or -ve)")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.DescriptionAttribute("Testing the login funtionality is working")]
         [NUnit.Framework.CategoryAttribute("Browser:Chrome")]
         [NUnit.Framework.TestCaseAttribute("venubandi89@gmail.com", "sanVedha2212$", null)]
-        public virtual void TestingTheLoginFuntionalityIsWorkingOrNotVeOr_Ve(string emailid, string password, string[] exampleTags)
+        public virtual void TestingTheLoginFuntionalityIsWorking(string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag",
                     "Browser:Chrome"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing the login funtionality is working or not (+ve or -ve)", null, @__tags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing the login funtionality is working", null, @__tags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -109,16 +107,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
- testRunner.Given("I have navigate to my application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.Given("I have navigate to my login application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
- testRunner.And(string.Format("I typed the {0} and {1}", emailid, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
+ testRunner.And(string.Format("I typed the {0} and {1}", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 9
  testRunner.When("I click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 10
  testRunner.Then("I see the dashboard page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

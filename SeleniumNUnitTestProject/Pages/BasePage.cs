@@ -6,5 +6,6 @@ namespace SeleniumNUnitTestProject.Pages
 {
    public class BasePage
     {
+
     }
 }
