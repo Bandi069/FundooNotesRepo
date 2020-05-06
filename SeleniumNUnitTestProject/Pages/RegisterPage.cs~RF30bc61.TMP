@@ -16,9 +16,9 @@ namespace SeleniumNUnitTestProject.Pages
             PageFactory.InitElements(driver, this);
             this.webdriver = driver;
         }
-        [FindsBy(How = How.Id, Using = "mat-input-0")]
+        [FindsBy(How = How.Id, Using = ("mat-input-0"))]
         private IWebElement txtFirstName;
-        [FindsBy(How = How.Id, Using = "mat-input-1")]
+        [FindsBy(How = How.Id, Using = ("mat-input-1"))]
         private IWebElement txtLastName;
         [FindsBy(How = How.Id, Using = ("mat-input-2"))]
         private IWebElement txtEmail;
@@ -35,7 +35,7 @@ namespace SeleniumNUnitTestProject.Pages
             txtEmail.SendKeys(Email);
             txtPassword.SendKeys(Password);
         }
-        public LoginPage ClickRegister()
+        public LoginPage LoginPage()
         {
             registerbutton.Submit();
             return new LoginPage(webdriver);

@@ -6,9 +6,8 @@ using System.Text;
 
 namespace SeleniumNUnitTestProject.Pages
 {
-   public class DashboardPage :BasePage
+   public class DashboardPage 
     {
-       
 
         public DashboardPage(IWebDriver currentDriver)
         {

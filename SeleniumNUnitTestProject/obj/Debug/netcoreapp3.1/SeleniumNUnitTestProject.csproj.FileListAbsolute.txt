@@ -108,4 +108,3 @@ C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\obj
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.csproj.CopyComplete
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.dll
 C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.pdb
-C:\Users\tree\source\repos\SeleniumNUnitTestProject\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.csprojAssemblyReference.cache

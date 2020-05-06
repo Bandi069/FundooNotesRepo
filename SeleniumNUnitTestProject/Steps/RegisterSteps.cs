@@ -19,15 +19,18 @@ namespace SeleniumNUnitTestProject
         [Given(@"I typed the (.*),(.*),(.*) and (.*)")]
         public void GivenITypedTheAnd(string FirstName,string LastName, string Email, string Password)
         {
-          //  RegisterPage registerPage = new RegisterPage();
+            RegisterPage registerPage = new RegisterPage(driver);
+            registerPage.Register(FirstName,LastName,Email,Password);
             
         }
         [When(@"I click on the submit button")]
         public void WhenIClickOnTheSubmitButton()
         {
-
+            RegisterPage registerPage = new RegisterPage(driver);
+            registerPage.ClickRegister();
+            driver.Close();
         }
-        
+
         [Then(@"Isee the login page")]
         public void ThenIseeTheLoginPage()
         {

@@ -32,7 +32,7 @@ namespace UnitTestProject.Steps
         public void WhenIClickOnLoginButton()
         {
             LoginPage loginPage = new LoginPage(currentDriver);
-           PropertyCollection.Currentpage=loginPage.ClickLogin();
+           loginPage.ClickLogin();
         }
 
         [Then(@"I see the dashboard page")]
