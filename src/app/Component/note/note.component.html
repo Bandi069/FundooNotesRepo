@@ -1,5 +1,16 @@
 <mat-card *ngIf="!Note2" class="card" (click)="note()">
-  <div class="takeNote">Take a note...</div>
+  <div class="takeNote">Take a note...
+  <button mat-icon-button class="noteicon" matTooltip="New list">
+      <mat-icon>check_box</mat-icon>
+    </button>
+    <button mat-icon-button class="noteicon" matTooltip="New note with drawing">
+      <mat-icon>brush</mat-icon>
+    </button>
+    <button mat-icon-button class="noteicon" matTooltip="New note with image">
+      <mat-icon>image</mat-icon>
+    </button>
+  </div>
+  
 </mat-card>
 
 <mat-card *ngIf="!Note1" class="card">
