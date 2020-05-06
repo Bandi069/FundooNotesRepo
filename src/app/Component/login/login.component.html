@@ -8,7 +8,7 @@
                     </mat-label>
                 </mat-card-title>
             </mat-card-header>
-            <mat-card-header>
+            <mat-card-header class="headtext">
                 <mat-card-title>
                     <h2>Signin Fundoo Account</h2>
                 </mat-card-title>
@@ -32,7 +32,7 @@
             </mat-error>
         </mat-form-field>
         <div class="button">
-            <button mat-raised-button color="primary" type="button">Signin</button>
+            <button mat-raised-button color="primary" (click)="login()">Signin</button>
         </div>
         <br>
         <div class="forgot" routerLink="/forgot"><a href="forgot">Forgot Password?</a></div>
