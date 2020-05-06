@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
 import { AccountService } from 'src/app/Services/account.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private service:AccountService,
-    private route:Router
+    private route:Router,
+    private snackbar:MatSnackBar
   ) { }
   firstName = new FormControl('', [
     Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Z]*'), ]);
@@ -39,17 +41,23 @@ export class RegisterComponent implements OnInit {
   //         this.password.hasError('maxlength') ? 'Password Max Legnth upto 15 characters' :
   //           '';
   }
-  registration(){
+  register(){
     const data={
     firstName:this.firstName.value,
     lastName:this.lastName.value,
     emailid:this.email.value,password:this.password.value
     };
     console.log(data);
-    this.service.register(data).subscribe((result)=>{const temp=JSON.stringify(result);
+    this.service.register(data).subscribe((result)=>{
+      this.snackbar.open('Sucessfully registered','Dismiss',{duration :4000});
+      const temp=JSON.stringify(result);
     const res=JSON.parse(temp);
   this.route.navigate(['/login']);
+    },
+  (error)=>{
+    this.snackbar.open('Registration failed', 'Dismiss',{duration:4000});
 });
-this.service.register(data);
+//this.service.register(data);
   }
 }
+
