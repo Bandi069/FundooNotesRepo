@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tree\\source\\repos\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj": {}
+    "D:\\FundooNotesRepo\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tree\\source\\repos\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj": {
+    "D:\\FundooNotesRepo\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tree\\source\\repos\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj",
+        "projectUniqueName": "D:\\FundooNotesRepo\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj",
         "projectName": "SeleniumNUnitTestProject",
-        "projectPath": "C:\\Users\\tree\\source\\repos\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj",
-        "packagesPath": "C:\\Users\\tree\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tree\\source\\repos\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject\\obj\\",
+        "projectPath": "D:\\FundooNotesRepo\\SeleniumNUnitTestProject\\SeleniumNUnitTestProject.csproj",
+        "packagesPath": "C:\\Users\\Bandi\\.nuget\\packages\\",
+        "outputPath": "D:\\FundooNotesRepo\\SeleniumNUnitTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bandi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[16.6.1, )"
             },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
             "NUnit3TestAdapter": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -62,15 +66,11 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[81.0.4044.6900, )"
+              "version": "[81.0.4044.13800, )"
             },
             "SpecFlow": {
               "target": "Package",
               "version": "[3.1.97, )"
-            },
-            "SpecFlow.Assist.Dynamic": {
-              "target": "Package",
-              "version": "[1.4.1, )"
             },
             "SpecFlow.NUnit": {
               "target": "Package",
@@ -79,10 +79,6 @@
             "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
               "version": "[3.1.97, )"
-            },
-            "nunit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
             }
           },
           "imports": [
@@ -100,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

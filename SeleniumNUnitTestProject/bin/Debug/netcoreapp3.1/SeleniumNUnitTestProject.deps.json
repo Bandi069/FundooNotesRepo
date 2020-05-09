@@ -10,15 +10,14 @@
         "dependencies": {
           "DotNetSeleniumExtras.PageObjects.Core": "3.12.0",
           "Microsoft.NET.Test.Sdk": "16.6.1",
+          "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "81.0.4044.6900",
+          "Selenium.WebDriver.ChromeDriver": "81.0.4044.13800",
           "SpecFlow": "3.1.97",
-          "SpecFlow.Assist.Dynamic": "1.4.1",
           "SpecFlow.NUnit": "3.1.97",
-          "SpecFlow.Tools.MsBuild.Generation": "3.1.97",
-          "NUnit": "3.12.0"
+          "SpecFlow.Tools.MsBuild.Generation": "3.1.97"
         },
         "runtime": {
           "SeleniumNUnitTestProject.dll": {}
@@ -55,19 +54,6 @@
           }
         }
       },
-      "Dynamitey/2.0.9.136": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.4.1",
-          "NETStandard.Library": "2.0.0",
-          "System.ComponentModel": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.5/Dynamitey.dll": {
-            "assemblyVersion": "2.0.9.136",
-            "fileVersion": "2.0.9.136"
-          }
-        }
-      },
       "Gherkin/6.0.0": {
         "dependencies": {
           "Utf8Json": "1.3.7"
@@ -98,7 +84,26 @@
           }
         }
       },
-      "Microsoft.CSharp/4.4.1": {},
+      "Microsoft.CSharp/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "Microsoft.DotNet.InternalAbstractions/1.0.0": {
         "dependencies": {
           "System.AppContext": "4.1.0",
@@ -397,7 +402,7 @@
       },
       "Newtonsoft.Json/10.0.3": {
         "dependencies": {
-          "Microsoft.CSharp": "4.4.1",
+          "Microsoft.CSharp": "4.3.0",
           "NETStandard.Library": "2.0.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Runtime.Serialization.Formatters": "4.3.0",
@@ -507,7 +512,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/81.0.4044.6900": {},
+      "Selenium.WebDriver.ChromeDriver/81.0.4044.13800": {},
       "SpecFlow/3.1.97": {
         "dependencies": {
           "BoDi": "1.4.1",
@@ -522,18 +527,6 @@
           "lib/netstandard2.0/TechTalk.SpecFlow.dll": {
             "assemblyVersion": "3.1.0.0",
             "fileVersion": "3.1.97.53089"
-          }
-        }
-      },
-      "SpecFlow.Assist.Dynamic/1.4.1": {
-        "dependencies": {
-          "Dynamitey": "2.0.9.136",
-          "SpecFlow": "3.1.97"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SpecFlow.Assist.Dynamic.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -700,6 +693,24 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Dynamic.Runtime/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "System.Globalization/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -760,6 +771,27 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Linq.Expressions/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "System.Net.Http/4.3.4": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -796,6 +828,15 @@
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.ObjectModel/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
         }
       },
       "System.Reflection/4.3.0": {
@@ -1242,13 +1283,6 @@
       "path": "dotnetseleniumextras.pageobjects.core/3.12.0",
       "hashPath": "dotnetseleniumextras.pageobjects.core.3.12.0.nupkg.sha512"
     },
-    "Dynamitey/2.0.9.136": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SzGWOl8nKR4r7WYiyMgJ0n/MuncdtPSyjxe1+znH8KVKOFQAckXFOeqOXgcWSMLHT+ehAYtZHPWjX+GsH7eI4Q==",
-      "path": "dynamitey/2.0.9.136",
-      "hashPath": "dynamitey.2.0.9.136.nupkg.sha512"
-    },
     "Gherkin/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1270,12 +1304,12 @@
       "path": "microsoft.codecoverage/16.6.1",
       "hashPath": "microsoft.codecoverage.16.6.1.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.4.1": {
+    "Microsoft.CSharp/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-A5hI3gk6WpcBI0QGZY6/d5CCaYUxJgi7iENn1uYEng+Olo8RfI5ReGVkjXjeu3VR3srLvVYREATXa2M0X7FYJA==",
-      "path": "microsoft.csharp/4.4.1",
-      "hashPath": "microsoft.csharp.4.4.1.nupkg.sha512"
+      "sha512": "sha512-P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
+      "path": "microsoft.csharp/4.3.0",
+      "hashPath": "microsoft.csharp.4.3.0.nupkg.sha512"
     },
     "Microsoft.DotNet.InternalAbstractions/1.0.0": {
       "type": "package",
@@ -1487,12 +1521,12 @@
       "path": "selenium.webdriver/3.141.0",
       "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/81.0.4044.6900": {
+    "Selenium.WebDriver.ChromeDriver/81.0.4044.13800": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UQ1BIbA+XkjwsX9j8bDDtucNgMRdpnxuxjer37SuOpztjpgVA/5dOAPfGePjm36kT+NNb4mDsxqhKcKM6b14ow==",
-      "path": "selenium.webdriver.chromedriver/81.0.4044.6900",
-      "hashPath": "selenium.webdriver.chromedriver.81.0.4044.6900.nupkg.sha512"
+      "sha512": "sha512-2b1bjeB0HmTw9wJ41FFcXXRTRMjf0Xm9nrlw1iK6tBTm3Rwqi5+UX9WWaj+lXp8itmmVOKmnYfq49aVDNq281w==",
+      "path": "selenium.webdriver.chromedriver/81.0.4044.13800",
+      "hashPath": "selenium.webdriver.chromedriver.81.0.4044.13800.nupkg.sha512"
     },
     "SpecFlow/3.1.97": {
       "type": "package",
@@ -1500,13 +1534,6 @@
       "sha512": "sha512-8nRsXBSjvtbSmZHw5tqnJcfwgNaygsRKFhbP+ipZXu+5suzUibTI16sG3wNLgGza6LKpZlxPef8fRxqtmZZJaA==",
       "path": "specflow/3.1.97",
       "hashPath": "specflow.3.1.97.nupkg.sha512"
-    },
-    "SpecFlow.Assist.Dynamic/1.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aVpMTnJJ7oLxDIzhA4mNnDgbHpC8rIx8y754onItEnq4Sg9Y5IyIbuRHTb9FwsAvoU7gUB6GeYZgxZ8jOa2hgQ==",
-      "path": "specflow.assist.dynamic/1.4.1",
-      "hashPath": "specflow.assist.dynamic.1.4.1.nupkg.sha512"
     },
     "SpecFlow.NUnit/3.1.97": {
       "type": "package",
@@ -1620,6 +1647,13 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
+    "System.Dynamic.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag==",
+      "path": "system.dynamic.runtime/4.3.0",
+      "hashPath": "system.dynamic.runtime.4.3.0.nupkg.sha512"
+    },
     "System.Globalization/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1669,6 +1703,13 @@
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
     },
+    "System.Linq.Expressions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PGKkrd2khG4CnlyJwxwwaWWiSiWFNBGlgXvJpeO0xCXrZ89ODrQ6tjEWS/kOqZ8GwEOUATtKtzp1eRgmYNfclg==",
+      "path": "system.linq.expressions/4.3.0",
+      "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
+    },
     "System.Net.Http/4.3.4": {
       "type": "package",
       "serviceable": true,
@@ -1682,6 +1723,13 @@
       "sha512": "sha512-qOu+hDwFwoZPbzPvwut2qATe3ygjeQBDQj91xlsaqGFQUI5i4ZnZb8yyQuLGpDGivEPIt8EJkd1BVzVoP31FXA==",
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.ObjectModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bdX+80eKv9bN6K4N+d77OankKHGn6CH711a6fcOpMQu2Fckp/Ft4L/kW9WznHpyR0NRAvJutzOMHNNlBGvxQzQ==",
+      "path": "system.objectmodel/4.3.0",
+      "hashPath": "system.objectmodel.4.3.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",
