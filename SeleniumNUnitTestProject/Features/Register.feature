@@ -5,7 +5,7 @@
 @Browser:Chrome
 Scenario Outline: Verify register the account(+ve cases) 
 	Given I have navigate to Register application 
-	And I typed the <FirstName>,<LastName>,<Email> and <Password>
+	And  I have fill the details  <FirstName>,<LastName>,<Email> and <Password>
 	When I click on the submit button
 	Then I navigate to the login page
 	Examples: 
