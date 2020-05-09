@@ -20,22 +20,23 @@ namespace SeleniumNUnitTestProject.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Register")]
-    public partial class RegisterFeature
+    [NUnit.Framework.DescriptionAttribute("AddNote")]
+    public partial class AddNoteFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Register.feature"
+#line 1 "AddNote.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Register", "\tVerify the functionility of Register form in my application", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AddNote", "\tTest  AddNote functionality of my application\r\n\tverifying the Title and Descript" +
+                    "ion are working as expected", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,21 +75,19 @@ namespace SeleniumNUnitTestProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify register the account(+ve cases)")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.DescriptionAttribute("Verify AddNote functionlity is working(+Ve Case)")]
         [NUnit.Framework.CategoryAttribute("Browser:Chrome")]
-        [NUnit.Framework.TestCaseAttribute("Venu", "Bandi", "bandivenu89@gmail.com", "sanVedha2212", null)]
-        public virtual void VerifyRegisterTheAccountVeCases(string firstName, string lastName, string email, string password, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Selenium Automation Test", "Verify Test", null)]
+        public virtual void VerifyAddNoteFunctionlityIsWorkingVeCase(string title, string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag",
                     "Browser:Chrome"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify register the account(+ve cases)", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify AddNote functionlity is working(+Ve Case)", null, @__tags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -110,16 +109,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I have navigate to Register application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I should navigated to my application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Email",
+                            "Password"});
+                table1.AddRow(new string[] {
+                            "bandivenu89@gmail.com",
+                            "sanVedha2212$"});
 #line 8
- testRunner.And(string.Format("I have fill the details  {0},{1},{2} and {3}", firstName, lastName, email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I type the credentials", ((string)(null)), table1, "And ");
 #line hidden
-#line 9
- testRunner.When("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.When("I click Login Button in the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
- testRunner.Then("I navigate to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.Given("I should see the Dashborad page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 13
+ testRunner.Given(string.Format("I have write {0} and {1}", title, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 14
+ testRunner.When("I click on the close button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();
