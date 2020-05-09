@@ -8,7 +8,7 @@ Scenario Outline: Testing the login funtionality is working
 	And I typed the <Email> and <Password>
 	When I click on login button
 	Then I see the dashboard page
-
+	 
 	Examples:
 		| Email                 | Password      |
 		| venubandi89@gmail.com | sanVedha2212$ |
