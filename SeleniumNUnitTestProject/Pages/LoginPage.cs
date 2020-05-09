@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace UnitTestProject.Pages
 {
-    class LoginPage
+   public class LoginPage
     {
         IWebDriver driver;
         public LoginPage(IWebDriver currentDriver)
