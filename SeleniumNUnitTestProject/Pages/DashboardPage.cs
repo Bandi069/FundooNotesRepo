@@ -12,6 +12,7 @@ namespace SeleniumNUnitTestProject.Pages
         public DashboardPage(IWebDriver currentDriver)
         {
             PageFactory.InitElements(currentDriver, this);
+           // this.currentDriver = currentDriver;
         }
     }
 }
