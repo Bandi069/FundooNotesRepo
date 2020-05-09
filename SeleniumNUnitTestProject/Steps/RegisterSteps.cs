@@ -10,18 +10,17 @@ namespace SeleniumNUnitTestProject
     public class RegisterSteps
     {
         IWebDriver driver = new ChromeDriver();
-        [Given(@"I have navigate to register application form")]
-        public void GivenIHaveNavigateToRegisterApplicationForm()
+        [Given(@"I have navigate to Register application")]
+        public void GivenIHaveNavigateToRegisterApplication()
         {
             driver.Navigate().GoToUrl("http://localhost:4200/register");
         }
 
-        [Given(@"I typed the (.*),(.*),(.*) and (.*)")]
-        public void GivenITypedTheAnd(string FirstName,string LastName, string Email, string Password)
+        [Given(@"I have fill the details  Venu,Bandi,bandivenu(.*)@gmail\.com and sanVedha(.*)")]
+        public void GivenIHaveFillTheDetailsVenuBandiBandivenuGmail_ComAndSanVedha(int p0, int p1)
         {
             RegisterPage registerPage = new RegisterPage(driver);
-            registerPage.Register(FirstName,LastName,Email,Password);
-            
+          //registerPage.Register(p0, p1);
         }
         [When(@"I click on the submit button")]
         public void WhenIClickOnTheSubmitButton()
@@ -31,8 +30,8 @@ namespace SeleniumNUnitTestProject
             driver.Close();
         }
 
-        [Then(@"Isee the login page")]
-        public void ThenIseeTheLoginPage()
+        [Then(@"I navigate to the login page")]
+        public void ThenINavigateToTheLoginPage()
         {
             ///ScenarioContext.Current.Pending();
         }
