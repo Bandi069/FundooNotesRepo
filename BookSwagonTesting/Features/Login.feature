@@ -1,11 +1,13 @@
 ﻿Feature: Login
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	Test the login functionality of application
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+@Browser:Chrome
+Scenario: Testing the login funtionality is working(+ve case)
+	Given I have navigate to my login application
+	And I enter details <Email> and <Password>
+	When I click on login button
+	Then I should see the dashboard page
+
+	Examples:
+		| Email                 | Password |
+		| venubandi89@gmail.com | venub818 |
