@@ -211,7 +211,6 @@ D:\FundooNotesRepo\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\zh-Hant\Micr
 D:\FundooNotesRepo\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\FundooNotesRepo\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\FundooNotesRepo\SeleniumNUnitTestProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\FundooNotesRepo\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.csprojAssemblyReference.cache
 D:\FundooNotesRepo\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.csproj.CoreCompileInputs.cache
 D:\FundooNotesRepo\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.AssemblyInfoInputs.cache
 D:\FundooNotesRepo\SeleniumNUnitTestProject\obj\Debug\netcoreapp3.1\SeleniumNUnitTestProject.AssemblyInfo.cs

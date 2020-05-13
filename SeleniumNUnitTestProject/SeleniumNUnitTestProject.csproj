@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="C:\Users\Bandi\Documents\GitHub\FundooNotesRepo\SeleniumNUnitTestProject\Steps\AddNoteSteps.cs" Link="Steps\AddNoteSteps.cs" />
     <Compile Include="C:\Users\Bandi\Documents\GitHub\FundooNotesRepo\SeleniumNUnitTestProject\Steps\LogoutSteps.cs" Link="Steps\LogoutSteps.cs" />
   </ItemGroup>
 
