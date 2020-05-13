@@ -3,14 +3,15 @@
 
 @Browser:Chrome
 Scenario: Verify search a book in application
-	Given I Sould navigate to login application page
-	And I have entered details <Email> and <Password>
-	Examples: 
-	| Email                 | Password  |
-	| bandivenu89@gmail.com | bandiv818 |
-	When I press on Login button
-	Then It should show Dashboard page 
+	Given I have navigate to my login application
+	And I enter details <Email> and <Password>
+	When I click on login button
+	Then I should see the main page
+	#Scenario: Search Book list
 	When I have press on Search box
 	And I should enter a text for search
 	When I click on the search button
-	Then Result should be Books list on Homepage 
+	Then Result should be Books list on Homepage
+	When I shoud press buynow option 
+
+	

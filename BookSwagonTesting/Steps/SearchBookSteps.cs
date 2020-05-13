@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using BookSwagonTesting.Pages;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
@@ -9,53 +10,69 @@ namespace BookSwagonTesting.Steps
     public class SearchBookSteps
     {
         IWebDriver driver = new ChromeDriver();
-        [Given(@"I Sould navigate to login application page")]
-        public void GivenISouldNavigateToLoginApplicationPage()
+
+        [Then(@"I should see the main page")]
+        public void ThenIShouldSeeTheMainPage()
         {
             driver.Manage().Window.Maximize();
-
+            driver.Navigate().GoToUrl("https://www.bookswagon.com/");
         }
-        
+
         [Given(@"I have entered details (.*) and (.*)")]
         public void GivenIHaveEnteredDetailsAnd(string p0, string p1)
         {
-            ScenarioContext.Current.Pending();
+            // ScenarioContext.Current.Pending();
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.Login(p0, p1);
+
         }
         
         [When(@"I press on Login button")]
         public void WhenIPressOnLoginButton()
         {
-            ScenarioContext.Current.Pending();
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.LoginClick();
         }
         
         [When(@"I have press on Search box")]
         public void WhenIHavePressOnSearchBox()
         {
-            ScenarioContext.Current.Pending();
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.Searchbox();
         }
         
         [When(@"I should enter a text for search")]
         public void WhenIShouldEnterATextForSearch()
         {
-            ScenarioContext.Current.Pending();
+           // IWebElement book;
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.Searchtext("bandi book");
         }
         
         [When(@"I click on the search button")]
         public void WhenIClickOnTheSearchButton()
         {
-            ScenarioContext.Current.Pending();
+            SearchBookPage searchBook = new SearchBookPage(driver);
+            searchBook.ClickSearch();
         }
         
         [Then(@"It should show Dashboard page")]
         public void ThenItShouldShowDashboardPage()
         {
-            ScenarioContext.Current.Pending();
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+
         }
         
         [Then(@"Result should be Books list on Homepage")]
         public void ThenResultShouldBeBooksListOnHomepage()
         {
-            ScenarioContext.Current.Pending();
+
+        }
+        [When(@"I shoud press buynow option")]
+        public void WhenIShoudPressBuynowOption()
+        {
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.buyclick();
         }
     }
 }
