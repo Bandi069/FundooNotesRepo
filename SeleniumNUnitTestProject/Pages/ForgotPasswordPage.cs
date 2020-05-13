@@ -8,7 +8,7 @@ using UnitTestProject.Pages;
 
 namespace SeleniumNUnitTestProject.Pages
 {
-    public class ForgotPasswordPage
+     class ForgotPasswordPage
     {
         IWebDriver webDriver;
         public ForgotPasswordPage(IWebDriver driver)
