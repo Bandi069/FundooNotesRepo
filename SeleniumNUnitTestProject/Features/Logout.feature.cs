@@ -75,13 +75,13 @@ namespace SeleniumNUnitTestProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Testing for logout functionality(+ve case)")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("Browser:Chrome")]
         public virtual void TestingForLogoutFunctionalityVeCase()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "Browser:Chrome"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testing for logout functionality(+ve case)", null, new string[] {
-                        "mytag"});
+                        "Browser:Chrome"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -109,7 +109,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I press on the singout button in the dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("it displays loginpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see loginpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
