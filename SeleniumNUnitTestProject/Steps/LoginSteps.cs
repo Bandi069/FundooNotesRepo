@@ -21,10 +21,10 @@ namespace UnitTestProject.Steps
         }
 
         [Given(@"I typed the (.*) and (.*)")]
-        public void GivenITypedTheAnd(string Emailid, string Password)
+        public void GivenITypedTheAnd(string Email, string Password)
         {
             LoginPage loginPage = new LoginPage(currentDriver);
-            loginPage.Login(Emailid, Password);
+            loginPage.Login(Email, Password);
 
         }
 
