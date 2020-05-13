@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using SeleniumNUnitTestProject.Pages;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SeleniumNUnitTestProject.Steps
@@ -39,13 +41,17 @@ namespace SeleniumNUnitTestProject.Steps
         [Then(@"I want to update the (.*) and (.*)")]
         public void ThenIWantToUpdateTheAnd(string p0, string p1)
         {
-            ScenarioContext.Current.Pending();
+          System.Threading.Thread.Sleep(5000);
+          //  UpdateNotePage updateNote = new UpdateNotePage(driver);
+          //  updateNote.Click(p0, p1);
         }
         
         [Then(@"I click Close button")]
         public void ThenIClickCloseButton()
         {
-            ScenarioContext.Current.Pending();
+
+            //UpdateNotePage updateNote = new UpdateNotePage(driver);
+           // updateNote.ClickClose();
         }
     }
 }

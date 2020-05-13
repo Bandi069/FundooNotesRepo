@@ -17,10 +17,10 @@ namespace SeleniumNUnitTestProject
         }
 
         [Given(@"I have fill the details  Venu,Bandi,bandivenu(.*)@gmail\.com and sanVedha(.*)")]
-        public void GivenIHaveFillTheDetailsVenuBandiBandivenuGmail_ComAndSanVedha(int p0, int p1)
+        public void GivenIHaveFillTheDetailsVenuBandiBandivenuGmail_ComAndSanVedha(string p0, string p1)
         {
             RegisterPage registerPage = new RegisterPage(driver);
-          //registerPage.Register(p0, p1);
+       // registerPage.Register(p0, p1);
         }
         [When(@"I click on the submit button")]
         public void WhenIClickOnTheSubmitButton()
