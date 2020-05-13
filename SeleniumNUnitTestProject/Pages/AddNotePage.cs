@@ -26,16 +26,16 @@ namespace SeleniumNUnitTestProject.Pages
         [FindsBy(How = How.ClassName, Using = "mat-raised-button")]
         private IWebElement buttonLogin;
 
-        [FindsBy(How = How.Id, Using = "closeCard")]
+        [FindsBy(How = How.ClassName, Using = "takeNote")]
         private IWebElement txtMatCard;
 
-        [FindsBy(How = How.Id, Using = "titleId")]
+        [FindsBy(How = How.Id, Using = "taketitle")]
         private IWebElement txtTitle;
 
-        [FindsBy(How = How.Id, Using = "takeAnote")]
+        [FindsBy(How = How.Id, Using = "takedes")]
         private IWebElement txtDescription;
 
-        [FindsBy(How = How.Id, Using = "close")]
+        [FindsBy(How = How.ClassName, Using = "closecls")]
         private IWebElement buttonClose;
         public void Login(string Email, string Password)
         {
@@ -50,14 +50,15 @@ namespace SeleniumNUnitTestProject.Pages
         }
         public void Addnote(string Title, string Description)
         {
-            Thread.Sleep(4000);
+           
             txtMatCard.Click();
+            Thread.Sleep(4000);
             txtTitle.SendKeys(Title);
             txtDescription.SendKeys(Description);
         }
         public DashboardPage ClickClose()
         {
-            buttonClose.Submit();
+            buttonClose.Click();
             return new DashboardPage(webDriver);
         }
 

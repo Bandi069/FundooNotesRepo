@@ -6,13 +6,12 @@ using System.Text;
 
 namespace SeleniumNUnitTestProject.Pages
 {
-   public class DashboardPage 
+  class DashboardPage 
     {
-
         public DashboardPage(IWebDriver currentDriver)
         {
             PageFactory.InitElements(currentDriver, this);
-           // this.currentDriver = currentDriver;
+          // this.currentDriver = currentDriver;
         }
     }
 }

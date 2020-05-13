@@ -8,7 +8,7 @@ using UnitTestProject.Pages;
 
 namespace SeleniumNUnitTestProject.Pages
 {
-    public class RegisterPage
+     class RegisterPage
     {
         IWebDriver webdriver;
         public RegisterPage(IWebDriver driver)
@@ -24,7 +24,7 @@ namespace SeleniumNUnitTestProject.Pages
         private IWebElement txtEmail;
         [FindsBy(How = How.Id, Using = ("mat-input-3"))]
         private IWebElement txtPassword;
-        [FindsBy(How = How.ClassName, Using = ("mat-raise-button"))]
+        [FindsBy(How = How.ClassName, Using = ("regitserbutton"))]
         private IWebElement registerbutton;
 
         public  void  Register(string FirstName,string LastName,string Email,string Password)
