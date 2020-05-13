@@ -2,8 +2,7 @@
  Test the login functionality of application
 
 @Browser:Chrome
-
-Scenario Outline: Testing the login funtionality is working 
+Scenario: Testing the login funtionality is working 
 	Given I have navigate to my login application
 	And I typed the <Email> and <Password>
 	When I click on login button
