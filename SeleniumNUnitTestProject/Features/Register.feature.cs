@@ -75,13 +75,11 @@ namespace SeleniumNUnitTestProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify register the account(+ve cases)")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
         [NUnit.Framework.CategoryAttribute("Browser:Chrome")]
         [NUnit.Framework.TestCaseAttribute("Venu", "Bandi", "bandivenu89@gmail.com", "sanVedha2212", null)]
         public virtual void VerifyRegisterTheAccountVeCases(string firstName, string lastName, string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag",
                     "Browser:Chrome"};
             if ((exampleTags != null))
             {

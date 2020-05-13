@@ -1,7 +1,7 @@
 ﻿Feature: Register
 	Verify the functionility of Register form in my application
 
-@mytag
+
 @Browser:Chrome
 Scenario Outline: Verify register the account(+ve cases) 
 	Given I have navigate to Register application 
