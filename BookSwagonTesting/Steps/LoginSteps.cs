@@ -7,9 +7,9 @@ using TechTalk.SpecFlow;
 namespace BookSwagonTesting
 {
     [Binding]
-    public class LoginSteps
+    class LoginSteps
     {
-        IWebDriver driver = new ChromeDriver(0);
+        IWebDriver driver = new ChromeDriver();
         [Given(@"I have navigate to my login application")]
         public void GivenIHaveNavigateToMyLoginApplication()
         {
@@ -18,22 +18,24 @@ namespace BookSwagonTesting
         }
         
         [Given(@"I enter details (.*) and (.*)")]
-        public void GivenIEnterDetailsAnd(string p0, string p1)
+        public void GivenIEnterDetailsAnd(string Email, string Password)
         {
-            LoginPage loginPage = new LoginPage();
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.Login(Email, Password);
 
         }
         
         [When(@"I click on login button")]
         public void WhenIClickOnLoginButton()
         {
-            ScenarioContext.Current.Pending();
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.LoginClick();
         }
         
         [Then(@"I should see the dashboard page")]
         public void ThenIShouldSeeTheDashboardPage()
         {
-            ScenarioContext.Current.Pending();
+          //  ScenarioContext.Current.Pending(); lift my call whtsapp
         }
     }
 }
