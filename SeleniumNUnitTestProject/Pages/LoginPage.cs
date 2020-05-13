@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace UnitTestProject.Pages
 {
-   public class LoginPage
+    class LoginPage
     {
         IWebDriver driver;
         public LoginPage(IWebDriver currentDriver)
@@ -35,7 +35,7 @@ namespace UnitTestProject.Pages
         }
         public DashboardPage ClickLogin()
         {
-            loginbutton.Submit();
+            loginbutton.Click();
             return new DashboardPage(driver);
         }
     }
