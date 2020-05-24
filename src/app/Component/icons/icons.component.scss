@@ -4,16 +4,13 @@
     outline: none;
     margin: 4px;
 }
-// .colorbutn{
-//     background-color: #fff;
-// //box-sizing: border-box;
-// //box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-// padding: 5px 7px 3px;
-// position: absolute;
-// visibility: hidden;
-// }
+
+.colorcls{
+    overflow: hidden;
+}
 .icon{
     font-size: 20px;
+    overflow: hidden;
 }
 .heading{
     font-size: 15px;
@@ -21,15 +18,11 @@
 }
 .iconbuttons{
     margin-top: 10px;
+   // width: 220px;
 }
-// .verticalbutton
-// {
-//     aria-hidden =false;
-//      aria-label ="expandmenu"  ; 
-// }
 
 .Reminderbutton{
-    display: grid;
+    display: contents;
 }
 .align{
     display:flex;
@@ -55,10 +48,11 @@
     max-width: 100%;
 }
 .picktime{
-    margin-left: 18px;
-   // background-size: 15px 15px;
+    margin-left: 0px;
+    background-size: 15px 15px;
   //  padding-left: 25px;
     color: #3c4043;
+    display: inline-flex;
 }
 .saverebutton{
     margin-left: 120px;

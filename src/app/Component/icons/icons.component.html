@@ -1,31 +1,32 @@
 <div class="iconbuttons">
-  <button mat-icon-button class="button" matTooltip="Remind me">
-    <mat-icon class="icon" [matMenuTriggerFor]="remindermenu">add_alert</mat-icon>
-  </button>
-  <!-- <div class="collabcls"> -->
-  <button mat-icon-button class="button" matTooltip="Collaborator" (click)="openCollabDialog(data)">
-    <mat-icon class="icon">person_add</mat-icon>
-  </button>
-  <!-- </div> -->
-  <button mat-icon-button class="button" matTooltip="Change color" class="{{value}}">
-    <mat-icon class="icon" [matMenuTriggerFor]="color">color_lens</mat-icon>
-  </button>
-  <button mat-icon-button class="button" (click)="addImage(data)" matTooltip="Add image">
-    <mat-icon class="icon">add_photo_alternate</mat-icon>
-  </button>
-  <button mat-icon-button class="button" matTooltip="Archive">
+  <div>
+    <button mat-icon-button matTooltip="Remind me" id="reminder" class="button">
+      <mat-icon class="icon" [matMenuTriggerFor]="remindermenu">add_alert</mat-icon>
+    </button>
+    <button mat-icon-button class="button" matTooltip="Collaborator" (click)="openCollabDialog(data)">
+      <mat-icon class="icon">person_add</mat-icon>
+    </button>
+    <button mat-icon-button class="button" matTooltip="Change color">
+      <mat-icon class="icon" [matMenuTriggerFor]="addColors">color_lens</mat-icon>
+    </button>
+    <button mat-icon-button class="button" (click)="addImage(data)" matTooltip="Add image">
+      <mat-icon class="icon">add_photo_alternate</mat-icon>
+    </button>
+    <button mat-icon-button class="button" matTooltip="Archive">
+      <mat-icon class="icon">archive</mat-icon>
+    </button>
+    <!-- <button mat-icon-button class="button" *ngIf="note.archive" (click)="Archive()" matTooltip="Archive">
     <mat-icon class="icon">archive</mat-icon>
   </button>
-  <!-- <button mat-icon-button class="button"  (click)="Archive()" matTooltip="Archive">
-    <mat-icon class="icon">archive</mat-icon>
-  </button>
-  <button mat-icon-button class="button" click)="unArchive()" matTooltip="Unarchive">
+  <button mat-icon-button class="button"  *ngIf="!note.archive" (click)="unArchive()" matTooltip="Unarchive">
     <mat-icon class="icon">unarchive</mat-icon>
   </button> -->
-  <button class="verticalbutton" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="more">
-    <mat-icon class="icon" aria-label="expand menu">more_vert</mat-icon>
-  </button>
-  <mat-menu #remindermenu="matMenu">
+    <button class="verticalbutton" mat-icon-button [matMenuTriggerFor]="menu" matTooltip="more">
+      <mat-icon class="icon" aria-label="expand menu">more_vert</mat-icon>
+    </button>
+  </div>
+
+  <mat-menu #remindermenu="matMenu" (click)="$event.stopPropagation()">
     <div class="heading"> Reminder:</div>
     <div class="Reminderbutton">
       <button mat-button class="Reminderbutton" (click)="Remainder8PM()">
@@ -46,17 +47,17 @@
           <div class="space1">Telangana</div>
         </div>
       </button>
-      <div class="align" >
-      <button class="Reminderbutton" (click)="reminderDialog()">
-        <!-- mat-menu-item [matMenuTriggerFor]="pickdate" -->
-        
-          <div class="pickdivicon">
-          <mat-icon class="timericon">schedule</mat-icon>
-          <span class="picktime">Pick date & time</span>
-        </div>
-     
-      </button>
-    </div>
+      <div class="align">
+        <button class="Reminderbutton" (click)="reminderDialog()">
+          <!-- mat-menu-item [matMenuTriggerFor]="pickdate" -->
+
+          <div class="pickdivicon" fxLayout="space-between center">
+            <!-- <mat-icon class="timericon">schedule</mat-icon> -->
+            <span class="picktime"><img src="../../../assets/images/schedule-black-18dp.svg"> Pick date & time</span>
+          </div>
+
+        </button>
+      </div>
       <!-- <mat-menu #pickdate="matMenu">
         <div> 
           <mat-form-feild class="time">
@@ -97,32 +98,47 @@
         </div>
        </mat-menu> -->
       <!-- </div>
-  </mat-menu> -->
-      <mat-menu #color="matMenu" class="menu">
+    </mat-menu> -->
+      <!-- <mat-menu #color="matMenu" class="menu" [overlapTrigger]="false">
         <div class="colorIcons ">
-          <div *ngFor="let color of Colors">
+          <div *ngFor="let color of Colors" fxLayoutGap="10px">
             <button mat-icon-button class="colorIcon" [style.background-color]="color.colorCode"
               (click)="setcolor(notes.id, color.color)" matTooltip="{{color.name}}">
             </button>
           </div>
         </div>
-      </mat-menu>
-
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <span>Delete note</span>
-        </button>
-        <button mat-menu-item>
-          <span>Add label</span>
-        </button>
-        <button mat-menu-item>
-          <span>Add drawing</span>
-        </button>
-        <button mat-menu-item>
-          <span>Make a copy</span>
-        </button>
-        <button mat-menu-item>
-          <span>show checkboxes</span>
-        </button>
-      </mat-menu>
+      </mat-menu> -->
+      <div fxLayout="row" class="colorcls">
+        <mat-menu #addColors="matMenu" [overlapTrigger]="false">
+          <ng-template matMenuContent>
+            <div>
+              <div fxLayout="row" fxLayoutGap="10px" style="margin-top: 1px" *ngFor="let color of colors">
+                <div *ngFor="let clr of color" fxLayout="column">
+                  <button [ngStyle]="{'background-color': clr.color}" mat-mini-fab matTooltip="{{ clr.name }}"
+                    (click)="setColor(clr.color)"></button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </mat-menu>
+      </div>
     </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span>Delete note</span>
+      </button>
+      <button mat-menu-item>
+        <span>Add label</span>
+      </button>
+      <button mat-menu-item>
+        <span>Add drawing</span>
+      </button>
+      <button mat-menu-item>
+        <span>Make a copy</span>
+      </button>
+      <button mat-menu-item>
+        <span>show checkboxes</span>
+      </button>
+    </mat-menu>
+  </mat-menu>
+</div>

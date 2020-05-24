@@ -14,12 +14,13 @@ import { PickreminderComponent } from '../pickreminder/pickreminder.component';
 })
 export class IconsComponent implements OnInit {
   @Input() data;
-  @Input() value:any;
+  @Input() value: any;
   //@Input() notes=any;
-  @Output() setColorEvent=new EventEmitter<any>();
-  //notes = [];
+  @Output() setColorEvent = new EventEmitter<any>();
+  notes = [];
   //color:Note=new Note();
-  allreminder:any;
+  allreminder: any;
+  noteColor: string;
 
   constructor(private dataSharing: DataSharingService,
     public dialog: MatDialog,
@@ -29,60 +30,62 @@ export class IconsComponent implements OnInit {
   ngOnInit() {
     this.noteserve = this.data;
   }
-
-  Colors = [
+  colors = [
     [
-    { colorCode: '#FFFFFF', name: 'Default' },
-    { colorCode: '#FF0000', name: 'Red' },
-    { colorCode: '#FFA500', name: 'Orange' },
-    { colorCode: '#808080', name: 'Gray' },
+      { color: "#FFFFFF", name: "Default Color" },
+      { color: "rgb(137,207,240)", name: "Blue" },
+      { color: "rgb(75,0,130)", name: "Indigo" },
+      { color: "rgb(167,252,0)", name: "Green" }
     ],
     [
-    { colorCode: '#800080', name: 'Purple' },
-    { colorCode: '#FFC0CB', name: 'Pink' },
-    { colorCode: '#0000FF', name: 'Blue' },
-    { colorCode: '#0000A0', name: 'Dark blue' },
-  ],
-  [
-    { colorCode: '#A52A2A', name: 'Brown' },
-    { colorCode: '#008000', name: 'Green' },
-    { colorCode: '#FFFF00', name: 'Yellow' },
-    { colorCode: '#008080', name: 'Teal' }
+      { color: "#FF0000", name: "Red" },
+      { color: "rgb(0,198,128)", name: "Teal" },
+      { color: "rgb(255,215,0)", name: "Yellow" },
+      { color: "rgb(181,126,220)", name: "Violet" }
+    ],
+    [
+      { color: "rgb(0,255,255)", name: "Cyan" },
+      { color: "rgb(253,108,158)", name: "Pink" },
+      { color: "rgb(150,75,0)", name: "Brown" },
+      { color: "rgb(128,128,128)", name: "Gray" }
+    ]
   ]
-  ];
-  setcolor(id,changeColor)
-  {
-    this.setColorEvent.emit("done");
-    this.noteserve.addColor(id,changeColor).subscribe(Response=>{console.log(Response)});
+
+  setColor(changeColor) {
+    this.setColorEvent.emit(changeColor);
+    this.noteserve.addColor(this.notes, changeColor).subscribe((result) => {
+      console.log(result);
+      this.snackBar.open('color chaged ', 'Dismiss', { duration: 3000 });
+
+    },
+      (error) => {
+        console.log('error respons', error);
+        this.snackBar.open('error ', 'Dismiss', { duration: 3000 });
+      });
+
   }
+
   reminderDialog() {
 
-  //  allreminder:localStorage.getItem('allreminder');
     const dialog = this.dialog.open(PickreminderComponent, {
-      data:{labels:this.allreminder},
-     // height: '173px',
-    //width: '373px',
-    //  width: '250px',
-    //  height:'150px'
-     // data: {name: this.name, animal: this.animal}
-   });
+      data: { labels: this.allreminder },
+      // height: '173px',
+      //width: '373px',
+    });
     dialog.afterClosed().subscribe(result => {
-       console.log('The dialog was closed');
-    //this.animal = result;
-     });
+      console.log('The dialog was closed');
+    });
   }
   openCollabDialog(coll) {
     const dialog = this.dialog.open(CollaboratorComponent, {
       autoFocus: false,
-      data:coll,
-     // width:'250px',
-      //height:'250px'
+      data: coll,
     });
-   dialog.afterClosed().subscribe(result=>{
+    dialog.afterClosed().subscribe(result => {
       console.log('dialog closed');
     });
   }
-  
+
   Remainder8PM() {
     this.noteserve.addRemainder(this.data.id, "Today, 8:00 PM").subscribe((status) => {
       if (status != null) {
@@ -99,7 +102,7 @@ export class IconsComponent implements OnInit {
       }
     });
   }
- Archive() {
+  Archive() {
     this.noteserve.addArchive(this.data.id).subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
@@ -107,7 +110,7 @@ export class IconsComponent implements OnInit {
       }
     });
   }
- unArchive() {
+  unArchive() {
     this.noteserve.unArchive(this.data.id).subscribe((status) => {
       if (status != null) {
         this.dataSharing.changeMessage(true);
