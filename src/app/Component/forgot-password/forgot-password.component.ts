@@ -21,21 +21,24 @@ export class ForgotPasswordComponent implements OnInit {
 
   ngOnInit() {
   }
+
   forgotpassword() {
+    debugger;
     if (this.email.value != null) {
       const forg = {
         email: this.email.value,
       };
+      debugger;
       this.service.forgot(forg).subscribe(result => {
         console.log('result', result);
         this.snackbar.open('Reset password link sent to registered mail', 'Dismiss', { 'duration': 4000 });
         token: localStorage.setItem('token', result.toLocaleString());
       });
-      this.route.navigate(['/login']);
+      debugger;
+      this.route.navigate(['/resetpassword']);
     }
     else {
       this.snackbar.open("Invalid email address", "", { 'duration': 3000 });
     }
   }
-
 }
