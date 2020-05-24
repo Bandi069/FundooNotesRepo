@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { AccountService } from 'src/app/Services/account.service';
+import { AccountData } from 'src/app/Model/AccountData.model';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AccountService } from 'src/app/Services/account.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  data: AccountData = new AccountData();
   constructor(
     private service: AccountService,
     private route: Router,
@@ -23,24 +24,26 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login() {
-    if (this.email.value != null && this.password.value >= 8) {
-      const data = {
-        email: this.email.value,
-        password: this.password.value
-
-      };
-      console.log(data);
-      this.service.login(data).subscribe(Response => {
-        this.snackbar.open('Login Succesfully', 'Dismiss', { 'duration': 3000 });
-        console.log(Response);
-        localStorage.setItem('token', Response.toLocaleString());
-      },
-        (error) => {
-          this.snackbar.open('Login failed', 'Dismiss', { 'duration': 3000 });
-
-        });
-      //this.service.login(data);
-      this.route.navigate(['/dashboard/note'], { queryParams: { page: 'notes' } });
+    // debugger;
+    const data = {
+      Email: this.email.value,
+      Password: this.password.value
     }
+    // debugger;
+    console.log(data);
+    this.service.login(data).subscribe(Response => {
+
+      this.snackbar.open('Login Succesfully', '', { 'duration': 3000 });
+      console.log(Response);
+      if (Response == 'valid') {
+
+        localStorage.setItem('token', Response.toLocaleString());
+      }
+      this.route.navigate(['/dashboard/note'], { queryParams: { page: 'notes' } });
+    },
+      (error) => {
+        this.snackbar.open('Login failed', 'Dismiss', { 'duration': 3000 });
+      });
+    this.service.login(data);
   }
 }
