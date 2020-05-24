@@ -1,47 +1,84 @@
-.editnotediv{
+.editnotediv {
     background-color: transparent;
-border: none;
-box-shadow: none;
-opacity: 0;
-padding: 16px;
-position: fixed;
-z-index: 4001;
+    border: none;
+    box-shadow: none;
+    opacity: 0;
+    padding: 16px;
+    position: fixed;
+    z-index: 4001;
 }
-
-.ndescription{
-    margin-bottom: 10%;
-    padding-bottom: 100px;
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 10px;
+    height: auto;
+    width: 300px;
+}
+.close {
+    visibility: hidden;
+}
+.close:hover {
+    visibility: visible;
+}
+.ndescription {
+    margin-bottom: 5%;
+    padding-bottom: -50px;
     padding-top: 9px;
 }
-.ntitle{
+
+.ntitle {
     font-size: 20px;
-    
 }
-.chiplist{
+.column {
+    float: left;
+    width: 29%;
+    padding: 26px;
+    margin-left: 0.5cm;
+    margin-bottom: auto;
+    height: auto;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.chiplist {
     user-select: none;
     width: calc(100% - 15px);
     display: flex;
     align-items: center;
-    height: 18px;
+    height: 10px;
     min-width: 35px;
     padding: 3px 5px;
     cursor: pointer;
-    outline: none!important;
-    letter-spacing: .01785714em;
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
-    font-size: .875rem;
+    outline: none !important;
+    letter-spacing: 0.01785714em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.25rem;
 }
-.title{
+.title {
     padding-left: 180px;
 }
+@media only screen and(max-width: 800px) {
+    .card {
+        width: 290px;
+        margin: 15px auto;
+        height: auto;
+    }
+}
 .card {
-    //transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
     box-sizing: border-box;
     box-shadow: none;
     opacity: 1;
     position: relative;
     border-radius: 8px;
     width: 600px;
+    margin-top: -34px;
+    margin-bottom: 46px;
+    margin-left: 1px;
 }

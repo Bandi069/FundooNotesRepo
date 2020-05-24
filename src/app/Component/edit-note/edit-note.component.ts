@@ -10,34 +10,34 @@ import { NoteComponent } from '../note/note.component';
   styleUrls: ['./edit-note.component.scss']
 })
 export class EditNoteComponent implements OnInit {
-// note=any;
-color:any;
-  constructor(private noteser:NoteService,
-    private datasharing:DataSharingService,
-    private dialog:MatDialog) { }
+  // note=any;
+  @Input() allnotes: any;
+  color: any;
+  trash: boolean;
+  constructor(private noteser: NoteService,
+    private datasharing: DataSharingService,
+    private dialog: MatDialog) { }
 
   ngOnInit() {
   }
-  Updatenote(note)
-  {
-    console.log("AllNotes"+note);
-    if(note.isbin!=true)
-    {
-      const Ref=this.dialog.open(NoteComponent,{
-        data:{note:note},
-        panelClass:'custom-dialog-container'
+  Update(note) {
+    console.log("AllNotes" + note);
+    if (note.trash != true) {
+      const Ref = this.dialog.open(NoteComponent, {
+        data: { note: note },
+        panelClass: 'custom-dialog-container'
       });
-      Ref.afterClosed().subscribe(result=>{
-        note=result;
+      Ref.afterClosed().subscribe(result => {
+        note = result;
       });
     }
-    else{
+    else {
       console.log("cont edit");
     }
   }
-  deleteReminder(id){
-    this.color.id=id;
-    this.noteser.removeRemainder(this.color).subscribe(Response=>{
+  deleteReminder(id) {
+    this.color.id = id;
+    this.noteser.removeRemainder(this.color).subscribe(Response => {
       console.log(Response);
     })
     window.location.reload();
