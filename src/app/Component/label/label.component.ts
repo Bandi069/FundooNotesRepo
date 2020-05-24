@@ -9,28 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LabelComponent implements OnInit {
   param: any;
-  //notes=any;
-  labelNotes:any;
-  gridView:any;
+  labelNotes: any;
+  gridView: any;
   constructor(private service: NoteService,
-     private route: ActivatedRoute) { }
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    //this.getAllNotes();
-    //this.getLabelNote();
     this.route.queryParams.subscribe(params => {
-      this.param = params['page'] ;
-      this.gridView= params['view'];
+      this.param = params['page'];
+      this.gridView = params['view'];
       console.log(this.param);
     });
   }
   // getAllNotes() {
-   
   //   this.service.getNote().subscribe(Response => {
   //     console.log(Response);
   //   });
   // }
-
   // getLabelNote()
   // {
   //   this.service.addlabel().subscribe(Response => {
