@@ -1,8 +1,9 @@
 .container{
-    width: 600px;
-        margin-left: 37px;
+    width: 700px;
+       // margin-left: 37px;
        // margin-top: 10px;
-        height: 180px;
+        height: 200px;
+        padding: 15px 15px 0;
 }
 .collabdiv{
    padding: 15px 15px 0;
@@ -17,19 +18,10 @@
     //width: 500px;
     
 }
-// .mat-dialog-container{
-//     width: 600px;
-//     margin-left: 37px;
-//     margin-top: 100px;
-//     height: 300px;
-// }
-// .mat-dialog-content 
-// {
-//     height: 300px;
-//     width: 600px;
-//     margin-top: 100px;
-//     margin-left: 37px;
-// }
+.placehold{
+    display: inline-flex;
+}
+
 .collabname{
     border-bottom: 1px solid rgba(0,0,0,0.15);
 font-size: 18px;
@@ -41,7 +33,7 @@ padding: 0 0 10px 0;
     box-sizing: border-box;
 left: 0;
 max-height: 400px;
-min-height: 150px;
+//min-height: 150px;
 overflow-y: auto;
 }
 .divclass{
@@ -53,6 +45,12 @@ padding: 10px 0;
 {
     font-weight: 700;
 }
+.addperson{
+    background-size: 18px 24px;
+    height: 100%;
+    opacity: .5;
+    width: 100%;
+}
 .owner{
     font-style: italic;
     margin-left: 5px;
@@ -61,4 +59,58 @@ padding: 10px 0;
     color: #5f6368;
     direction: ltr;
     font-family: 'Roboto',arial,sans-serif;
+}
+.newcollab{
+    flex: 1 0 auto;
+    margin: 0 13px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    color: #3c4043;
+    font-size: 13px;
+    font-family: 'Roboto',arial,sans-serif;
+    height: 25px;
+    padding: 0;
+}
+.inlinediv{
+    position: relative;
+    align-items: center;
+   // display: flex;
+    padding: 5px;
+   display: inline-flex;
+}
+.cancelsave{
+    background-color: rgba(0,0,0,0.07);
+    justify-content: flex-end;
+    padding: 4px 10px;
+  border-radius: 5px;;
+  margin-top: 5%;
+}
+.cancel{
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.87);
+    overflow: hidden;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-weight: 500;
+    height: 36px;
+    //padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left:500px;
+}
+.save{
+   // margin-left: 19%;
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.87);
+    overflow: hidden;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-weight: 500;
+    height: 36px;
+ //   padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 8px;
 }
