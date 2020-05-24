@@ -9,12 +9,12 @@ import { DataSharingService } from 'src/app/Services/datasharing.service';
   styleUrls: ['./trash.component.scss']
 })
 export class TrashComponent implements OnInit {
- //msg : String = "row wrap";
- //noteid=any;
+  //msg : String = "row wrap";
+  //noteid=any;
   constructor(
-    // private noteservice: NoteService,
-    // private datasharing:DataSharingService,
-    // private snackBar : MatSnackBar
+    private noteservice: NoteService,
+    private datasharing: DataSharingService,
+    private snackBar: MatSnackBar
 
   ) { }
 
