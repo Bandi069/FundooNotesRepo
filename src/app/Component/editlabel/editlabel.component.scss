@@ -1,81 +1,79 @@
-.editlabelname{
+.editlabelname {
     color: #202124;
-letter-spacing: .00625em;
-font-family: 'Google Sans',Roboto,Arial,sans-serif;
-font-size: 1rem;
-font-weight: 500;
-line-height: 1.5rem;
-height: 25px;
+    letter-spacing: 0.00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    height: 25px;
 }
-.editcolumn{
-    width:200px;
+.editcolumn {
+    width: 200px;
 }
-.editbody
-{
+.editbody {
     max-height: 400px;
-overflow-y: hidden;
-padding: 15px;
-width: 284px;
+    overflow-y: hidden;
+    padding: 15px;
+    width: 284px;
 }
-.cancel{
+.cancel {
     flex: 1 0 auto;
 }
-.create{
+.create {
     background-color: transparent;
-border: none;
+    border: none;
     border-bottom-color: currentcolor;
     border-bottom-style: none;
     border-bottom-width: medium;
-border-bottom: 1px solid transparent;
-box-shadow: none;
-color: #3c4043;
-font-size: 13px;
-font-family: 'Roboto',arial,sans-serif;
-height: 25px;
-outline: none;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    color: #3c4043;
+    font-size: 13px;
+    font-family: "Roboto", arial, sans-serif;
+    height: 25px;
+    outline: none;
 }
-.check{
+.check {
     background-position: center;
-background-repeat: no-repeat;
-background-size: 18px 18px;
-border-radius: 50%;
-border: 1px solid transparent;
-height: 24px;
-opacity: .54;
-width: 24px;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    height: 24px;
+    opacity: 0.54;
+    width: 24px;
 }
-.labelnew{
+.labelnew {
     flex: 1 1 auto;
-font-size: 14px;
-font-weight: 500;
-margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 15px;
 }
-.donediv{
+.donediv {
     border-top: 1px solid #dadce0;
-padding: 15px 10px;
-text-align: right;
+    padding: 15px 10px;
+    text-align: right;
 }
-.donebutn
-{
+.donebutn {
     border-color: transparent !important;
     box-sizing: border-box;
-color: rgba(0,0,0,0.87);
-overflow: hidden;
-text-overflow: ellipsis;
-text-align: right;
+    color: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
 
-white-space: nowrap;
-letter-spacing: .01785714em;
-font-family: 'Google Sans',Roboto,Arial,sans-serif;
-font-size: .875rem;
-font-weight: 500;
-line-height: 1.25rem;
-height: 36px;
-padding: 8px 24px;
-border-radius: 4px;
-cursor: pointer;
-display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0.01785714em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    height: 36px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
 }
-.icon{
+.icon {
     border-radius: 50%;
 }
