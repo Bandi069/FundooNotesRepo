@@ -1,95 +1,60 @@
-.container{
-        //transform: none;
-        height: 250px;
-        width: 299px;
-        // margin-right: 200px;
-        // margin-top: 93px;
-        overflow: hidden;
-//      width: 20%;
-//     height: 150px;
-//     margin-left: 209px;
-//    margin-top: 246px;
+.container {
+    //transform: none;
+    height: 250px;
+    width: 299px;
+    // margin-right: 200px;
+    // margin-top: 93px;
+    overflow: hidden;
 }
-.content{
-    display:flex;
-   // height: 100px;
+.content {
+    display: flex;
+    // height: 100px;
     //width: 100px;
-   // margin-left: 450px;
-    //margin-top: 170px;
 }
-// .mat-dialog-content
-// {
-//     width: 36%;
-//     height: 241px;
-//     margin-left: 209px;
-//     margin-top: 246px;
-// }
-// .card{
-//     align-items: center;
-//     border-radius: 4px;
-//     cursor: default;
-//     font-size: 13px;
-//    // height: 100px;
-//     //width: 100px;
-// }
-.backicon{
+
+.backicon {
     border-radius: 50%;
     border: 1px solid transparent;
     display: inline-flex;
 }
-.picktag{
+.picktag {
     padding-left: 40px;
     font-size: 14px;
     padding: 15px;
-        margin-left: 14px;
-        margin-top: 5px;
-        font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    margin-left: 14px;
+    margin-top: 5px;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
 
-.datepicdiv{
+.datepicdiv {
     padding: 10px 15px;
     cursor: pointer;
     margin: 5px 0;
     //padding: 10px 15px;
     color: #3c4043;
 }
-// .mat-dialog-container{
-//     height: 173px;
-//     width: 373px;
-//     margin-right: 132px;
-//     margin-top: 250px;
-//     overflow: hidden;
-// }
-// .editbody
-// {
-//     max-height: 400px;
-// overflow-y: hidden;
-// padding: 15px;
-// width: 284px;
-// }
-.savediv{
+.savediv {
     box-sizing: border-box;
-padding: 5px 5px 10px;
-text-align: right;
-width: 100%;
+    padding: 5px 5px 10px;
+    text-align: right;
+    width: 100%;
 }
-.savebutn{
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
-    font-size: .875rem;
+.savebutn {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.25rem;
     height: 36px;
     padding: 8px 24px;
     border-radius: 4px;
-    border-color: black; 
+    border-color: black;
 }
-.back{
-    
-border-radius: 50%;
-border: 1px solid transparent;
-height: 24px;
-opacity: .54;
-width: 24px;
-cursor: pointer;
-display: inline-block;
+.back {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    height: 24px;
+    opacity: 0.54;
+    width: 24px;
+    cursor: pointer;
+    display: inline-block;
 }

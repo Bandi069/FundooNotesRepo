@@ -12,16 +12,17 @@
             <div class="datetoggel">
                 <mat-form-field>
                     <!-- <mat-icon></mat-icon> -->
-                    <input matInput [matDatepicker]="date" placeholder="Choose a date">
-                    <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+                    <input matInput [matDatepicker]="date" placeholder="Choose a date" [formControl]="date"
+                    (click)="$event.stopPropagation();">
+                    <mat-datepicker-toggle matSuffix [for]="date" (click)="$event.stopPropagation();"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
             <div class="timetoggle">
                 <mat-form-field>
-                    <input matInput [ngxTimepicker]="pickertime" placeholder="Choose a time">
+                    <input matInput [ngxTimepicker]="pickertime" [formControl]="time" placeholder="Choose a time">
                     <!-- <ngx-datepicker-toggle matSuffix [for]="time"></mat-datepicker-toggle> -->
-                    <ngx-material-timepicker-toggle matSuffix [for]="timePick"></ngx-material-timepicker-toggle>
+                    <ngx-material-timepicker-toggle matSuffix (click)="$event.stopPropagation();" [for]="timePick"></ngx-material-timepicker-toggle>
                     <ngx-material-timepicker #pickertime></ngx-material-timepicker>
                 </mat-form-field>
             </div>
