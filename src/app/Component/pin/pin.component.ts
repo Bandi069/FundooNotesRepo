@@ -11,27 +11,25 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class PinComponent implements OnInit {
   @Input() getid;
   constructor(
-    private noteser:NoteService,
-    private datasharing:DataSharingService,
-    private snackbar:MatSnackBar) { }
+    private noteser: NoteService,
+    private datasharing: DataSharingService,
+    private snackbar: MatSnackBar) { }
   ngOnInit() {
   }
-  pinval(){
-    this.noteser.Ispin(this.getid.id).subscribe((result)=>{ 
-      if(result!=null){
+  pinval() {
+    this.noteser.Ispin(this.getid.id).subscribe((result) => {
+      if (result != null) {
         this.datasharing.changeMessage(true);
-        this.snackbar .open('Pinned',' ',{duration:2000});
+        this.snackbar.open('Pinned', ' ', { duration: 2000 });
       }
     })
   }
-  unpinval(){
-      this.noteser.Unpin(this.getid.id).subscribe((result)=>{
-        if(result!=null){
-          this.datasharing.changeMessage(true);
-          this.snackbar.open('UnPinned',' ',{duration:2000});
-        }
-      })
+  unpinval() {
+    this.noteser.Unpin(this.getid.id).subscribe((result) => {
+      if (result != null) {
+        this.datasharing.changeMessage(true);
+        this.snackbar.open('UnPinned', ' ', { duration: 2000 });
+      }
+    })
   }
-
-
 }
