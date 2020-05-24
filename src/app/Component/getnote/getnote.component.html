@@ -6,7 +6,7 @@
         </mat-card>
     </div>
     <div class="bignote" *ngIf="flag==false" >
-        <mat-card [style.backgroundColor]="setColor" >
+        <mat-card  [ngStyle]="{'background-color':setColor}" >
             <div class="titcard">
                 <input class="title" type="text" [formControl]="noteTitle" placeholder="Title"> -->
                 <div class="pin" *ngIf="value==false" (click)="pinval()"  matTooltip="Pin note"> <img src="../../../assets/images/pinimg.svg"></div>

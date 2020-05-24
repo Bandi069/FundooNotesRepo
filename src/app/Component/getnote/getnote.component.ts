@@ -18,5 +18,8 @@ export class GetnoteComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  receiveSetColorEvent($event){
+    this.setColor=$event;
+    console.log(this.setColor);
+  }
 }
