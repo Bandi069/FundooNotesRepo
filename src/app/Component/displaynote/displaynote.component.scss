@@ -1,47 +1,42 @@
-.notearea
-{
+.notearea {
     display: flex;
-     margin-left: 5%;
+    margin-left: 5%;
 }
-.archdis
-{
+.archdis {
     flex-direction: row;
-         box-sizing: border-box; 
-         display: flex;
-          margin-left: 5%;
-}
-.remindclass
-{
-    box-sizing: border-box; 
-    display: flex; 
+    box-sizing: border-box;
+    display: flex;
     margin-left: 5%;
 }
-.reimnddis
-{
-    box-sizing: border-box; 
-    display: flex; 
+.remindclass {
+    box-sizing: border-box;
+    display: flex;
     margin-left: 5%;
 }
-.pinned{
-    color: #5f6368;
-letter-spacing: .07272727em;
-font-family: Roboto,Arial,sans-serif;
-font-size: .6875rem;
-font-weight: 500;
-line-height: 1rem;
-text-transform: uppercase;
-margin: 32px 32px 8px;
-position: absolute;
+.reimnddis {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: 5%;
 }
-.others
-{
+.pinned {
     color: #5f6368;
-letter-spacing: .07272727em;
-font-family: Roboto,Arial,sans-serif;
-font-size: .6875rem;
-font-weight: 500;
-line-height: 1rem;
-text-transform: uppercase;
-margin: 32px 32px 8px;
-position: absolute;
+    letter-spacing: 0.07272727em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin: 32px 32px 8px;
+    position: absolute;
+}
+.others {
+    color: #5f6368;
+    letter-spacing: 0.07272727em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin: 32px 32px 8px;
+    position: absolute;
 }

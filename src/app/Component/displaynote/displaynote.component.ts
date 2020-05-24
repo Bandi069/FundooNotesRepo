@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from 'src/app/Services/note.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Note } from 'src/app/Model/notes.model';
 
 @Component({
   selector: 'app-displaynote',
@@ -8,27 +9,33 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./displaynote.component.scss']
 })
 export class DisplaynoteComponent implements OnInit {
+  color: Note = new Note();
   notepara: any;
-  email:any;
-  allnotes:any;
+  email: any;
+
+  labelNotes: any;
+  gridView: any;
+  result: any;
   constructor(
-    private route:Router,
-    private noteser:NoteService,
-   
+    private router: Router,
+    private noteser: NoteService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    // this.getNotes();
-    // this.route.queryParams.subscribe(params => {
-    //   this.notepara = params['page'];
-    //  // this.gridView=  params['view'];
-    // });
-  }
-  getNotes(){
-    this.noteser.getNote(this.email).subscribe(data => {
-      console.log(data);
-      this.allnotes=data;
-     
+
+    this.getNote();
+    this.route.queryParams.subscribe(params => {
+      this.notepara = params['page'];
+      this.gridView = params['view'];
     });
-      }
+  }
+  getNote() {
+    // debugger;
+    this.noteser.getallnote().subscribe(response => {
+      console.log(response);
+      this.result = response;
+      console.log(this.result);
+    });
+  }
 }

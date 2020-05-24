@@ -1,21 +1,23 @@
-<div *ngIf="notepara=='notes'">
+<app-note></app-note>
+<app-edit-note [allnotes]="result"></app-edit-note>
+<!-- <div>
     <div class="getnote">
-        <app-getnote></app-getnote>
+        <app-note></app-note>
     </div>
-    <!-- <app-pin class="pinclass"></app-pin> -->
+     <app-pin class="pinclass"></app-pin> 
     <div class="pinned">PINNED
     </div>
     <div class="dis">
         <div *ngFor="let note of allnotes" class="notearea">
-            <app-editcard *ngIf="!note.trash&&!note.archive&&note.pin=='1'" [param]="notepara" 
-                [notes]="note"></app-editcard>
+             <app-edit-note *ngIf="!note.trash&&!note.archive&&note.pin=='1'"  
+              [labels]="labelNotes"  [notes]="note" ></app-edit-note>
         </div>
     </div>
     <div class="others">OTHERS
     </div>
     <div class="display">
         <div *ngFor="let note of allnotes" class="notearea">
-            <app-edit-note *ngIf="!note.trash&&!note.archive&&!note.pin" [param]="gridView" [notes]="note">
+            <app-edit-note *ngIf="!note.trash&&!note.archive&&!note.pin"   [labels]="labelNotes"  [notes]="note">
             </app-edit-note>
         </div>
     </div>
@@ -23,7 +25,7 @@
 <div *ngIf="param=='Archive'">
     <div class="archivedis">
         <div class="archdis" *ngFor="let note of allnotes">
-            <app-edit-note *ngIf="!note.trash&&note.archive=='1'" [param]="gridView" [notes]="note">
+            <app-edit-note *ngIf="!note.trash&&note.archive=='1'"    [labels]="labelNotes"  [notes]="note">
             </app-edit-note>
         </div>
     </div>
@@ -32,7 +34,7 @@
 <div *ngIf="param=='Trash'">
     <div class="remindclass">
         <div *ngFor="let note of allnotes" class="space">
-            <app-edit-note *ngIf="note.trash=='1'" [param]="gridView" [notes]="note"></app-edit-note>
+            <app-edit-note *ngIf="note.trash=='1'" [param]="gridView"   [labels]="labelNotes"  [notes]="note"></app-edit-note>
         </div>
     </div>
 </div>
@@ -45,4 +47,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
