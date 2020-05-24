@@ -6,97 +6,103 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class NoteService {
-
+  //Url:'https://localhost:44349/';
+  // header = {
+  //   headers: new HttpHeaders()
+  //     .set('Authorization',  `Bearer ${localStorage.Token}`)
+  //}
   constructor(
     private http: HttpClient) { }
 
-  addNote(title, description, email){
-    const parameters={
-      Title :title,
-      Description : description,
-      Email : email
-    };
-   return this.http.post(environment.Url +'addnote', parameters);
+  addNote(notedata) {
+    debugger;
+
+    return this.http.post(environment.Url + 'addnotes', notedata);
   }
 
   updateNote(id, title, description, email) {
-    const params={
+    const params = {
       Id: id,
-      Title :title,
-      Description:description,  
-      Email:email
+      Title: title,
+      Description: description,
+      Email: email
     };
-    return this.http.put(environment.Url+'updatenote',params);
+    return this.http.put(environment.Url + 'updatenote', params);
   }
 
-  addArchive(id){
-    return this.http.put(environment.Url +'Archive'+ id ,null);
+  addArchive(id) {
+    return this.http.put(environment.Url + 'Archive' + id, null);
   }
 
-  unArchive(id){
-    return this.http.put(environment.Url +'unArchive?id='+ id ,null);
+  unArchive(id) {
+    return this.http.put(environment.Url + 'unArchive?id=' + id, null);
   }
 
-  addTrash(id){
-    return this.http.put(environment.Url +'Trash?id='+ id ,null);
+  addTrash(id) {
+    return this.http.put(environment.Url + 'Trash?id=' + id, null);
   }
 
-  addColor(id,value){
-    const url =environment.Url +'color?id='+ id +'&color='+ value;   
-    return this.http.put(url,null);
-  }
-  
-  getNote(email){
-    
-    return this.http.get(environment.Url+ 'getNote?email='+email);
-  }
-  getNoteList(){
-    return this.http.get(environment.Url+ 'getList');
+  addColor(id, value) {
+    const url = environment.Url + 'color?id=' + id + '&color=' + value;
+    return this.http.put(url, null);
   }
 
-  addRemainder(id,remainder){
- return this.http.put(environment.Url+ 'setRemainder?id='+id+'&remainder='+remainder, null);
+  getNote(email) {
+
+    return this.http.get(environment.Url + 'getNote?email=' + email);
   }
-  removeRemainder(id){
-    return this.http.put(environment.Url+ 'removeRemainder?id='+id, null);
-  }
-  getArchive(email){
-    return this.http.get(environment.Url+'getArchive?email='+email);
+  getNoteList() {
+    debugger;
+    return this.http.get(environment.Url + 'getList');
   }
 
-  getTrash(email){
-    return this.http.get(environment.Url+'getTrash?email='+email);
+  addRemainder(id, remainder) {
+    return this.http.put(environment.Url + 'setRemainder?id=' + id + '&remainder=' + remainder, null);
   }
-  getRemainder(email){
-    return this.http.get(environment.Url+'getRemainders?email='+email);
+  removeRemainder(id) {
+    return this.http.put(environment.Url + 'removeRemainder?id=' + id, null);
   }
-  delete(id){
-    return this.http.delete(environment.Url+'removeNotes?id='+id);
+  getArchive(email) {
+    return this.http.get(environment.Url + 'getArchive?email=' + email);
   }
-  restore(id){
-    return this.http.put(environment.Url+'restore?id='+id, null);
+  getallnote() {
+    //debugger;
+    return this.http.get(environment.Url + 'getnote');
   }
-  deleteAll(email){
-    return this.http.delete(environment.Url+'deleteAll?email='+email);
+
+  getTrash(email) {
+    return this.http.get(environment.Url + 'getTrash?email=' + email);
   }
-  restoreAll(email){
-    return this.http.put(environment.Url+'restoreAll?email='+email, null);
+  getRemainder(email) {
+    return this.http.get(environment.Url + 'getRemainders?email=' + email);
   }
-   Ispin(id) {
-    return this.http.put(environment.Url + 'Ispin?id='+ id, id);
+  delete(id) {
+    return this.http.delete(environment.Url + 'removeNotes?id=' + id);
   }
-  
+  restore(id) {
+    return this.http.put(environment.Url + 'restore?id=' + id, null);
+  }
+  deleteAll(email) {
+    return this.http.delete(environment.Url + 'deleteAll?email=' + email);
+  }
+  restoreAll(email) {
+    return this.http.put(environment.Url + 'restoreAll?email=' + email, null);
+  }
+  Ispin(id) {
+    return this.http.put(environment.Url + 'Ispin?id=' + id, id);
+  }
+
   Unpin(id) {
-    return this.http.put(environment.Url+ 'Unpin?id='+ id, id);
+    return this.http.put(environment.Url + 'Unpin?id=' + id, id);
   }
-  addlabel(id,name,userid) {
-    
-    return this.http.post(environment.Url + 'AddLabel'+id + '&name=' + name +'&userid='+ userid, null);
+  addlabel(id, name, userid) {
+
+    return this.http.post(environment.Url + 'AddLabel' + id + '&name=' + name + '&userid=' + userid, null);
   }
   deletelabel(id) {
-    return this.http.delete(environment.Url + 'Deletelabel'+ id);
+    return this.http.delete(environment.Url + 'Deletelabel' + id);
   }
   getlabel() {
-    return this.http.get(environment.Url+ 'getlabel');
+    return this.http.get(environment.Url + 'getlabel');
   }
 }

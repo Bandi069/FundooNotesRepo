@@ -9,9 +9,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RegisterComponent } from './Component/register/register.component';
 import { LoginComponent } from './Component/login/login.component';
 import { ForgotPasswordComponent } from './Component/forgot-password/forgot-password.component';
@@ -20,16 +21,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
 import { NoteComponent } from './Component/note/note.component';
 import { IconsComponent } from './Component/icons/icons.component';
-import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { DisplaynoteComponent } from './Component/displaynote/displaynote.component'; 
+import { DisplaynoteComponent } from './Component/displaynote/displaynote.component';
 //import { HttpModule } from '@angular/common/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AccountService } from './Services/account.service';
 import { NoteService } from './Services/note.service';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+
 
 import { ArchiveComponent } from './Component/archive/archive.component';
 import { ReminderComponent } from './Component/reminder/reminder.component';
@@ -42,8 +44,9 @@ import { LabelComponent } from './Component/label/label.component';
 import { EditlabelComponent } from './Component/editlabel/editlabel.component';
 import { PickreminderComponent } from './Component/pickreminder/pickreminder.component';
 import { CollaboratorComponent } from './Component/collaborator/collaborator.component';
-import {FormControl} from '@angular/forms';
- 
+import { FormControl } from '@angular/forms';
+import { UploadimageComponent } from './Component/uploadimage/uploadimage.component';
+
 
 @NgModule({
   declarations: [
@@ -66,9 +69,9 @@ import {FormControl} from '@angular/forms';
     LabelComponent,
     EditlabelComponent,
     PickreminderComponent,
-    CollaboratorComponent
-   // FormControl
-
+    CollaboratorComponent,
+    UploadimageComponent
+    // FormControl
   ],
   imports: [
     BrowserModule,
@@ -79,8 +82,8 @@ import {FormControl} from '@angular/forms';
     MatMenuModule,
     HttpClientModule,
     //FormControl,
-   ////NgxMaterialTimepickerModule,
-   NgxMaterialTimepickerModule,
+    //NgxMaterialTimepickerModule,
+    NgxMaterialTimepickerModule,
     MatNativeDateModule,
     MatDatepickerModule,
     ReactiveFormsModule,
@@ -92,13 +95,13 @@ import {FormControl} from '@angular/forms';
     MatIconModule,
     MatSidenavModule,
     MatSnackBarModule,
-  //  MatDialogRef,
+    // MatDialogRef,
     RouterModule.forRoot([])
   ],
-  providers: [AccountService,NoteService,{provide: MatDialogRef, useValue: {}},
-  {provide:MAT_DIALOG_DATA,useValue:{}}],
+  providers: [AccountService, NoteService, { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent],
-  entryComponents:[CollaboratorComponent],
+  entryComponents: [CollaboratorComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ]

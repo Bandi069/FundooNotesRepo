@@ -12,8 +12,8 @@ import { ArchiveComponent } from './Component/archive/archive.component';
 import { ReminderComponent } from './Component/reminder/reminder.component';
 import { DisplaynoteComponent } from './Component/displaynote/displaynote.component';
 import { GetnoteComponent } from './Component/getnote/getnote.component';
-import { TrashComponent }from './Component/trash/trash.component';
-import {EditNoteComponent} from './Component/edit-note/edit-note.component';
+import { TrashComponent } from './Component/trash/trash.component';
+import { EditNoteComponent } from './Component/edit-note/edit-note.component';
 import { LabelComponent } from './Component/label/label.component';
 import { EditlabelComponent } from './Component/editlabel/editlabel.component';
 import { PickreminderComponent } from './Component/pickreminder/pickreminder.component';
@@ -24,22 +24,20 @@ const routes: Routes = [
   { path: 'forgot', component: ForgotPasswordComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },
   //{path :'edit',component:EditNoteComponent},
- //{ path: 'arch', component: ArchiveComponent },
+  //{ path: 'arch', component: ArchiveComponent },
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
       { path: 'note', component: NoteComponent },
-      {path : 'arch',component:ArchiveComponent},
-      {path : 'reminder',component:ReminderComponent},
-      {path:'trash',component:TrashComponent},
-      {path:'notedisplay',component:DisplaynoteComponent},
-      {path :'getnote',component:GetnoteComponent},
-      {path:'editlabel',component:EditlabelComponent},
-     // {path:'editlabel',component:LabelComponent}
+      { path: 'displaynote', component: DisplaynoteComponent },
+      { path: 'arch', component: ArchiveComponent },
+      { path: 'reminder', component: ReminderComponent },
+      { path: 'trash', component: TrashComponent },
+      { path: 'getnote', component: GetnoteComponent },
+      { path: 'editlabel', component: EditlabelComponent },
     ]
   },
-  //{path : 'icon', component: IconsComponent},
-  {path:'pick', component:PickreminderComponent}
+  { path: 'pick', component: PickreminderComponent }
 ];
 @NgModule({
   imports: [

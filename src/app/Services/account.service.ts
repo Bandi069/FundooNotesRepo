@@ -8,42 +8,38 @@ import { environment } from 'src/environments/environment';
 })
 
 export class AccountService {
-  url: string;
-  card;
+  // Url: string;
   constructor(private http: HttpClient) { }
-  register(data) {
-   
-    return this.http.post(environment.Url + 'register', data);
+  registerfun(rdata) {
+    debugger;
+    return this.http.post(environment.Url + 'accountregistration', rdata);
   }
-  login(data) {
-    
-    return this.http.post(environment.Url + 'login', data);
-  }
-
-  googleLogin(email) {
-    
-    return this.http.post(environment.Url + 'googlelogin',email);
+  login(ldata) {
+    // debugger;
+    return this.http.post(environment.Url + 'accountlogin', ldata);
   }
 
+  googleLogin(gemail) {
+
+    return this.http.post(environment.Url + 'googlelogin', gemail);
+  }
   facebookLogin(email) {
-    // const param = {
-    //   Email: email
-    // };
+
     return this.http.post(environment.Url + 'facebooklogin', email);
   }
 
-  forgot(data) {
-    
-    return this.http.post(environment.Url + 'forgotpassword', data);
+  forgot(fordata) {
+
+    return this.http.put(environment.Url + 'forgotpassword', fordata);
   }
-  resetpassword(data) {
-    return this.http.put(environment.Url + 'resetpassword', data);
+  resetpassword(redata) {
+    return this.http.put(environment.Url + 'resetpassword', redata);
   }
-  
-  logout(email) {
+
+  logout(emaillog) {
     let headers = new HttpHeaders({
       'Accept': 'application/json'
     });
-    return this.http.put(environment.Url + 'logout' + email, null, { headers: headers });
+    return this.http.put(environment.Url + 'logout' + emaillog, null, { headers: headers });
   }
 }
