@@ -64,7 +64,7 @@
                 <mat-nav-list class="sidenavlist">
                     <div class="sidenavbar">
                         <div class="sidenave snavbar">
-                            <button mat-button class="navadd" [routerLink]="['note']"
+                            <button mat-button class="navadd" [routerLink]="['displaynote']"
                                 routerLinkActive="router-link-active" (click)="headerName='Notes'"
                                 [ngClass]="{'sidenavname': headerName!='Notes', 'sideNames': headerName=='Notes'}"
                                 opened>
@@ -88,13 +88,11 @@
                         </div>
 
                         <div class="sidenave snavbar">
-                            <button mat-button class="navadd" (click)="openDialog()"  >
-                                <!-- [routerLink]="['editlabel']" routerLinkActive="router-link-active" -->
+                            <button mat-button class="navadd" (click)="openDialog()">
                                 <mat-icon class="icon">create</mat-icon>
                                 <span class="note">Edit Labels</span>
                             </button>
                         </div>
-                        <!-- <mat-divider class="div"></mat-divider> -->
                         <div class="sidenave snavbar">
                             <button mat-button class="navadd" [routerLink]="['arch']"
                                 routerLinkActive="router-link-active" (click)="headerName='Archive'"
@@ -104,7 +102,6 @@
 
                             </button>
                         </div>
-                        <!-- <mat-divider class="div"></mat-divider> -->
                         <div class="sidenave snavbar">
                             <button mat-button class="navadd" [routerLink]="['trash']"
                                 routerLinkActive="router-link-active">

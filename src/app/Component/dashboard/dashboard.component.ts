@@ -47,9 +47,10 @@ export class DashboardComponent implements OnInit {
   }
   openDialog(): void {
     const dialog = this.dialog.open(EditlabelComponent, {
-      //width: '400px',
-      //height:'250px'
-      //data: {name: this.name, animal: this.animal}
     });
+  }
+  logout() {
+    localStorage.clear();
+    this.route.navigate(['/login']);
   }
 }
