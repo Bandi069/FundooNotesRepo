@@ -1,20 +1,20 @@
 <mat-card class="card">
-  <div class="div" align="center">
+  <div class="div">
     <mat-card-header>
       <mat-card-title class="registertitle">
         <mat-label class="fundoo">
-          <h1>FUNDOO</h1>
+          <h1 class="h1head">FUNDOO</h1>
         </mat-label>
       </mat-card-title>
     </mat-card-header>
     <mat-card-header>
       <mat-card-title>
-        <h2>Create a New Fundoo Account</h2>
+        <h2 class="createtitle">Create a New Fundoo Account</h2>
       </mat-card-title>
     </mat-card-header>
     <form class="form">
       <mat-form-field class="width" appearance="outline" class="smallname">
-        <mat-label class="labelColor">First name<sup>*</sup></mat-label>
+        <mat-label>First name<sup>*</sup></mat-label>
         <input matInput [formControl]="firstName" placeholder="First Name">
         <mat-error *ngIf="firstName.hasError('required')">required
         </mat-error>
@@ -25,7 +25,7 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="width" appearance="outline" class="smallname">
-        <mat-label class="labelColor">Last name<sup>*</sup></mat-label>
+        <mat-label>Last name<sup>*</sup></mat-label>
         <input matInput [formControl]="lastName" placeholder="Last Name">
         <mat-error *ngIf="lastName.hasError('required')">
           *required
@@ -35,25 +35,26 @@
         <mat-error *ngIf="lastName.hasError('pattern') && !lastName.hasError('minlength')">Name must be characters
         </mat-error>
       </mat-form-field>
-        <mat-form-field class="width" appearance="outline" class="linewidth">
-          <mat-label class="labelColor">Email<sup>*</sup></mat-label>
-          <input matInput [formControl]="email" placeholder="Email">
-          <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">Invalid email
-          </mat-error>
-          <mat-error *ngIf="email.hasError('required')">
-            Email is required
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="width" appearance="outline" class="smallname linewidth">
-          <mat-label class="labelColor">Password<sup>*</sup></mat-label>
-          <input matInput [formControl]="password" placeholder="" type="password">
-          <mat-error *ngIf="password.hasError('required')">*required</mat-error>
-          <mat-error *ngIf="password.hasError('minlength')"> Minimum length 6
-          </mat-error>
-        </mat-form-field>
+      <mat-form-field class="width" appearance="outline" class="linewidth">
+        <mat-label>Email<sup>*</sup></mat-label>
+        <input matInput [formControl]="email" placeholder="Email">
+        <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">Invalid email
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+          Email is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="width" appearance="outline" class="smallname linewidth">
+        <mat-label>Password<sup>*</sup></mat-label>
+        <input matInput [formControl]="password" placeholder="" type="password">
+        <mat-error *ngIf="password.hasError('required')">*required</mat-error>
+        <mat-error *ngIf="password.hasError('minlength')"> Minimum length 6
+        </mat-error>
+      </mat-form-field>
       <div class="button">
         <!-- <mat-button mat-raised-button color="primary" type="mat-button" (click)="onRegistrationForm()">Register</mat-button> -->
-        <button mat-raised-button class="regitserbutton" color="primary" (click)="register()" type="button">Register</button>
+        <button mat-raised-button class="regitserbutton" color="primary" (click)="register()"
+          type="button">Register</button>
       </div>
       <br>
       <div class="link">
