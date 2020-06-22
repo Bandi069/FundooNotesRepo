@@ -102,11 +102,13 @@ C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcor
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.csprojAssemblyReference.cache
-C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.csproj.CoreCompileInputs.cache
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.AssemblyInfoInputs.cache
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.AssemblyInfo.cs
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.csproj.CopyComplete
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.dll
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.pdb
 C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.genruntimeconfig.cache
+C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.csprojAssemblyReference.cache
+C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcoreapp3.1\Dynamitey.dll
+C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\bin\Debug\netcoreapp3.1\SpecFlow.Assist.Dynamic.dll
+C:\Users\Bandi\source\repos\BookSwagonTesting\BookSwagonTesting\obj\Debug\netcoreapp3.1\BookSwagonTesting.csproj.CoreCompileInputs.cache

@@ -129,6 +129,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.When("I shoud press buynow option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 16
+ testRunner.When("I want to place an order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

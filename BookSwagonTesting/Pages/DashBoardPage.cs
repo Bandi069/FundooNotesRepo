@@ -12,7 +12,7 @@ namespace BookSwagonTesting.Pages
         public DashBoardPage(IWebDriver webDriver)
         {
             PageFactory.InitElements(webDriver, this);
-           // this.driver = driver;
+            this.driver = webDriver;
 
         }
     }

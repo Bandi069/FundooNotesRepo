@@ -13,5 +13,6 @@ Scenario: Verify search a book in application
 	When I click on the search button
 	Then Result should be Books list on Homepage
 	When I shoud press buynow option 
+	When I want to place an order 
 
 	

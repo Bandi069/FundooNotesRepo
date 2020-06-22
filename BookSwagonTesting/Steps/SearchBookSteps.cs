@@ -19,50 +19,49 @@ namespace BookSwagonTesting.Steps
         }
 
         [Given(@"I have entered details (.*) and (.*)")]
-        public void GivenIHaveEnteredDetailsAnd(string p0, string p1)
+        public void GivenIHaveEnteredDetailsAnd(string Email, string Password)
         {
             // ScenarioContext.Current.Pending();
             SearchBookPage searchBookPage = new SearchBookPage(driver);
-            searchBookPage.Login(p0, p1);
-
+            searchBookPage.Login(Email, Password);
         }
-        
+
         [When(@"I press on Login button")]
         public void WhenIPressOnLoginButton()
         {
             SearchBookPage searchBookPage = new SearchBookPage(driver);
             searchBookPage.LoginClick();
         }
-        
+
         [When(@"I have press on Search box")]
         public void WhenIHavePressOnSearchBox()
         {
             SearchBookPage searchBookPage = new SearchBookPage(driver);
             searchBookPage.Searchbox();
         }
-        
+
         [When(@"I should enter a text for search")]
         public void WhenIShouldEnterATextForSearch()
         {
-           // IWebElement book;
+            // IWebElement book;
             SearchBookPage searchBookPage = new SearchBookPage(driver);
             searchBookPage.Searchtext("bandi book");
         }
-        
+
         [When(@"I click on the search button")]
         public void WhenIClickOnTheSearchButton()
         {
             SearchBookPage searchBook = new SearchBookPage(driver);
             searchBook.ClickSearch();
         }
-        
+
         [Then(@"It should show Dashboard page")]
         public void ThenItShouldShowDashboardPage()
         {
             SearchBookPage searchBookPage = new SearchBookPage(driver);
 
         }
-        
+
         [Then(@"Result should be Books list on Homepage")]
         public void ThenResultShouldBeBooksListOnHomepage()
         {
@@ -74,5 +73,12 @@ namespace BookSwagonTesting.Steps
             SearchBookPage searchBookPage = new SearchBookPage(driver);
             searchBookPage.buyclick();
         }
+        [When(@"I want to place an order")]
+        public void WhenIWantToPlaceAnOrder()
+        {
+            SearchBookPage searchBookPage = new SearchBookPage(driver);
+            searchBookPage.placeorder();
+        }
+
     }
 }

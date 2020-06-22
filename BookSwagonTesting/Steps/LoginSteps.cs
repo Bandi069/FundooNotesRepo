@@ -16,7 +16,7 @@ namespace BookSwagonTesting
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://www.bookswagon.com/login");
         }
-        
+
         [Given(@"I enter details (.*) and (.*)")]
         public void GivenIEnterDetailsAnd(string Email, string Password)
         {
@@ -24,18 +24,18 @@ namespace BookSwagonTesting
             loginPage.Login(Email, Password);
 
         }
-        
+
         [When(@"I click on login button")]
         public void WhenIClickOnLoginButton()
         {
             LoginPage loginPage = new LoginPage(driver);
             loginPage.LoginClick();
         }
-        
+
         [Then(@"I should see the dashboard page")]
         public void ThenIShouldSeeTheDashboardPage()
         {
-          //  ScenarioContext.Current.Pending(); lift my call whtsapp
+            //  ScenarioContext.Current.Pending(); lift my call whtsapp
         }
     }
 }

@@ -25,7 +25,7 @@ namespace BookSwagonTesting.Pages
             Thread.Sleep(5000);
             txtEmail.SendKeys(Email);
         }
-        public LoginPage ClickForgot()
+        public  LoginPage ClickForgot()
         {
             forgotbutton.Submit();
             return new LoginPage(webDriver);

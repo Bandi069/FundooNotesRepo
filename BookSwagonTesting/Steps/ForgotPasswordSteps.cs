@@ -16,7 +16,6 @@ namespace BookSwagonTesting.Steps
         {
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://www.bookswagon.com/forgetpassword");
-            /// ScenarioContext.Current.Pending();
         }
         
         [Given(@"I have entetered credential (.*)")]
@@ -25,7 +24,6 @@ namespace BookSwagonTesting.Steps
             ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage(driver);
             forgotPasswordPage.Forgot(Email);
         }
-        
         [When(@"I Click on Submit Button")]
         public void WhenIClickOnSubmitButton()
         {
